@@ -4,7 +4,7 @@ const ThreeAsSection = () => {
   return (
     <>
       <Separator className="bg-white h-[2px]" />
-      <section className="bg-hero-bg min-h-[2000px] max-w-[1392px] min-w-[1392px] pt-40 px-20 flex flex-col justify-start items-center gap-[90px] font-geist">
+      <section className="bg-hero-bg min-h-[2000px] w-full pt-40 px-4 md:px-6 lg:px-20 flex flex-col justify-start items-center gap-[90px] font-geist mx-auto">
         {/* Title */}
         <div className="w-[615px] h-[229px] max-w-[615px] flex flex-col justify-center items-center gap-5">
           <div className="w-[899px] flex flex-col justify-start items-start">
