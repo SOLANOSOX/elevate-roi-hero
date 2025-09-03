@@ -4,22 +4,22 @@ import logo from "@/assets/logo.png";
 const HeroSection = () => {
   return (
     <>
-      <section className="bg-hero-bg py-8 md:py-[60px] pb-4 px-6 md:px-[418px] font-raleway">
-      <div className="max-w-[1060px] mx-auto h-[718px] flex flex-col items-start gap-5">
+      <section className="bg-hero-bg py-8 md:py-12 lg:py-[60px] px-4 md:px-6 lg:px-[418px] font-raleway">
+      <div className="max-w-[1060px] mx-auto min-h-[500px] md:min-h-[600px] lg:h-[718px] flex flex-col items-start justify-center gap-6 md:gap-8">
         {/* Logo */}
-        <div className="w-[546px] max-w-full">
-          <div className="flex flex-col gap-7">
+        <div className="w-full max-w-[546px]">
+          <div className="flex flex-col gap-6 md:gap-7">
             <img 
               src={logo} 
               alt="Logo" 
-              className="w-[90px] h-[57px] object-contain"
+              className="w-[70px] h-[44px] md:w-[90px] md:h-[57px] object-contain"
             />
             
             {/* Main Content */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 md:gap-6">
               {/* Main Title */}
               <div className="flex flex-col">
-                <h1 className="text-[36px] font-extrabold leading-[35px] text-hero-text">
+                <h1 className="text-[24px] md:text-[32px] lg:text-[36px] font-extrabold leading-[28px] md:leading-[36px] lg:leading-[40px] text-hero-text">
                   Dois dias revelando o método que levou uma imobiliária a ter{" "}
                   <span className="text-hero-accent">600% de retorno</span>{" "}
                   <span className="text-hero-accent">em 6 meses!</span>
@@ -27,8 +27,8 @@ const HeroSection = () => {
               </div>
               
               {/* Description */}
-              <div className="h-48 flex flex-col text-hero-text text-base font-medium leading-6">
-                <p className="mb-6">
+              <div className="flex flex-col text-hero-text text-sm md:text-base font-medium leading-5 md:leading-6 gap-4 md:gap-6">
+                <p>
                   Descubra o sistema exato que transformou uma imobiliária comum              
                   em uma máquina de vendas – e como você pode replicar esses resultados             
                   na sua operação
@@ -43,7 +43,7 @@ const HeroSection = () => {
         </div>
         
         {/* CTA Button */}
-        <div className="w-[360px] max-w-full">
+        <div className="w-full max-w-[360px]">
           <Button 
             variant="hero" 
             size="hero"
