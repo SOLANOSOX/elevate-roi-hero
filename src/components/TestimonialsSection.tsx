@@ -90,7 +90,7 @@ const TestimonialsSection = () => {
           {/* CTA Button - Updated to match other buttons */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-[1365.09px] w-[360px]">
             <Button variant="hero" size="hero" className="w-full">
-              Quer ser um case
+              Quero ser um case
             </Button>
           </div>
         </div>

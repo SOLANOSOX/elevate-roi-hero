@@ -5,6 +5,7 @@ import BenefitsSection from "@/components/BenefitsSection";
 import ThreeAsSection from "@/components/ThreeAsSection";
 import ScheduleSection from "@/components/ScheduleSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import PricingSection from "@/components/PricingSection";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <ThreeAsSection />
       <ScheduleSection />
       <TestimonialsSection />
+      <PricingSection />
     </>
   );
 };
