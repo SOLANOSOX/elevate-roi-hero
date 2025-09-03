@@ -26,8 +26,8 @@ const StorySection = () => {
           </div>
         </div>
 
-        {/* Main content card - covers section with minimal top spacing */}
-        <div className="absolute left-4 right-4 top-8 bottom-4 bg-hero-text rounded-[25px] md:rounded-[50px] shadow-sm p-6 md:p-12 lg:p-16 flex flex-col justify-center">
+        {/* Main content card - covers section with 100px top spacing */}
+        <div className="absolute left-4 right-4 top-[100px] bottom-4 bg-hero-text rounded-[25px] md:rounded-[50px] shadow-sm p-6 md:p-12 lg:p-16 flex flex-col justify-center">
           {/* Title */}
           <div className="w-full mb-6 md:mb-8">
             <h3 className="text-hero-bg text-lg sm:text-xl md:text-2xl lg:text-[32px] font-extrabold leading-tight md:leading-[40px] text-center">
