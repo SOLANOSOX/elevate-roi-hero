@@ -3,11 +3,11 @@ import { Separator } from "@/components/ui/separator";
 const PricingSection = () => {
   return <>
       <Separator className="bg-white h-[2px]" />
-      <section className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway">
+      <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway">
         <div className="max-w-[1060px] mx-auto py-20">
           {/* Main Title */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-black mb-4 md:text-4xl">💰 O Valor Real do Workshop LEGADO Imobiliário</h2>
+            <h2 className="text-4xl font-extrabold text-hero-text mb-4 md:text-4xl">💰 O Valor Real do Workshop LEGADO Imobiliário</h2>
           </div>
 
           {/* Value Breakdown */}
@@ -46,21 +46,21 @@ const PricingSection = () => {
 
           {/* Special Offer */}
           <div className="text-center mb-8">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-6">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-hero-text mb-6">
               🎁 OFERTA ESPECIAL DE FECHAMENTO DE ANO
             </h3>
             
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
-              <span className="text-2xl text-black/60 line-through">R$ 6.400</span>
-              <span className="text-3xl text-black/80 line-through">R$ 497,00</span>
-              <span className="text-4xl text-black/90 line-through">R$ 197,00</span>
+              <span className="text-2xl text-hero-text/60 line-through">R$ 6.400</span>
+              <span className="text-3xl text-hero-text/80 line-through">R$ 497,00</span>
+              <span className="text-4xl text-hero-text/90 line-through">R$ 197,00</span>
             </div>
             
             <div className="bg-accent rounded-[25px] p-6 mb-6 shadow-sm">
-              <div className="text-5xl md:text-6xl font-black text-black mb-2">
+              <div className="text-5xl md:text-6xl font-black text-accent-foreground mb-2">
                 Apenas R$ 47,00
               </div>
-              <div className="text-lg font-bold text-black/80">
+              <div className="text-lg font-bold text-accent-foreground/80">
                 (Mais de 98% de desconto)
               </div>
             </div>
@@ -98,7 +98,7 @@ const PricingSection = () => {
           {/* Final CTA */}
           <div className="text-center">
             <div className="bg-accent rounded-[25px] p-6 mb-8 shadow-sm">
-              <div className="text-3xl md:text-4xl font-black text-black">
+              <div className="text-3xl md:text-4xl font-black text-accent-foreground">
                 VOCÊ LEVA TUDO POR: R$ 47
               </div>
             </div>

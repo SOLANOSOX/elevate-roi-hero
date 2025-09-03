@@ -1,0 +1,59 @@
+import { Separator } from "@/components/ui/separator";
+
+const AboutSection = () => {
+  return (
+    <>
+      <Separator className="bg-white h-[2px]" />
+      <section 
+        className="relative px-4 md:px-6 lg:px-[418px] font-raleway min-h-[878px] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://placehold.co/1897x878')"
+        }}
+      >
+        <div className="max-w-[1060px] mx-auto pt-[83px] pb-[96px] flex justify-end">
+          <div className="w-full max-w-[429px] pt-[7px]">
+            <div className="flex flex-col gap-5">
+              {/* Name Title */}
+              <div className="pb-[0.58px]">
+                <h2 className="text-hero-text text-[32px] font-extrabold leading-[38.4px] text-center">
+                  Adel Gabrielle
+                </h2>
+              </div>
+              
+              {/* Content */}
+              <div className="flex flex-col gap-[27px]">
+                <div className="text-hero-text text-lg font-medium leading-[27px]">
+                  É referência nacional em crescimento de imobiliárias, com:
+                </div>
+                
+                <div className="text-hero-text text-lg font-medium leading-[27px]">
+                  ✅ 15+ anos de experiência no mercado imobiliário<br />
+                  ✅ 200+ imobiliárias transformadas em todo o Brasil<br />
+                  ✅ R$ 50+ milhões em vendas geradas pelos seus métodos<br />
+                  ✅ Palestrante nos principais eventos do setor<br />
+                  ✅ Consultor de grandes redes imobiliárias
+                </div>
+                
+                <div className="text-hero-text text-lg font-medium leading-[27px]">
+                  "Minha missão é provar que qualquer imobiliária pode multiplicar seus resultados,
+                  independente do tamanho ou localização."
+                </div>
+                
+                <div className="text-hero-text text-lg font-bold leading-[27px]">
+                  Sua fama vai além da internet, já participando de<br />
+                  programas de televisão e atuando nos bastidores<br />
+                  como terapeuta de grandes nomes do cinema,<br />
+                  música e milionários em momentos de<br />
+                  dificuldade, como:
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Separator className="bg-white h-[2px]" />
+    </>
+  );
+};
+
+export default AboutSection;
