@@ -20,6 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				raleway: ['Raleway', 'sans-serif'],
+				geist: ['Geist', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
