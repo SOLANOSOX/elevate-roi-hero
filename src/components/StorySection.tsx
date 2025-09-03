@@ -7,7 +7,7 @@ const StorySection = () => {
       <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway mb-0">
       <div className="max-w-[1060px] mx-auto min-h-[750px] flex flex-col items-center relative py-6">
         {/* Header with logo and title - proper spacing to avoid overlap */}
-        <div className="w-full flex flex-col items-center mb-6">
+        <div className="w-full flex flex-col items-center mb-6 relative z-10">
           <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-8">
             <div className="flex-1 flex flex-col items-center lg:items-start">
               <img 
@@ -26,8 +26,8 @@ const StorySection = () => {
           </div>
         </div>
 
-        {/* Main content card - covers almost entire section */}
-        <div className="absolute inset-4 bg-hero-text rounded-[25px] md:rounded-[50px] shadow-sm p-6 md:p-12 lg:p-16 flex flex-col justify-center">
+        {/* Main content card - covers section with proper top spacing */}
+        <div className="absolute left-4 right-4 top-[180px] bottom-4 bg-hero-text rounded-[25px] md:rounded-[50px] shadow-sm p-6 md:p-12 lg:p-16 flex flex-col justify-center">
           {/* Title */}
           <div className="w-full mb-6 md:mb-8">
             <h3 className="text-hero-bg text-lg sm:text-xl md:text-2xl lg:text-[32px] font-extrabold leading-tight md:leading-[40px] text-center">
