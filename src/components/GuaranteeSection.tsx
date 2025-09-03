@@ -1,0 +1,62 @@
+import { Separator } from "@/components/ui/separator";
+
+const GuaranteeSection = () => {
+  return (
+    <>
+      <Separator className="bg-white h-[2px]" />
+      <section className="relative bg-hero-primary font-geist">
+        <div className="max-w-[1392px] mx-auto px-4 md:px-6 lg:px-[450px] py-40">
+          <div className="w-full max-w-[492px] mx-auto flex flex-col justify-center items-center gap-5">
+            {/* Guarantee Icon */}
+            <div className="w-[168px] h-[169px] flex flex-col justify-center items-center">
+              <div className="relative w-[168px] h-[169px]">
+                {/* Main circle */}
+                <div className="absolute w-[168px] h-[168px] left-0 top-0.5 rounded-full border-[3.28px] border-white/20"></div>
+                {/* Inner circle */}
+                <div className="absolute w-[68.5px] h-[68.5px] left-[49.75px] top-[50px] rounded-full border-[3.28px] border-white"></div>
+                {/* Check mark */}
+                <div className="absolute left-[73.76px] top-[77.43px]">
+                  <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 7L8 12L19 2" stroke="white" strokeWidth="3.28" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Title */}
+            <div className="flex flex-col justify-start items-start">
+              <div className="relative h-[115px]">
+                <div className="absolute w-[265px] h-[58px] left-[119px] top-0 text-center">
+                  <h2 className="text-white text-[48px] font-semibold leading-[57.6px]">
+                    Garantia de
+                  </h2>
+                </div>
+                <div className="absolute w-[239px] h-[58px] left-[127px] top-[57px] text-center">
+                  <h2 className="text-white text-[48px] font-semibold leading-[57.6px]">
+                    Satisfação
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="max-w-[367px] flex flex-col justify-start items-start">
+              <div className="px-[1.28px] flex flex-col justify-start items-end">
+                <div className="text-center text-white/80 text-lg font-normal leading-[27px]">
+                  Se ainda no primeiro dia do workshop, você<br />
+                  sentir que não é o que você procurava ou
+                </div>
+                <div className="text-center text-white/80 text-lg font-normal leading-[27px]">
+                  esperava, devolvemos 100% do seu dinheiro.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Separator className="bg-white h-[2px]" />
+    </>
+  );
+};
+
+export default GuaranteeSection;
