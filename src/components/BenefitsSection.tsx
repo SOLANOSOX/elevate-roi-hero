@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 const BenefitsSection = () => {
   return (
-    <section className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway rounded-t-[100px]">
+    <>
+      <Separator className="bg-white h-[2px]" />
+      <section className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway rounded-t-[100px]">
       <div className="max-w-[1060px] mx-auto h-[864px] relative">
         
         {/* Left side card - "Você está cansado de..." */}
@@ -121,6 +124,8 @@ const BenefitsSection = () => {
 
       </div>
     </section>
+    <Separator className="bg-white h-[2px]" />
+    </>
   );
 };
 
