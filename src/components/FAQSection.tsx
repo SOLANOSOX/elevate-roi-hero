@@ -40,7 +40,7 @@ const FAQSection = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
-                    Absolutamente! Na verdade, as estratégias funcionam ainda melhor em imobiliárias menores, pois você tem mais agilidade para implementar as mudanças. Já ajudamos imobiliárias com apenas 1 corretor a multiplicar seus resultados.
+                    O método foi criado especificamente para imobiliárias a partir de 3 corretores. Quanto menor, mais rápido você vê resultados.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -56,7 +56,7 @@ const FAQSection = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
-                    Não! O método foi desenvolvido para ser aplicado por qualquer pessoa, independente do conhecimento técnico. Tudo é explicado de forma simples e prática, com exemplos reais.
+                    Zero conhecimento técnico necessário. Tudo é explicado passo a passo, como se você fosse iniciante.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -72,7 +72,7 @@ const FAQSection = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
-                    Sim! Temos casos documentados de imobiliárias que cresceram mais de 600% em 12 meses. O crescimento depende da sua dedicação em aplicar as estratégias ensinadas no workshop.
+                    Mostramos o case completo com dados reais e prints de tela. Além disso, você tem 7 dias de garantia total.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -88,7 +88,7 @@ const FAQSection = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
-                    Não se preocupe! Todas as aulas ficam gravadas e disponíveis por 1 ano completo. Você pode assistir quantas vezes quiser, no seu ritmo e horário.
+                    Todas as aulas ficam gravadas e disponíveis por 30 dias após o evento.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -104,7 +104,7 @@ const FAQSection = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
-                    Sim! As estratégias foram testadas em cidades pequenas, médias e grandes em todo o Brasil. O método se adapta a qualquer mercado e localização.
+                    Sim! O método já foi testado em cidades de 10 mil a 2 milhões de habitantes com sucesso.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
