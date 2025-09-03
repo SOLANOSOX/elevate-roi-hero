@@ -1,17 +1,14 @@
-import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 
 const FAQSection = () => {
   return (
-    <>
-      <Separator className="bg-white h-[2px]" />
-      <section 
-        className="relative bg-hero-primary font-raleway min-h-[1035px] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('https://placehold.co/1897x1133')"
-        }}
-      >
+    <section 
+      className="relative bg-hero-bg font-raleway min-h-[1035px] bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('https://placehold.co/1897x1133')"
+      }}
+    >
         <div className="max-w-[1897px] mx-auto px-4 md:px-6 lg:px-[418px]">
           <div className="max-w-[1060px] mx-auto pt-[74px] pb-[339px] flex flex-col justify-start items-center gap-[60px]">
             
@@ -124,8 +121,6 @@ const FAQSection = () => {
           </div>
         </div>
       </section>
-      <Separator className="bg-white h-[2px]" />
-    </>
   );
 };
 
