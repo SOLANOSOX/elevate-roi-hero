@@ -1,6 +1,6 @@
 const StorySection = () => {
   return (
-    <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway">
+    <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway mb-0">
       <div className="max-w-[1060px] mx-auto h-[750px] flex flex-col items-center gap-6 md:gap-[15px]">
         {/* Header with logo and title - proper spacing to avoid overlap */}
         <div className="w-full flex flex-col items-center">
@@ -23,7 +23,7 @@ const StorySection = () => {
         </div>
 
         {/* Main content card - fully responsive */}
-        <div className="w-full max-w-[687px] mx-auto bg-hero-text rounded-[25px] md:rounded-[50px] shadow-sm p-6 md:p-12 lg:p-16">
+        <div className="w-full max-w-[1060px] mx-auto bg-hero-text rounded-[25px] md:rounded-[50px] shadow-sm p-6 md:p-12 lg:p-16">
           {/* Title */}
           <div className="w-full mb-6 md:mb-8">
             <h3 className="text-hero-bg text-lg sm:text-xl md:text-2xl lg:text-[32px] font-extrabold leading-tight md:leading-[40px] text-center">
