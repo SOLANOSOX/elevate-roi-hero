@@ -1,23 +1,21 @@
-import companyLogo from "@/assets/company-logo.png";
-
 const StorySection = () => {
   return (
     <section className="bg-hero-bg py-20 px-6 md:px-[418px] font-raleway">
       <div className="max-w-[1060px] mx-auto flex flex-col items-end gap-[15px]">
-        {/* Header with logo and title */}
+        {/* Header with logo and title - responsive layout */}
         <div className="w-full flex flex-col items-start">
-          <div className="w-full flex justify-center items-center">
-            <div className="flex-1 flex flex-col items-start">
+          <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-0">
+            <div className="flex-1 flex flex-col items-center lg:items-start">
               <img 
-                src={companyLogo} 
+                src="/lovable-uploads/f17cd4d8-1d68-4eb2-b47d-9272481f8f90.png" 
                 alt="Company Logo" 
                 className="w-[520px] h-[44px] max-w-full object-contain"
               />
             </div>
-            <div className="flex-1 pt-2 flex flex-col items-start">
+            <div className="flex-1 pt-0 lg:pt-2 flex flex-col items-start">
               <div className="w-full flex flex-col items-center">
                 <div className="w-full text-center">
-                  <h2 className="text-hero-text text-[10px] font-bold uppercase leading-[3px] tracking-[20px]">
+                  <h2 className="text-hero-text text-[8px] sm:text-[10px] font-bold uppercase leading-[3px] tracking-[15px] sm:tracking-[20px]">
                     A VIRADA DE CHAVE
                   </h2>
                 </div>
