@@ -8,33 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 30% 8%;
+    --foreground: 40 80% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 30% 10%;
+    --card-foreground: 40 80% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 30% 10%;
+    --popover-foreground: 40 80% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 43 55% 56%;
+    --primary-foreground: 210 30% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 43 47% 35%;
+    --secondary-foreground: 40 80% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 15%;
+    --muted-foreground: 40 30% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 43 55% 56%;
+    --accent-foreground: 210 30% 8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 80% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 43 55% 56%;
+
+    --radius: 0.5rem;
+    
+    /* Hero specific colors */
+    --hero-bg: 210 30% 8%;
+    --hero-text: 40 80% 95%;
+    --hero-accent: 43 55% 56%;
+    --hero-accent-dark: 43 47% 35%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(284deg, hsl(var(--primary)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-hero-button: linear-gradient(284deg, hsl(43 55% 56%) 50%, hsl(43 47% 35%) 100%);
+    
+    /* Shadows */
+    --shadow-hero-button: 0px -4px 56px rgba(201, 164, 86, 0.60);
+    --shadow-button-inner: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 

@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				raleway: ['Raleway', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +54,12 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				hero: {
+					bg: 'hsl(var(--hero-bg))',
+					text: 'hsl(var(--hero-text))',
+					accent: 'hsl(var(--hero-accent))',
+					'accent-dark': 'hsl(var(--hero-accent-dark))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
