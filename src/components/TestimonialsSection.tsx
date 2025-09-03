@@ -4,10 +4,14 @@ import { Button } from "@/components/ui/button";
 
 const TestimonialsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 6; // Number of slides/images
+  const totalSlides = 6; // Number of slides available
+  const itemsToShow = 3; // Number of items to show at once
+  const maxSlides = totalSlides - itemsToShow + 1; // Maximum slides we can navigate to
 
   const nextSlide = (slideIndex: number) => {
-    setCurrentSlide(slideIndex);
+    if (slideIndex < maxSlides) {
+      setCurrentSlide(slideIndex);
+    }
   };
 
   return (
@@ -70,7 +74,7 @@ const TestimonialsSection = () => {
             
             {/* Carousel Indicators - Interactive */}
             <div className="absolute left-1/2 transform -translate-x-1/2 top-[800px] flex items-start gap-3 py-2 px-4">
-              {Array.from({ length: totalSlides }).map((_, index) => (
+              {Array.from({ length: maxSlides }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => nextSlide(index)}
@@ -86,7 +90,7 @@ const TestimonialsSection = () => {
           {/* CTA Button - Updated to match other buttons */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-[1365.09px] w-[360px]">
             <Button variant="hero" size="hero" className="w-full">
-              Quero Ver Mais Cases
+              Quer ser um case
             </Button>
           </div>
         </div>
