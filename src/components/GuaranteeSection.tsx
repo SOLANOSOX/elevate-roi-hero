@@ -24,31 +24,21 @@ const GuaranteeSection = () => {
             </div>
 
             {/* Title */}
-            <div className="flex flex-col justify-start items-start">
-              <div className="relative h-[115px]">
-                <div className="absolute w-[265px] h-[58px] left-[119px] top-0 text-center">
-                  <h2 className="text-white text-[48px] font-semibold leading-[57.6px]">
-                    Garantia de
-                  </h2>
-                </div>
-                <div className="absolute w-[239px] h-[58px] left-[127px] top-[57px] text-center">
-                  <h2 className="text-white text-[48px] font-semibold leading-[57.6px]">
-                    Satisfação
-                  </h2>
-                </div>
-              </div>
+            <div className="flex flex-col justify-center items-center text-center">
+              <h2 className="text-white text-[48px] font-semibold leading-[57.6px]">
+                Garantia de
+              </h2>
+              <h2 className="text-white text-[48px] font-semibold leading-[57.6px]">
+                Satisfação
+              </h2>
             </div>
 
             {/* Description */}
-            <div className="max-w-[367px] flex flex-col justify-start items-start">
-              <div className="px-[1.28px] flex flex-col justify-start items-end">
-                <div className="text-center text-white/80 text-lg font-normal leading-[27px]">
-                  Se ainda no primeiro dia do workshop, você<br />
-                  sentir que não é o que você procurava ou
-                </div>
-                <div className="text-center text-white/80 text-lg font-normal leading-[27px]">
-                  esperava, devolvemos 100% do seu dinheiro.
-                </div>
+            <div className="max-w-[367px] flex flex-col justify-center items-center text-center">
+              <div className="text-center text-white/80 text-lg font-normal leading-[27px]">
+                Se ainda no primeiro dia do workshop, você<br />
+                sentir que não é o que você procurava ou<br />
+                esperava, devolvemos 100% do seu dinheiro.
               </div>
             </div>
           </div>
