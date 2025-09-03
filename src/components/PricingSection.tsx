@@ -1,17 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-
 const PricingSection = () => {
-  return (
-    <>
+  return <>
       <Separator className="bg-white h-[2px]" />
       <section className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway">
         <div className="max-w-[1060px] mx-auto py-20">
           {/* Main Title */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-4">
-              💰 VALOR TOTAL DO CONTEÚDO
-            </h2>
+            <h2 className="text-4xl font-extrabold text-black mb-4 md:text-4xl">💰 O Valor Real do Workshop LEGADO Imobiliário</h2>
           </div>
 
           {/* Value Breakdown */}
@@ -116,8 +112,6 @@ const PricingSection = () => {
         </div>
       </section>
       <Separator className="bg-white h-[2px]" />
-    </>
-  );
+    </>;
 };
-
 export default PricingSection;
