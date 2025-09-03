@@ -1,6 +1,15 @@
+import { useState } from "react";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 
 const TestimonialsSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 6; // Number of slides/images
+
+  const nextSlide = (slideIndex: number) => {
+    setCurrentSlide(slideIndex);
+  };
+
   return (
     <>
       <Separator className="bg-white" />
@@ -35,11 +44,14 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* Carousel Section */}
-          <div className="absolute left-0 top-[480.78px] w-full overflow-hidden">
+          {/* Carousel Section - Moved down */}
+          <div className="absolute left-0 top-[580px] w-full overflow-hidden">
             <div className="flex flex-col items-center">
               <div className="flex flex-col items-start pb-5">
-                <div className="flex items-start">
+                <div 
+                  className="flex items-start transition-transform duration-300 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 380}px)` }}
+                >
                   {/* Repeat the same image 8 times as requested */}
                   {Array.from({ length: 8 }).map((_, index) => (
                     <div key={index} className="w-[360px] flex-shrink-0 pr-5 flex flex-col justify-center items-start">
@@ -47,7 +59,7 @@ const TestimonialsSection = () => {
                         <img 
                           src="/lovable-uploads/6c9fcc59-7910-4026-ae79-29129b30dac0.png" 
                           alt={`Case de sucesso ${index + 1}`}
-                          className="w-full h-[764.31px] max-w-[340px] object-cover" 
+                          className="w-full h-[764.31px] max-w-[340px] object-cover rounded-lg" 
                         />
                       </div>
                     </div>
@@ -56,28 +68,26 @@ const TestimonialsSection = () => {
               </div>
             </div>
             
-            {/* Carousel Indicators */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-[791.31px] flex items-start gap-3 py-2 px-4">
-              <div className="w-[10px] h-[10px] bg-[#F3CE71] rounded-full"></div>
-              <div className="w-[10px] h-[10px] bg-black/46 rounded-full"></div>
-              <div className="w-[10px] h-[10px] bg-black/46 rounded-full"></div>
-              <div className="w-[10px] h-[10px] bg-black/46 rounded-full"></div>
-              <div className="w-[10px] h-[10px] bg-black/46 rounded-full"></div>
-              <div className="w-[10px] h-[10px] bg-black/46 rounded-full"></div>
+            {/* Carousel Indicators - Interactive */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-[800px] flex items-start gap-3 py-2 px-4">
+              {Array.from({ length: totalSlides }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => nextSlide(index)}
+                  className={`w-[12px] h-[12px] rounded-full transition-colors duration-200 hover:scale-110 ${
+                    currentSlide === index ? 'bg-[#F3CE71]' : 'bg-black/46 hover:bg-black/60'
+                  }`}
+                  aria-label={`Ir para slide ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-[1365.09px] w-[360px] bg-gradient-to-r from-[#25D366] to-[#015E53] rounded-[50px] shadow-[0px_-4px_56px_rgba(37,211,102,0.48)]">
-            <div className="py-[18px] px-4 flex justify-center items-start">
-              <div className="flex-1 flex justify-center items-start">
-                <div className="flex flex-col justify-start items-center">
-                  <div className="text-center text-[#000C14] text-base font-bold uppercase leading-4 tracking-[1px] font-['Raleway']">
-                    Quero Ver Mais Cases
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* CTA Button - Updated to match other buttons */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-[1365.09px] w-[360px]">
+            <Button variant="hero" size="hero" className="w-full">
+              Quero Ver Mais Cases
+            </Button>
           </div>
         </div>
       </section>
