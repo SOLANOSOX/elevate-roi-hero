@@ -1,7 +1,7 @@
 const StorySection = () => {
   return (
     <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway">
-      <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-6 md:gap-[15px]">
+      <div className="max-w-[1060px] mx-auto h-[750px] flex flex-col items-center gap-6 md:gap-[15px]">
         {/* Header with logo and title - proper spacing to avoid overlap */}
         <div className="w-full flex flex-col items-center">
           <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-8">

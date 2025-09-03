@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 const HeroSection = () => {
   return (
     <section className="bg-hero-bg py-8 md:py-[60px] pb-4 px-6 md:px-[418px] font-raleway">
-      <div className="max-w-[1060px] mx-auto flex flex-col items-start gap-5">
+      <div className="max-w-[1060px] mx-auto h-[718px] flex flex-col items-start gap-5">
         {/* Logo */}
         <div className="w-[546px] max-w-full">
           <div className="flex flex-col gap-7">

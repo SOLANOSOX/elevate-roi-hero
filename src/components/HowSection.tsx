@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const HowSection = () => {
   return (
     <section className="bg-hero-bg py-12 px-4 md:px-6 lg:px-[374px] font-raleway">
-      <div className="max-w-[1150px] mx-auto min-h-[600px] relative">
+      <div className="max-w-[1150px] mx-auto h-[1585px] relative">
         {/* Header with logo and "O QUE ACONTECEU?" */}
         <div className="w-full mb-12">
           <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-8">
