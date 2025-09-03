@@ -1,0 +1,132 @@
+import { Separator } from "@/components/ui/separator";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+
+const FAQSection = () => {
+  return (
+    <>
+      <Separator className="bg-white h-[2px]" />
+      <section 
+        className="relative bg-hero-primary font-raleway min-h-[1035px] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://placehold.co/1897x1133')"
+        }}
+      >
+        <div className="max-w-[1897px] mx-auto px-4 md:px-6 lg:px-[418px]">
+          <div className="max-w-[1060px] mx-auto pt-[74px] pb-[339px] flex flex-col justify-start items-center gap-[60px]">
+            
+            {/* Title Section */}
+            <div className="w-full max-w-[760px] pb-[2px] flex flex-col justify-start items-start">
+              <div className="w-full pb-[0.58px] flex flex-col justify-start items-center">
+                <div className="w-full text-center text-[32px] font-extrabold leading-[38.4px]">
+                  <span className="text-[#F0CB6D]">Ainda não decidiu pelo seu sucesso?</span><br />
+                  <span className="text-white">Veja o que outras pessoas também perguntam…</span>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ Accordion */}
+            <div className="w-full max-w-[1060px]">
+              <Accordion type="single" collapsible className="flex flex-col gap-5">
+                <AccordionItem value="item-1" className="border-none">
+                  <AccordionTrigger className="bg-[#13191D] px-10 py-7 rounded-none hover:no-underline [&>svg]:hidden">
+                    <div className="flex justify-between items-center w-full">
+                      <div className="text-white text-lg font-extrabold leading-[18px]">
+                        "Mas isso funciona para imobiliárias pequenas?"
+                      </div>
+                      <div className="w-4 h-4 bg-gradient-to-b from-[#F0CC6E] to-[#8A753F] relative">
+                        <div className="w-[5.85px] h-[2.93px] absolute left-[5.07px] top-[7.02px] bg-[#F0CB6D] border-[1.17px] border-black"></div>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
+                    Absolutamente! Na verdade, as estratégias funcionam ainda melhor em imobiliárias menores, pois você tem mais agilidade para implementar as mudanças. Já ajudamos imobiliárias com apenas 1 corretor a multiplicar seus resultados.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border-none">
+                  <AccordionTrigger className="bg-[#13191D] px-10 py-7 rounded-none hover:no-underline [&>svg]:hidden">
+                    <div className="flex justify-between items-center w-full">
+                      <div className="text-white text-lg font-extrabold leading-[18px]">
+                        "Preciso ter conhecimento técnico?"
+                      </div>
+                      <div className="w-4 h-4 bg-gradient-to-b from-[#F0CC6E] to-[#8A753F] relative">
+                        <div className="w-[5.85px] h-[2.93px] absolute left-[5.07px] top-[7.02px] bg-[#F0CB6D] border-[1.17px] border-black"></div>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
+                    Não! O método foi desenvolvido para ser aplicado por qualquer pessoa, independente do conhecimento técnico. Tudo é explicado de forma simples e prática, com exemplos reais.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border-none">
+                  <AccordionTrigger className="bg-[#13191D] px-10 py-7 rounded-none hover:no-underline [&>svg]:hidden">
+                    <div className="flex justify-between items-center w-full">
+                      <div className="text-white text-lg font-extrabold leading-[18px]">
+                        "600% é realmente possível?"
+                      </div>
+                      <div className="w-4 h-4 bg-gradient-to-b from-[#F0CC6E] to-[#8A753F] relative">
+                        <div className="w-[5.85px] h-[2.93px] absolute left-[5.07px] top-[7.02px] bg-[#F0CB6D] border-[1.17px] border-black"></div>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
+                    Sim! Temos casos documentados de imobiliárias que cresceram mais de 600% em 12 meses. O crescimento depende da sua dedicação em aplicar as estratégias ensinadas no workshop.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border-none">
+                  <AccordionTrigger className="bg-[#13191D] px-10 py-7 rounded-none hover:no-underline [&>svg]:hidden">
+                    <div className="flex justify-between items-center w-full">
+                      <div className="text-white text-lg font-extrabold leading-[18px]">
+                        "E se eu perder alguma aula?"
+                      </div>
+                      <div className="w-4 h-4 bg-gradient-to-b from-[#F0CC6E] to-[#8A753F] relative">
+                        <div className="w-[5.85px] h-[2.93px] absolute left-[5.07px] top-[7.02px] bg-[#F0CB6D] border-[1.17px] border-black"></div>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
+                    Não se preocupe! Todas as aulas ficam gravadas e disponíveis por 1 ano completo. Você pode assistir quantas vezes quiser, no seu ritmo e horário.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border-none">
+                  <AccordionTrigger className="bg-[#13191D] px-10 py-7 rounded-none hover:no-underline [&>svg]:hidden">
+                    <div className="flex justify-between items-center w-full">
+                      <div className="text-white text-lg font-extrabold leading-[18px]">
+                        "Funciona em qualquer cidade?"
+                      </div>
+                      <div className="w-4 h-4 bg-gradient-to-b from-[#F0CC6E] to-[#8A753F] relative">
+                        <div className="w-[5.85px] h-[2.93px] absolute left-[5.07px] top-[7.02px] bg-[#F0CB6D] border-[1.17px] border-black"></div>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="bg-[#13191D] px-10 pb-7 text-white/80 text-base leading-6">
+                    Sim! As estratégias foram testadas em cidades pequenas, médias e grandes em todo o Brasil. O método se adapta a qualquer mercado e localização.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            {/* CTA Button */}
+            <div className="w-[360px] max-w-[1060px]">
+              <Button 
+                className="w-full h-[50px] bg-gradient-to-r from-[#C9A456] to-[#82652F] hover:from-[#B8943F] hover:to-[#71582A] text-[#000C14] font-bold text-base uppercase tracking-[1px] leading-4 rounded-[50px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+                style={{
+                  boxShadow: "0px -4px 56px rgba(201, 164, 86, 0.60)"
+                }}
+              >
+                Destravar acesso por R$47
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Separator className="bg-white h-[2px]" />
+    </>
+  );
+};
+
+export default FAQSection;
