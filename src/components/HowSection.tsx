@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const HowSection = () => {
   return (
-    <section className="bg-black py-12 px-4 md:px-6 lg:px-[374px] font-raleway">
+    <section className="bg-hero-bg py-12 px-4 md:px-6 lg:px-[374px] font-raleway">
       <div className="max-w-[1150px] mx-auto min-h-[600px] relative">
         {/* Header with logo and "O QUE ACONTECEU?" */}
         <div className="w-full mb-12">
@@ -24,14 +24,14 @@ const HowSection = () => {
           </div>
         </div>
 
-        {/* Main content - centered and aligned */}
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-[800px] flex flex-col items-center gap-8">
-            <div className="w-full text-center">
-              <h3 className="text-hero-text text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-tight mb-6">
+        {/* Main content - text aligned to the right */}
+        <div className="w-full flex justify-center lg:justify-end lg:pr-[70px]">
+          <div className="w-full max-w-[424px] flex flex-col items-start gap-5">
+            <div className="w-full text-center lg:text-left">
+              <h3 className="text-hero-text text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-6 lg:leading-[24px] mb-4">
                 Como isso foi possível?
               </h3>
-              <div className="text-hero-text text-sm sm:text-base lg:text-[16px] font-normal leading-relaxed max-w-[600px] mx-auto">
+              <div className="text-hero-text text-sm sm:text-base lg:text-[16px] font-normal leading-6 lg:leading-[24px]">
                 <p className="mb-4">
                   Não foi sorte.<br />
                   Não foi mercado aquecido.<br />
