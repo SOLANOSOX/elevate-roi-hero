@@ -6,7 +6,7 @@ const BenefitsSection = () => {
       <div className="max-w-[1060px] mx-auto h-[864px] relative">
         
         {/* Left side card - "Você está cansado de..." */}
-        <div className="absolute left-[180px] top-[-120px] w-[700px] h-[687px] bg-hero-text rounded-[50px] shadow-sm">
+        <div className="absolute left-[180px] top-[-570px] w-[700px] h-[687px] bg-hero-text rounded-[50px]" style={{ boxShadow: '0px 1.55px 3.07px rgba(0, 0, 0, 0.02)' }}>
           <div className="absolute left-[80px] top-[-54px] w-[520px] flex flex-col gap-7">
             <img 
               src="/lovable-uploads/f9ba186f-ea08-491d-b8cc-0e8a8c9a51dd.png" 
