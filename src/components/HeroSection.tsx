@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
     <>
-      <Separator className="bg-white h-[2px]" />
       <section className="bg-hero-bg py-8 md:py-[60px] pb-4 px-6 md:px-[418px] font-raleway">
       <div className="max-w-[1060px] mx-auto h-[718px] flex flex-col items-start gap-5">
         {/* Logo */}
@@ -56,7 +54,6 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-    <Separator className="bg-white h-[2px]" />
     </>
   );
 };

@@ -1,9 +1,9 @@
-import { Separator } from "@/components/ui/separator";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
   return (
     <>
-      <Separator className="bg-white h-[2px]" />
       <section 
         className="relative px-4 md:px-6 lg:px-[418px] font-raleway min-h-[878px] bg-cover bg-center bg-no-repeat"
         style={{
@@ -52,7 +52,6 @@ const AboutSection = () => {
           </div>
         </div>
       </section>
-      <Separator className="bg-white h-[2px]" />
     </>
   );
 };

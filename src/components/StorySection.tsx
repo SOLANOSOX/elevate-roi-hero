@@ -1,9 +1,6 @@
-import { Separator } from "@/components/ui/separator";
-
 const StorySection = () => {
   return (
     <>
-      <Separator className="bg-white h-[2px]" />
       <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway mb-0">
       <div className="max-w-[1060px] mx-auto min-h-[750px] flex flex-col items-center relative py-6">
         {/* Header with logo and title - proper spacing to avoid overlap */}
@@ -52,7 +49,6 @@ const StorySection = () => {
         </div>
       </div>
     </section>
-    <Separator className="bg-white h-[2px]" />
     </>
   );
 };

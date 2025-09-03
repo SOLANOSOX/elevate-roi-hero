@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 const PricingSection = () => {
   return <>
-      <Separator className="bg-white h-[2px]" />
       <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway">
         <div className="max-w-[1060px] mx-auto py-20">
           {/* Main Title */}
@@ -111,7 +109,6 @@ const PricingSection = () => {
           </div>
         </div>
       </section>
-      <Separator className="bg-white h-[2px]" />
     </>;
 };
 export default PricingSection;

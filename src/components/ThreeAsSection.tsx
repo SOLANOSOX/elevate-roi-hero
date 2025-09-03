@@ -1,9 +1,6 @@
-import { Separator } from "@/components/ui/separator";
-
 const ThreeAsSection = () => {
   return (
     <>
-      <Separator className="bg-white h-[2px]" />
       <section className="bg-hero-bg min-h-[2000px] w-full pt-40 px-4 md:px-6 lg:px-20 flex flex-col justify-start items-center gap-[90px] font-geist mx-auto">
         {/* Title */}
         <div className="w-[615px] h-[229px] max-w-[615px] flex flex-col justify-center items-center gap-5">
@@ -161,7 +158,6 @@ const ThreeAsSection = () => {
           </div>
         </div>
       </section>
-      <Separator className="bg-white h-[2px]" />
     </>
   );
 };

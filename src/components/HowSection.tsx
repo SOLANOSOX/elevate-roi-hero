@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 const HowSection = () => {
   return <>
-      <Separator className="bg-white h-[2px]" />
       <section className="bg-hero-bg py-12 px-4 md:px-6 lg:px-[374px] font-raleway">
       <div className="max-w-[1150px] mx-auto h-[1585px] relative">
         {/* Header with logo and "O QUE ACONTECEU?" */}
@@ -54,7 +52,6 @@ const HowSection = () => {
         </div>
       </div>
     </section>
-    <Separator className="bg-white h-[2px]" />
     </>;
 };
 export default HowSection;

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
 const TestimonialsSection = () => {
@@ -16,7 +15,6 @@ const TestimonialsSection = () => {
 
   return (
     <>
-      <Separator className="bg-white" />
       <section className="w-full bg-[#FDF8ED] rounded-t-[100px]">
         <div className="w-full max-w-[1060px] mx-auto px-4 relative" style={{ height: '1479.09px' }}>
           {/* Header Content */}
@@ -95,7 +93,6 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </section>
-      <Separator className="bg-white" />
     </>
   );
 };

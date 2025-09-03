@@ -1,9 +1,6 @@
-import { Separator } from "@/components/ui/separator";
-
 const ScheduleSection = () => {
   return (
     <>
-      <Separator className="bg-white h-[2px]" />
       <section className="bg-hero-bg w-full max-w-[1392px] min-w-[1392px] pt-[50px] pb-[100px] px-12 flex flex-col justify-center items-center gap-16 font-geist mx-auto">
         {/* Top divider line */}
         <div className="w-[1186px] h-[3px] flex flex-col justify-center items-start">
@@ -130,7 +127,6 @@ const ScheduleSection = () => {
           </div>
         </div>
       </section>
-      <Separator className="bg-white h-[2px]" />
     </>
   );
 };
