@@ -6,23 +6,23 @@ const BenefitsSection = () => {
       <div className="max-w-[1060px] mx-auto h-[864px] relative">
         
         {/* Left side card - "Você está cansado de..." */}
-        <div className="absolute left-[80px] top-[-120px] w-[700px] h-[687px] bg-hero-text rounded-[50px] shadow-sm">
+        <div className="absolute left-[180px] top-[-120px] w-[700px] h-[687px] bg-hero-text rounded-[50px] shadow-sm">
           <div className="absolute left-[80px] top-[-54px] w-[520px] flex flex-col gap-7">
             <img 
-              src="https://placehold.co/110x110" 
-              alt="Icon" 
+              src="/lovable-uploads/f9ba186f-ea08-491d-b8cc-0e8a8c9a51dd.png" 
+              alt="Benefits Icon" 
               className="w-[110px] h-[110px]"
             />
             
             <div className="flex flex-col gap-4">
               <h2 className="text-[32px] font-extrabold leading-[38px]">
                 <span className="text-accent">❌ </span>
-                <span className="text-secondary-foreground">Você está </span>
+                <span className="text-black">Você está </span>
                 <span className="text-accent">cansado</span>
-                <span className="text-secondary-foreground"> de...</span>
+                <span className="text-black"> de...</span>
               </h2>
               
-              <div className="text-secondary-foreground text-[16px] leading-5 space-y-3">
+              <div className="text-black text-[16px] leading-5 space-y-3">
                 <p>
                   <span className="font-bold">Mês após mês </span>
                   <span className="font-medium">vendo o mesmo faturamento baixo, enquanto vê concorrentes menores disparando na frente?</span>
@@ -46,7 +46,7 @@ const BenefitsSection = () => {
               </div>
               
               <div className="text-center mt-4">
-                <p className="text-secondary-foreground text-[16px] leading-5">
+                <p className="text-black text-[16px] leading-5">
                   <span className="font-bold">E não quer chegar ao final de 2025 </span>
                   <span className="font-medium">com as mesmas frustrações de 2024?</span>
                 </p>
@@ -64,7 +64,7 @@ const BenefitsSection = () => {
 
         {/* Right side content - "Você QUER finalmente..." */}
         <div className="absolute left-[149px] top-[229px] w-[762px]">
-          <h2 className="text-secondary-foreground text-[32px] font-extrabold leading-[38px] text-center mb-[122px]">
+          <h2 className="text-black text-[32px] font-extrabold leading-[38px] text-center mb-[122px]">
             ✅ Você QUER finalmente...
           </h2>
           
