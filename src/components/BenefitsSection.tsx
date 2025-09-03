@@ -71,7 +71,7 @@ const BenefitsSection = () => {
           <div className="absolute left-[-51px] top-[122px] flex flex-col gap-5">
             {/* Benefit items */}
             <div className="w-[864px] h-[52px] bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-[30px]">
-              <img src="/src/assets/red-circle-icon.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
+              <img src="/lovable-uploads/38101c22-9b26-419a-be30-66d520496d39.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
               <div className="text-hero-text text-[20px] leading-6 text-center flex-1">
                 <span className="font-extrabold">Multiplicar seu faturamento</span>
                 <span className="font-normal"> de forma consistente e previsível</span>
@@ -79,7 +79,7 @@ const BenefitsSection = () => {
             </div>
             
             <div className="w-[864px] h-[52px] bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-[30px]">
-              <img src="/src/assets/red-circle-icon.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
+              <img src="/lovable-uploads/38101c22-9b26-419a-be30-66d520496d39.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
               <div className="text-hero-text text-[20px] leading-6 text-center flex-1">
                 <span className="font-extrabold">Ter uma equipe engajada</span>
                 <span className="font-normal"> que vende muito mais sem pressão</span>
@@ -87,7 +87,7 @@ const BenefitsSection = () => {
             </div>
             
             <div className="w-[864px] h-[52px] bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-[30px]">
-              <img src="/src/assets/red-circle-icon.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
+              <img src="/lovable-uploads/38101c22-9b26-419a-be30-66d520496d39.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
               <div className="text-hero-text text-[20px] leading-6 text-center flex-1">
                 <span className="font-extrabold">Dominar sua região</span>
                 <span className="font-normal"> sendo a imobiliária referência</span>
@@ -95,7 +95,7 @@ const BenefitsSection = () => {
             </div>
             
             <div className="w-[864px] h-[52px] bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-[30px]">
-              <img src="/src/assets/red-circle-icon.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
+              <img src="/lovable-uploads/38101c22-9b26-419a-be30-66d520496d39.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
               <div className="text-hero-text text-[20px] leading-6 text-center flex-1">
                 <span className="font-extrabold">Trabalhar menos</span>
                 <span className="font-normal"> e ganhar muito mais</span>
@@ -103,7 +103,7 @@ const BenefitsSection = () => {
             </div>
             
             <div className="w-[864px] h-[52px] bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-[30px]">
-              <img src="/src/assets/red-circle-icon.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
+              <img src="/lovable-uploads/38101c22-9b26-419a-be30-66d520496d39.png" alt="Check icon" className="w-[31px] h-[30px] mr-4 flex-shrink-0" />
               <div className="text-hero-text text-[20px] leading-6 text-center flex-1">
                 <span className="font-extrabold">FECHAR 2025</span>
                 <span className="font-normal"> como o melhor ano da sua carreira</span>
@@ -113,7 +113,7 @@ const BenefitsSection = () => {
         </div>
 
         {/* Bottom CTA Button */}
-        <div className="absolute left-[350px] top-[729px] w-[360px]">
+        <div className="absolute left-[350px] top-[780px] w-[360px]">
           <Button variant="hero" size="hero" className="w-full">
             Liberar Acesso
           </Button>
