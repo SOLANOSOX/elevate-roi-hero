@@ -46,24 +46,6 @@ const StorySection = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom section with same image and "O QUE ACONTECEU?" - proper spacing to avoid overlap */}
-        <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-8 mt-6 md:mt-8">
-          <div className="flex-1 flex flex-col items-center lg:items-start">
-            <img 
-              src="/lovable-uploads/f17cd4d8-1d68-4eb2-b47d-9272481f8f90.png" 
-              alt="Company Logo" 
-              className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] h-auto object-contain"
-            />
-          </div>
-          <div className="flex-1 flex flex-col items-center lg:items-start lg:pl-6">
-            <div className="w-full text-center lg:text-left">
-              <h2 className="text-hero-text text-[10px] sm:text-[12px] lg:text-[10px] xl:text-[12px] font-bold uppercase leading-relaxed tracking-[6px] sm:tracking-[10px] lg:tracking-[20px]">
-                O QUE ACONTECEU?
-              </h2>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
