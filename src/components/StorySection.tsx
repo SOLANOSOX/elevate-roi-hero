@@ -2,20 +2,24 @@ const StorySection = () => {
   return (
     <section className="bg-hero-bg py-10 md:py-20 px-4 md:px-6 lg:px-[418px] font-raleway">
       <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-6 md:gap-[15px]">
-        {/* Header with logo and title - mobile first responsive */}
+        {/* Header with logo and title - side by side on desktop, stacked on mobile */}
         <div className="w-full flex flex-col items-center">
-          <div className="w-full flex flex-col items-center gap-4 md:gap-6">
-            <div className="w-full flex justify-center">
+          <div className="w-full flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
+            <div className="flex-1 flex flex-col items-center md:items-start">
               <img 
                 src="/lovable-uploads/f17cd4d8-1d68-4eb2-b47d-9272481f8f90.png" 
                 alt="Company Logo" 
                 className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[520px] h-auto object-contain"
               />
             </div>
-            <div className="w-full text-center">
-              <h2 className="text-hero-text text-[8px] sm:text-[10px] md:text-[12px] font-bold uppercase leading-tight tracking-[4px] sm:tracking-[8px] md:tracking-[20px]">
-                A VIRADA DE CHAVE
-              </h2>
+            <div className="flex-1 pt-0 md:pt-2 flex flex-col items-start">
+              <div className="w-full flex flex-col items-center">
+                <div className="w-full text-center">
+                  <h2 className="text-hero-text text-[8px] sm:text-[10px] md:text-[10px] lg:text-[12px] font-bold uppercase leading-tight md:leading-[3px] tracking-[4px] sm:tracking-[8px] md:tracking-[15px] lg:tracking-[20px]">
+                    A VIRADA DE CHAVE
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -45,19 +49,23 @@ const StorySection = () => {
           </div>
         </div>
 
-        {/* Bottom section with same image and "O QUE ACONTECEU?" */}
-        <div className="w-full flex flex-col items-center gap-4 md:gap-6 mt-6 md:mt-8">
-          <div className="w-full flex justify-center">
+        {/* Bottom section with same image and "O QUE ACONTECEU?" - side by side on desktop, stacked on mobile */}
+        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0 mt-6 md:mt-8">
+          <div className="flex-1 flex flex-col items-center md:items-start">
             <img 
               src="/lovable-uploads/f17cd4d8-1d68-4eb2-b47d-9272481f8f90.png" 
               alt="Company Logo" 
               className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[520px] h-auto object-contain"
             />
           </div>
-          <div className="w-full text-center">
-            <h2 className="text-hero-text text-[8px] sm:text-[10px] md:text-[12px] font-bold uppercase leading-tight tracking-[4px] sm:tracking-[8px] md:tracking-[20px]">
-              O QUE ACONTECEU?
-            </h2>
+          <div className="flex-1 pt-0 md:pt-2 flex flex-col items-start">
+            <div className="w-full flex flex-col items-center">
+              <div className="w-full text-center">
+                <h2 className="text-hero-text text-[8px] sm:text-[10px] md:text-[10px] lg:text-[12px] font-bold uppercase leading-tight md:leading-[3px] tracking-[4px] sm:tracking-[8px] md:tracking-[15px] lg:tracking-[20px]">
+                  O QUE ACONTECEU?
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
