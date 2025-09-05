@@ -9,22 +9,15 @@ const HeroSection = () => {
         {/* Logo */}
         <div className="w-full max-w-[546px]">
           <div className="flex flex-col gap-6 md:gap-7">
-            <div className="flex items-center gap-4 md:gap-6">
+            <div className="flex items-center gap-3 md:gap-4">
               <img 
-                src={logo} 
-                alt="Logo" 
-                className="w-[70px] h-[44px] md:w-[90px] md:h-[57px] object-contain"
+                src="/lovable-uploads/72560b92-d983-4b8b-9b48-3b2178120bc6.png" 
+                alt="Legado Imobiliário Logo" 
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] object-contain"
               />
-              <div className="flex items-center gap-3 md:gap-4">
-                <img 
-                  src="/lovable-uploads/72560b92-d983-4b8b-9b48-3b2178120bc6.png" 
-                  alt="Legado Imobiliário Logo" 
-                  className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] object-contain"
-                />
-                <span className="text-hero-text font-bold text-lg md:text-xl lg:text-2xl">
-                  Workshop Legado Imobiliário
-                </span>
-              </div>
+              <span className="text-hero-text font-bold text-lg md:text-xl lg:text-2xl">
+                Workshop Legado Imobiliário
+              </span>
             </div>
             
             {/* Main Content */}
