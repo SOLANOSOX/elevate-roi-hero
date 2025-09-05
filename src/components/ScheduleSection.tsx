@@ -39,7 +39,7 @@ const ScheduleSection = () => {
           {/* Right column - Schedule cards */}
           <div className="flex-1 flex flex-col justify-center items-center gap-4 md:gap-6 lg:gap-8">
             {/* 9h30 - Início */}
-            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
               <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px]">
                 9h30
               </div>
@@ -49,7 +49,7 @@ const ScheduleSection = () => {
             </div>
 
             {/* 12h00 - Almoço */}
-            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
               <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px]">
                 12h00
               </div>
@@ -59,7 +59,7 @@ const ScheduleSection = () => {
             </div>
 
             {/* 13h30 - Retorno */}
-            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
               <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px]">
                 13h30
               </div>
@@ -69,7 +69,7 @@ const ScheduleSection = () => {
             </div>
 
             {/* 20h00 - Encerramento */}
-            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
               <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px]">
                 20h00
               </div>

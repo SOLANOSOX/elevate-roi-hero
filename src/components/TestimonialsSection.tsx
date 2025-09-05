@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
           <div className="w-full flex flex-col items-center mb-8 md:mb-12 lg:mb-16">
             <div className="w-full max-w-[572px] text-center">
               <h2 className="text-[20px] md:text-[28px] lg:text-[32px] font-bold leading-tight md:leading-[38.40px] font-['Raleway'] mb-4 md:mb-6">
-                <span className="text-[#F0CB6D]">Resultados Reais</span>
+                <span className="text-[#B8943F]">Resultados Reais</span>
                 <span className="text-[#010D15]"> de quem aplicou nosso método<br/>e transformou seu negócio imobiliário.</span>
               </h2>
               

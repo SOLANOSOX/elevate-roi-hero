@@ -25,13 +25,13 @@ const HowSection = () => {
             <div className="w-full text-center lg:text-left">
               <h3 className="text-hero-text text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-6 lg:leading-[24px] mb-4">Como isso foi possível?</h3>
               <div className="text-hero-text text-sm sm:text-base lg:text-[16px] font-normal leading-6 lg:leading-[24px]">
-                <p className="mb-4 px-0 py-[50px]">
-                  Não foi sorte.<br />
-                  Não foi mercado aquecido.<br />
-                  Não foi alguma mudança política<br />
-                  Ou bancos com baixas taxas de juros<br />
-                  E muito menos localização privilegiada.
-                </p>
+                <div className="mb-4 px-0 py-[50px] text-left">
+                  <p>• Não foi sorte</p>
+                  <p>• Não foi mercado aquecido</p>
+                  <p>• Não foi alguma mudança política</p>
+                  <p>• Ou bancos com baixas taxas de juros</p>
+                  <p>• E muito menos localização privilegiada</p>
+                </div>
                 <p className="mb-4">
                   Foi a <span className="font-bold">aplicação de um método específico</span> que quebra completamente a forma tradicional de operar uma imobiliária.
                 </p>
