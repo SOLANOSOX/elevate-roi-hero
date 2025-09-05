@@ -8,19 +8,14 @@ const BenefitsSection = () => {
         
         {/* Problem Card - "Você está cansado de..." */}
         <div className="w-full bg-hero-text rounded-[25px] lg:rounded-[50px] shadow-lg p-6 md:p-8 lg:p-12 relative -mt-[70%] z-10">
-          {/* Circle icon positioned according to reference */}
+          {/* Benefits icon positioned at top left */}
           <img 
-            src="/lovable-uploads/65ed6c86-2543-4410-acd4-b9fd408ecb4a.png" 
-            alt="Circle Icon" 
-            className="absolute -top-[54px] left-[80px] w-8 h-8 z-20"
+            src="/lovable-uploads/f9ba186f-ea08-491d-b8cc-0e8a8c9a51dd.png" 
+            alt="Benefits Icon" 
+            className="absolute -top-[27px] left-[40px] w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] z-20"
           />
           
           <div className="flex flex-col items-start gap-6 md:gap-8">
-            <img 
-              src="/lovable-uploads/f9ba186f-ea08-491d-b8cc-0e8a8c9a51dd.png" 
-              alt="Benefits Icon" 
-              className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] mx-auto"
-            />
             
             <div className="flex flex-col gap-4 md:gap-6 text-left w-full">
               <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-extrabold leading-tight text-left">
