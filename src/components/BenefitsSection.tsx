@@ -62,6 +62,39 @@ const BenefitsSection = () => {
           </div>
         </div>
 
+        {/* Method Explanation Section */}
+        <div className="w-full max-w-[800px] mx-auto text-center space-y-6">
+          <div className="space-y-4">
+            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
+              • Não foi sorte
+            </p>
+            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
+              • Não foi mercado aquecido
+            </p>
+            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
+              • Não foi alguma mudança política
+            </p>
+            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
+              • Ou bancos com baixas taxas de juros
+            </p>
+            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
+              • E muito menos localização privilegiada
+            </p>
+          </div>
+          
+          <div className="space-y-4 pt-4">
+            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7 font-medium">
+              Foi a aplicação de um método específico que quebra completamente a forma tradicional de operar uma imobiliária.
+            </p>
+            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7 font-bold">
+              E você pode ter acesso a ele agora!
+            </p>
+            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7 font-medium">
+              Para realmente mudar a rota da sua operação ainda esse ano!
+            </p>
+          </div>
+        </div>
+
         {/* Solutions Section - "Você QUER finalmente..." */}
         <div className="w-full">
           <h2 className="text-black text-[24px] md:text-[28px] lg:text-[32px] font-extrabold leading-tight text-center mb-8 md:mb-12">
