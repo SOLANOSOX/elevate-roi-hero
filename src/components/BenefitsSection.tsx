@@ -7,7 +7,7 @@ const BenefitsSection = () => {
       <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-8 md:gap-12 lg:gap-16 relative">
         
         {/* Problem Card - "Você está cansado de..." */}
-        <div className="w-full bg-hero-text rounded-[25px] lg:rounded-[50px] shadow-lg p-6 md:p-8 lg:p-12 relative -mt-80 md:-mt-96 lg:-mt-[480px] z-10">
+        <div className="w-full bg-hero-text rounded-[25px] lg:rounded-[50px] shadow-lg p-6 md:p-8 lg:p-12 relative -mt-[120%] md:-mt-[130%] lg:-mt-[140%] z-10">
           <div className="flex flex-col items-center gap-6 md:gap-8">
             <img 
               src="/lovable-uploads/f9ba186f-ea08-491d-b8cc-0e8a8c9a51dd.png" 
