@@ -7,7 +7,7 @@ const BenefitsSection = () => {
       <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-8 md:gap-12 lg:gap-16 relative">
         
         {/* Problem Card - "Você está cansado de..." */}
-        <div className="w-full bg-hero-text rounded-[25px] lg:rounded-[50px] shadow-lg p-6 md:p-8 lg:p-12 relative -mt-16 z-10">
+        <div className="w-full bg-hero-text rounded-[25px] lg:rounded-[50px] shadow-lg p-6 md:p-8 lg:p-12 relative -mt-32 md:-mt-40 lg:-mt-48 z-10">
           <div className="flex flex-col items-center gap-6 md:gap-8">
             <img 
               src="/lovable-uploads/f9ba186f-ea08-491d-b8cc-0e8a8c9a51dd.png" 
@@ -65,7 +65,7 @@ const BenefitsSection = () => {
         {/* Solutions Section - "Você QUER finalmente..." */}
         <div className="w-full">
           <h2 className="text-black text-[24px] md:text-[28px] lg:text-[32px] font-extrabold leading-tight text-center mb-8 md:mb-12">
-            ✅ Você QUER finalmente...
+            Você QUER finalmente...
           </h2>
           
           <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">

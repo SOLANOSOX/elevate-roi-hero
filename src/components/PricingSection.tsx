@@ -55,7 +55,7 @@ const PricingSection = () => {
             </div>
             
             <div className="bg-accent rounded-[25px] p-6 mb-6 shadow-sm">
-              <div className="text-5xl md:text-6xl font-black text-accent-foreground mb-2">
+              <div className="text-5xl md:text-6xl font-black text-accent-foreground mb-2 whitespace-nowrap">
                 Apenas R$ 47,00
               </div>
               <div className="text-lg font-bold text-accent-foreground/80">
@@ -96,7 +96,7 @@ const PricingSection = () => {
           {/* Final CTA */}
           <div className="text-center">
             <div className="bg-accent rounded-[25px] p-6 mb-8 shadow-sm">
-              <div className="text-3xl md:text-4xl font-black text-accent-foreground">
+              <div className="text-3xl md:text-4xl font-black text-accent-foreground whitespace-nowrap">
                 VOCÊ LEVA TUDO POR: R$ 47
               </div>
             </div>

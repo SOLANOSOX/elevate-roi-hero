@@ -39,41 +39,41 @@ const ScheduleSection = () => {
           {/* Right column - Schedule cards */}
           <div className="flex-1 flex flex-col justify-center items-center gap-4 md:gap-6 lg:gap-8">
             {/* 9h30 - Início */}
-            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
-              <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px]">
+            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-0">
+              <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px] text-center lg:text-left">
                 9h30
               </div>
-              <div className="text-hero-bg text-[20px] md:text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[40px]">
+              <div className="text-hero-bg text-[20px] md:text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[40px] text-center lg:text-right">
                 Início
               </div>
             </div>
 
             {/* 12h00 - Almoço */}
-            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
-              <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px]">
+            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-0">
+              <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px] text-center lg:text-left">
                 12h00
               </div>
-              <div className="text-hero-bg text-[20px] md:text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[40px]">
+              <div className="text-hero-bg text-[20px] md:text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[40px] text-center lg:text-right">
                 Almoço
               </div>
             </div>
 
             {/* 13h30 - Retorno */}
-            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
-              <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px]">
+            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-0">
+              <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px] text-center lg:text-left">
                 13h30
               </div>
-              <div className="text-hero-bg text-[20px] md:text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[40px]">
+              <div className="text-hero-bg text-[20px] md:text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[40px] text-center lg:text-right">
                 Retorno
               </div>
             </div>
 
             {/* 20h00 - Encerramento */}
-            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
-              <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px]">
+            <div className="w-full px-6 md:px-8 lg:px-[42px] py-4 md:py-5 bg-hero-text rounded-xl lg:rounded-2xl flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-0">
+              <div className="text-hero-bg text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight lg:leading-[52.50px] text-center lg:text-left">
                 20h00
               </div>
-              <div className="text-hero-bg text-[20px] md:text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[40px]">
+              <div className="text-hero-bg text-[20px] md:text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[40px] text-center lg:text-right">
                 Encerramento*
               </div>
             </div>
