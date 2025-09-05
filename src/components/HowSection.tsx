@@ -34,19 +34,19 @@ const HowSection = () => {
             <div className="w-full text-center lg:text-left">
               <h3 className="text-hero-text text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-6 lg:leading-[24px] mb-4">Como isso foi possível?</h3>
               <div className="text-hero-text text-sm sm:text-base lg:text-[16px] font-normal leading-6 lg:leading-[24px]">
-                <div className="mb-4 px-0 py-[50px] text-left">
+                <div className="mb-6 px-0 py-[50px] text-left space-y-3">
                   <p>• Não foi sorte</p>
                   <p>• Não foi mercado aquecido</p>
                   <p>• Não foi alguma mudança política</p>
                   <p>• Ou bancos com baixas taxas de juros</p>
                   <p>• E muito menos localização privilegiada</p>
                 </div>
-                <p className="mb-4">
+                <p className="mb-6">
                   Foi a <span className="font-bold">aplicação de um método específico</span> que quebra completamente a forma tradicional de operar uma imobiliária.
                 </p>
-                <p className="py-[32px]">
-                  <span className="font-bold">E você pode ter acesso a ele agora!</span><br />
-                  Para realmente mudar a rota da sua operação <span className="font-bold">ainda esse ano!</span>
+                <p className="py-[32px] space-y-4">
+                  <span className="font-bold block mb-4">E você pode ter acesso a ele agora!</span>
+                  <span className="block">Para realmente mudar a rota da sua operação <span className="font-bold">ainda esse ano!</span></span>
                 </p>
               </div>
             </div>
