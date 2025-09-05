@@ -8,15 +8,18 @@ const BenefitsSection = () => {
         
         {/* Problem Card - "Você está cansado de..." */}
         <div className="w-full bg-hero-text rounded-[25px] lg:rounded-[50px] shadow-lg p-6 md:p-8 lg:p-12 relative -mt-[70%] z-10">
-          <div className="flex flex-col items-center gap-6 md:gap-8">
+          {/* Red circle positioned at top left */}
+          <div className="absolute -top-4 -left-4 w-8 h-8 bg-red-500 rounded-full border-4 border-white z-20"></div>
+          
+          <div className="flex flex-col items-start gap-6 md:gap-8">
             <img 
               src="/lovable-uploads/f9ba186f-ea08-491d-b8cc-0e8a8c9a51dd.png" 
               alt="Benefits Icon" 
-              className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px]"
+              className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] mx-auto"
             />
             
-            <div className="flex flex-col gap-4 md:gap-6 text-center">
-              <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-extrabold leading-tight">
+            <div className="flex flex-col gap-4 md:gap-6 text-left w-full">
+              <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-extrabold leading-tight text-left">
                 <span className="text-black">Você está </span>
                 <span className="text-accent">cansado</span>
                 <span className="text-black"> de...</span>
@@ -54,7 +57,7 @@ const BenefitsSection = () => {
             </div>
             
             {/* Button inside card */}
-            <div className="w-full max-w-[360px] mx-auto">
+            <div className="w-full max-w-[360px] mx-auto mt-2">
               <Button variant="hero" size="hero" className="w-full">
                 Liberar Acesso
               </Button>
