@@ -8,8 +8,12 @@ const BenefitsSection = () => {
         
         {/* Problem Card - "Você está cansado de..." */}
         <div className="w-full bg-hero-text rounded-[25px] lg:rounded-[50px] shadow-lg p-6 md:p-8 lg:p-12 relative -mt-[70%] z-10">
-          {/* Red circle positioned at top left */}
-          <div className="absolute -top-4 -left-4 w-8 h-8 bg-red-500 rounded-full border-4 border-white z-20"></div>
+          {/* Circle icon positioned at top left */}
+          <img 
+            src="/lovable-uploads/65ed6c86-2543-4410-acd4-b9fd408ecb4a.png" 
+            alt="Circle Icon" 
+            className="absolute -top-4 -left-4 w-8 h-8 z-20"
+          />
           
           <div className="flex flex-col items-start gap-6 md:gap-8">
             <img 
