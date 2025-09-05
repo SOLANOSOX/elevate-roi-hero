@@ -8,14 +8,14 @@ const BenefitsSection = () => {
         
         {/* Problem Card - "Você está cansado de..." */}
         <div className="w-full bg-hero-text rounded-[25px] lg:rounded-[50px] shadow-lg p-6 md:p-8 lg:p-12 relative -mt-[70%] z-10">
-          {/* Benefits icon positioned at top left */}
+          {/* Benefits icon positioned at top left - half outside */}
           <img 
             src="/lovable-uploads/f9ba186f-ea08-491d-b8cc-0e8a8c9a51dd.png" 
             alt="Benefits Icon" 
-            className="absolute -top-[27px] left-[40px] w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] z-20"
+            className="absolute -top-[40px] md:-top-[50px] lg:-top-[55px] left-[40px] w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] z-20"
           />
           
-          <div className="flex flex-col items-start gap-6 md:gap-8">
+          <div className="flex flex-col items-start gap-6 md:gap-8 mt-12 md:mt-16 lg:mt-20">
             
             <div className="flex flex-col gap-4 md:gap-6 text-left w-full">
               <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-extrabold leading-tight text-left">
@@ -61,39 +61,6 @@ const BenefitsSection = () => {
                 Liberar Acesso
               </Button>
             </div>
-          </div>
-        </div>
-
-        {/* Method Explanation Section */}
-        <div className="w-full max-w-[800px] mx-auto text-center space-y-6">
-          <div className="space-y-4">
-            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
-              • Não foi sorte
-            </p>
-            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
-              • Não foi mercado aquecido
-            </p>
-            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
-              • Não foi alguma mudança política
-            </p>
-            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
-              • Ou bancos com baixas taxas de juros
-            </p>
-            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7">
-              • E muito menos localização privilegiada
-            </p>
-          </div>
-          
-          <div className="space-y-4 pt-4">
-            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7 font-medium">
-              Foi a aplicação de um método específico que quebra completamente a forma tradicional de operar uma imobiliária.
-            </p>
-            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7 font-bold">
-              E você pode ter acesso a ele agora!
-            </p>
-            <p className="text-black text-sm md:text-base lg:text-[16px] leading-6 md:leading-7 font-medium">
-              Para realmente mudar a rota da sua operação ainda esse ano!
-            </p>
           </div>
         </div>
 
