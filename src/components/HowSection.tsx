@@ -6,7 +6,7 @@ const HowSection = () => {
         <div 
           className="absolute inset-0 bg-cover bg-left bg-no-repeat opacity-30"
           style={{
-            backgroundImage: "url('/lovable-uploads/b945dc3c-7711-4038-9b5c-8a816618396b.png')"
+            backgroundImage: "url('/lovable-uploads/8b421146-103e-47e7-9b10-66065514b90d.png')"
           }}
         ></div>
         
