@@ -9,7 +9,7 @@ const HeroSection = () => {
         {/* Logo */}
         <div className="w-full max-w-[546px]">
           <div className="flex flex-col gap-6 md:gap-7">
-            <div className="flex items-center gap-3 md:gap-4">
+            <div className="flex items-center gap-3 md:gap-4 -ml-2 md:-ml-4">
               <img 
                 src="/lovable-uploads/72560b92-d983-4b8b-9b48-3b2178120bc6.png" 
                 alt="Legado Imobiliário Logo" 
