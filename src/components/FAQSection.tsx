@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 
 const FAQSection = () => {
   return (
-    <section className="relative bg-hero-bg font-raleway py-12 md:py-16 lg:py-20">
-        <div className="absolute inset-0 bg-hero-bg"></div>
+    <section className="relative bg-[#1A2329] font-raleway py-12 md:py-16 lg:py-20">
+        <div className="absolute inset-0 bg-[#1A2329]"></div>
         <div className="max-w-[1897px] mx-auto px-4 md:px-6 lg:px-[418px]">
           <div className="max-w-[1060px] mx-auto flex flex-col justify-start items-center gap-8 md:gap-12 lg:gap-[60px]">
             
