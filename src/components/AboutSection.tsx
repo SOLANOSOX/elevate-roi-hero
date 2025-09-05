@@ -7,7 +7,7 @@ const AboutSection = () => {
       <section 
         className="relative px-4 md:px-6 lg:px-[418px] font-raleway min-h-[878px] bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/6b916cdc-d8d7-42a2-b8a5-1d3de4ac7c36.png')",
+          backgroundImage: "url('/lovable-uploads/e09262da-c083-4c40-89ff-00ca19c55e8b.png')",
           backgroundColor: "#FDF8ED"
         }}
       >
