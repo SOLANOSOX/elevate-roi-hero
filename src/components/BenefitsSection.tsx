@@ -25,24 +25,24 @@ const BenefitsSection = () => {
                 <span className="text-black"> de...</span>
               </h2>
               
-              <div className="text-black text-sm md:text-base lg:text-[16px] leading-5 md:leading-6 space-y-3 max-w-[600px]">
-                <p>
+              <div className="text-black text-sm md:text-base lg:text-[16px] leading-5 md:leading-6 space-y-3 w-full">
+                <p className="text-left">
                   <span className="text-accent font-bold">❌ Mês após mês </span>
                   <span className="font-medium">vendo o mesmo faturamento baixo, enquanto vê concorrentes menores disparando na frente?</span>
                 </p>
-                <p>
+                <p className="text-left">
                   <span className="text-accent font-bold">❌ Trabalhar 12+ horas por dia </span>
                   <span className="font-medium">mas o dinheiro não acompanha o esforço que você coloca no negócio?</span>
                 </p>
-                <p>
+                <p className="text-left">
                   <span className="text-accent font-bold">❌ Ter uma equipe desmotivada </span>
                   <span className="font-medium">que mal bate as metas básicas, quanto mais sonhar com crescimento?</span>
                 </p>
-                <p>
+                <p className="text-left">
                   <span className="text-accent font-bold">❌ Gastar fortunas em marketing </span>
                   <span className="font-medium">que não traz clientes qualificados nem vendas consistentes?</span>
                 </p>
-                <p>
+                <p className="text-left">
                   <span className="text-accent font-bold">❌ Ver seu negócio estagnado </span>
                   <span className="font-medium">enquanto grandes redes dominam sua região?</span>
                 </p>
