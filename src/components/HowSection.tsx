@@ -4,7 +4,7 @@ const HowSection = () => {
       <section className="relative bg-hero-bg py-12 px-4 md:px-6 lg:px-[374px] font-raleway">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          className="absolute inset-0 bg-cover bg-left bg-no-repeat opacity-30"
           style={{
             backgroundImage: "url('/lovable-uploads/8d1d3134-0fe0-46e8-9af9-a3a276e4e10a.png')"
           }}
