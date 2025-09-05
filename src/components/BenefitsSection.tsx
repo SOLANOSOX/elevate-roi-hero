@@ -3,12 +3,7 @@ import { Button } from "@/components/ui/button";
 const BenefitsSection = () => {
   return (
     <>
-      <section 
-        className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway rounded-t-[50px] lg:rounded-t-[100px] py-12 md:py-16 lg:py-20 relative bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/lovable-uploads/04697302-e5c7-42cb-9273-92e8662f0c40.png')"
-        }}
-      >
+      <section className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway rounded-t-[50px] lg:rounded-t-[100px] py-12 md:py-16 lg:py-20 relative">
       <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-8 md:gap-12 lg:gap-16 relative">
         
         {/* Problem Card - "Você está cansado de..." */}
