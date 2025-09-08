@@ -50,18 +50,27 @@ const TestimonialsSection = () => {
                     width: 'fit-content'
                   }}
                 >
-                  {/* Repeat the same image 8 times as requested */}
-                  {Array.from({ length: 8 }).map((_, index) => (
-                    <div key={index} className="w-[280px] md:w-[340px] lg:w-[360px] flex-shrink-0 flex flex-col justify-center items-start">
-                      <div className="w-full flex flex-col justify-start items-start">
-                        <img 
-                          src="/lovable-uploads/6c9fcc59-7910-4026-ae79-29129b30dac0.png" 
-                          alt={`Case de sucesso ${index + 1}`}
-                          className="w-full h-[400px] md:h-[600px] lg:h-[764.31px] object-cover rounded-lg" 
-                        />
-                      </div>
-                    </div>
-                  ))}
+                  {/* Testimonial images */}
+                  {[
+                    "/lovable-uploads/fa485f0f-b244-4e06-8d00-6cdb0a7c166a.png",
+                    "/lovable-uploads/1342d0dc-ce18-4efd-bcae-520ab6ce304f.png", 
+                    "/lovable-uploads/9621122d-95fe-47eb-9e24-36ac6d9e3e30.png",
+                    "/lovable-uploads/e0602336-cdbb-4b6a-b4ae-3e29baae4e68.png",
+                    "/lovable-uploads/9903cc19-908c-4572-8d21-e6ed3a7b3b07.png",
+                    "/lovable-uploads/fa485f0f-b244-4e06-8d00-6cdb0a7c166a.png",
+                    "/lovable-uploads/1342d0dc-ce18-4efd-bcae-520ab6ce304f.png", 
+                    "/lovable-uploads/9621122d-95fe-47eb-9e24-36ac6d9e3e30.png"
+                   ].map((imageSrc, index) => (
+                     <div key={index} className="w-[280px] md:w-[340px] lg:w-[360px] flex-shrink-0 flex flex-col justify-center items-start">
+                       <div className="w-full flex flex-col justify-start items-start">
+                         <img 
+                           src={imageSrc} 
+                           alt={`Case de sucesso ${index + 1}`}
+                           className="w-full h-[400px] md:h-[600px] lg:h-[764.31px] object-cover rounded-lg" 
+                         />
+                       </div>
+                     </div>
+                   ))}
                 </div>
               </div>
             </div>

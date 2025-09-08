@@ -17,7 +17,7 @@ const ThreeAsSection = () => {
           <div className="w-full lg:w-[318px] h-[300px] lg:h-[469px] relative overflow-hidden rounded-[14px] flex-shrink-0">
             <img 
               className="w-full h-full object-cover rounded-[14px]" 
-              src="/lovable-uploads/3d1eb292-b139-4d08-84a4-04335814cb8a.png" 
+              src="/lovable-uploads/117b7064-bbda-4822-ac7f-dae76bc73752.png" 
               alt="Fundamentos da Venda Imobiliária"
             />
           </div>
@@ -62,7 +62,7 @@ const ThreeAsSection = () => {
           <div className="w-full lg:w-[318px] h-[300px] lg:h-[469px] relative overflow-hidden rounded-[14px] flex-shrink-0">
             <img 
               className="w-full h-full object-cover rounded-[14px]" 
-              src="/lovable-uploads/cbd677f0-aa7f-4982-b8bb-d44b2eae1d62.png" 
+              src="/lovable-uploads/089f8aea-92fc-42e1-aaa8-d5a308c4ce32.png" 
               alt="Implementação da Venda Imobiliária"
             />
           </div>
