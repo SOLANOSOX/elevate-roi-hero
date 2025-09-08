@@ -2,16 +2,16 @@ import { Button } from "@/components/ui/button";
 const HowSection = () => {
   return <>
       <section className="relative bg-hero-bg py-12 px-4 md:px-6 lg:px-[374px] font-raleway">
-        {/* Background Image */}
+        {/* Background Image - hidden on mobile */}
         <div 
-          className="absolute inset-0 bg-cover bg-left bg-no-repeat opacity-30"
+          className="absolute inset-0 bg-cover bg-left bg-no-repeat opacity-30 hidden md:block"
           style={{
             backgroundImage: "url('/lovable-uploads/8b421146-103e-47e7-9b10-66065514b90d.png')"
           }}
         ></div>
         
         {/* Content overlay */}
-        <div className="relative z-10 max-w-[1150px] mx-auto h-[1585px]">
+        <div className="relative z-10 max-w-[1150px] mx-auto min-h-screen">
         {/* Header with logo and "O QUE ACONTECEU?" */}
         <div className="w-full mb-12">
           <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-8">

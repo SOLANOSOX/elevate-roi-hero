@@ -5,13 +5,14 @@ const AboutSection = () => {
   return (
     <>
       <section 
-        className="relative px-4 md:px-6 lg:px-[418px] font-raleway min-h-[878px] bg-cover bg-center bg-no-repeat"
+        className="relative px-4 md:px-6 lg:px-[418px] font-raleway min-h-[400px] md:min-h-[878px] bg-[#FDF8ED] md:bg-cover md:bg-center md:bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/e30bb079-9854-4b2a-a8b0-724320f03eba.png')",
-          backgroundColor: "#FDF8ED"
+          backgroundImage: "url('/lovable-uploads/e30bb079-9854-4b2a-a8b0-724320f03eba.png')"
         }}
       >
-        <div className="max-w-[1060px] mx-auto pt-[83px] pb-[96px] flex justify-end">
+        {/* Hide background on mobile with overlay */}
+        <div className="absolute inset-0 bg-[#FDF8ED] md:hidden"></div>
+        <div className="max-w-[1060px] mx-auto pt-8 md:pt-[83px] pb-8 md:pb-[96px] flex justify-center md:justify-end relative z-10">
           <div className="w-full max-w-[429px] pt-[7px]">
             <div className="flex flex-col gap-5">
               {/* Name Title */}
