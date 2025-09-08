@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
                 <div 
                   className="flex items-start transition-transform duration-300 ease-in-out gap-4 md:gap-5"
                   style={{ 
-                    transform: `translateX(-${currentSlide * (window.innerWidth < 768 ? 100 : 380)}px)`,
+                    transform: `translateX(-${currentSlide * (window.innerWidth < 640 ? window.innerWidth * 0.95 : window.innerWidth < 768 ? 300 : 380)}px)`,
                     width: 'fit-content'
                   }}
                 >
@@ -61,12 +61,12 @@ const TestimonialsSection = () => {
                     "/lovable-uploads/1342d0dc-ce18-4efd-bcae-520ab6ce304f.png", 
                     "/lovable-uploads/9621122d-95fe-47eb-9e24-36ac6d9e3e30.png"
                    ].map((imageSrc, index) => (
-                     <div key={index} className="w-[280px] md:w-[340px] lg:w-[360px] flex-shrink-0 flex flex-col justify-center items-start">
+                     <div key={index} className="w-[90vw] sm:w-[280px] md:w-[340px] lg:w-[360px] flex-shrink-0 flex flex-col justify-center items-start">
                        <div className="w-full flex flex-col justify-start items-start">
                          <img 
                            src={imageSrc} 
                            alt={`Case de sucesso ${index + 1}`}
-                           className="w-full h-[400px] md:h-[600px] lg:h-[764.31px] object-cover rounded-lg" 
+                           className="w-full h-[500px] sm:h-[400px] md:h-[600px] lg:h-[764.31px] object-cover rounded-lg" 
                          />
                        </div>
                      </div>
@@ -81,9 +81,9 @@ const TestimonialsSection = () => {
                 <button
                   key={index}
                   onClick={() => nextSlide(index)}
-                  className={`w-[12px] h-[12px] rounded-full transition-colors duration-200 hover:scale-110 ${
-                    currentSlide === index ? 'bg-[#F3CE71]' : 'bg-black/46 hover:bg-black/60'
-                  }`}
+                   className={`w-[12px] h-[12px] rounded-full transition-colors duration-200 hover:scale-110 ${
+                     currentSlide === index ? 'bg-black' : 'bg-black/70 hover:bg-black/80'
+                   }`}
                   aria-label={`Ir para slide ${index + 1}`}
                 />
               ))}
