@@ -6,14 +6,23 @@ const HeroSection = () => {
     <>
       <section className="relative bg-hero-bg py-8 md:py-12 lg:py-[60px] px-4 md:px-6 lg:px-[418px] font-raleway">
    <div
+
   className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
+
   style={{
+
     backgroundImage:
-      "url(https://i.imgur.com/8x8gK4Q.jpeg)",
+
+      "url(https://imgur.com/HXG9QSN)",
+
     backgroundSize: "cover",
+
     backgroundAttachment: "fixed",
+
     backgroundPosition: "top left"
+
   }}
+
 ></div>
         <div className="relative z-10 max-w-[1060px] mx-auto min-h-[500px] md:min-h-[600px] lg:h-[718px] flex flex-col items-start justify-center gap-6 md:gap-8">
           {/* Logo */}
