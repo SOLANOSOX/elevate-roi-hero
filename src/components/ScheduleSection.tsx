@@ -6,9 +6,9 @@ const ScheduleSection = () => {
         <div className="w-full max-w-[1186px] h-[3px] bg-gradient-to-r from-transparent via-hero-text/20 to-transparent"></div>
 
         {/* Main content */}
-        <div className="w-full max-w-[1296px] flex flex-col lg:flex-row justify-start items-start gap-8 lg:gap-8">
+        <div className="w-full max-w-[1296px] flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start gap-8 lg:gap-8">
           {/* Left column */}
-          <div className="w-full lg:w-[431px] flex flex-col justify-between items-start lg:items-start gap-8">
+          <div className="w-full lg:w-[431px] flex flex-col justify-between items-center lg:items-start gap-8 text-center lg:text-left">
             <div className="flex flex-col justify-start items-center lg:items-start gap-5 text-center lg:text-left">
               <div className="px-4 md:px-5 py-2 md:py-[10px] border border-[#A7BBD2] rounded-[100px] inline-flex">
                 <div className="text-hero-text text-sm md:text-lg font-semibold leading-tight">
@@ -16,7 +16,7 @@ const ScheduleSection = () => {
                 </div>
               </div>
               <div className="w-full">
-                <h2 className="text-hero-text text-[32px] md:text-[40px] lg:text-5xl font-semibold leading-tight lg:leading-[52.32px]">
+                <h2 className="text-center md:text-left text-hero-text text-[32px] md:text-[40px] lg:text-5xl font-semibold leading-tight lg:leading-[52.32px]">
                   Cronograma
                 </h2>
               </div>
@@ -28,9 +28,12 @@ const ScheduleSection = () => {
             </div>
             <div className="w-full max-w-[309px] mx-auto lg:mx-0">
               <p className="text-hero-text/40 text-xs md:text-sm font-normal leading-tight lg:leading-[21px] text-center lg:text-left">
-                *Considere encerrar mais tarde, caso os<br />
-                participantes peçam para nos aprofundarmos<br />
-                em algum ponto. Porém, o conteúdo combinado<br />
+                *Considere encerrar mais tarde, caso os
+                <br />
+                participantes peçam para nos aprofundarmos
+                <br />
+                em algum ponto. Porém, o conteúdo combinado
+                <br />
                 será entregue dentro do horário programado.
               </p>
             </div>
