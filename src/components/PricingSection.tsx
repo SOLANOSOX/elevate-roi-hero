@@ -127,7 +127,7 @@ const PricingSection = () => {
           {/* Final CTA */}
           <div className="text-center">
             <div className="bg-accent rounded-[25px] p-6 mb-8 shadow-sm">
-              <div className="text-3xl md:text-4xl font-black text-accent-foreground whitespace-nowrap">
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-accent-foreground text-center break-words">
                 VOCÊ LEVA TUDO POR: R$ 47
               </div>
             </div>

@@ -1,13 +1,20 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+
+import background from "@/assets/background.jpg";
 
 const AboutSection = () => {
   return (
     <>
-      <section 
+      <section
         className="relative px-4 md:px-6 lg:px-[418px] font-raleway min-h-[400px] md:min-h-[878px] bg-[#FDF8ED] md:bg-cover md:bg-center md:bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/e30bb079-9854-4b2a-a8b0-724320f03eba.png')"
+          backgroundImage: `url(${background})`,
         }}
       >
         {/* Hide background on mobile with overlay */}
@@ -21,31 +28,39 @@ const AboutSection = () => {
                   Adel Gabrielle
                 </h2>
               </div>
-              
+
               {/* Content */}
               <div className="flex flex-col gap-[27px]">
                 <div className="text-[#010D15] text-lg font-medium leading-[27px]">
                   É referência nacional em crescimento de imobiliárias, com:
                 </div>
-                
+
                 <div className="text-[#010D15] text-lg font-medium leading-[27px]">
-                  ✅ 15+ anos de experiência no mercado imobiliário<br />
-                  ✅ 200+ imobiliárias transformadas em todo o Brasil<br />
-                  ✅ R$ 50+ milhões em vendas geradas pelos seus métodos<br />
-                  ✅ Palestrante nos principais eventos do setor<br />
-                  ✅ Consultor de grandes redes imobiliárias
+                  ✅ 15+ anos de experiência no mercado imobiliário
+                  <br />
+                  ✅ 200+ imobiliárias transformadas em todo o Brasil
+                  <br />
+                  ✅ R$ 50+ milhões em vendas geradas pelos seus métodos
+                  <br />
+                  ✅ Palestrante nos principais eventos do setor
+                  <br />✅ Consultor de grandes redes imobiliárias
                 </div>
-                
+
                 <div className="text-[#010D15] text-lg font-medium leading-[27px]">
-                  "Minha missão é provar que qualquer imobiliária pode multiplicar seus resultados,
-                  independente do tamanho ou localização."
+                  "Minha missão é provar que qualquer imobiliária pode
+                  multiplicar seus resultados, independente do tamanho ou
+                  localização."
                 </div>
-                
+
                 <div className="text-[#010D15] text-lg font-bold leading-[27px]">
-                  Sua fama vai além da internet, já participando de<br />
-                  programas de televisão e atuando nos bastidores<br />
-                  como terapeuta de grandes nomes do cinema,<br />
-                  música e milionários em momentos de<br />
+                  Sua fama vai além da internet, já participando de
+                  <br />
+                  programas de televisão e atuando nos bastidores
+                  <br />
+                  como terapeuta de grandes nomes do cinema,
+                  <br />
+                  música e milionários em momentos de
+                  <br />
                   dificuldade, como:
                 </div>
               </div>
