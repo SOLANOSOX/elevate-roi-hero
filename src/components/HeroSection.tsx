@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import DiagnosticModal from "@/components/DiagnosticModal";
 import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <section className="relative bg-hero-bg py-8 md:py-12 lg:py-[60px] px-4 md:px-6 lg:px-[418px] font-raleway">
@@ -64,12 +67,18 @@ const HeroSection = () => {
               variant="hero"
               size="hero"
               className="w-full max-w-[360px] md:w-auto"
+              onClick={() => setIsModalOpen(true)}
             >
               LIBERAR ACESSO
             </Button>
           </div>
         </div>
       </section>
+      
+      <DiagnosticModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </>
   );
 };
