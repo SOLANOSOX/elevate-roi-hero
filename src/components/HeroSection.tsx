@@ -6,13 +6,13 @@ const HeroSection = () => {
     <>
       <section className="relative bg-hero-bg py-8 md:py-12 lg:py-[60px] px-4 md:px-6 lg:px-[418px] font-raleway">
   <div
-  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 hidden md:block"
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 hidden md:block"
   style={{
     backgroundImage:
-      "url(/lovable-uploads/d67d640d-22c2-4163-8203-fec7a1e87b95.png)",
+      "url(/lovable-uploads/8310e23c-f4fb-4118-b612-acf57630bb39.png)",
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
-    backgroundPosition: "50% 70%"
+    backgroundPosition: "center"
   }}
 ></div>
         <div className="relative z-10 max-w-[1060px] mx-auto min-h-[500px] md:min-h-[600px] lg:h-[718px] flex flex-col items-start justify-center gap-6 md:gap-8">
