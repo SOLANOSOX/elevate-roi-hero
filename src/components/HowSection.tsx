@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import DiagnosticModal from "@/components/DiagnosticModal";
 const HowSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return <>
       <section className="relative bg-hero-bg py-12 px-4 md:px-6 lg:px-[374px] font-raleway">
         {/* Background Image - hidden on mobile */}
@@ -53,7 +56,12 @@ const HowSection = () => {
 
             {/* CTA Button */}
             <div className="w-full max-w-[360px]">
-              <Button variant="hero" size="hero" className="w-full">
+              <Button 
+                variant="hero" 
+                size="hero" 
+                className="w-full"
+                onClick={() => setIsModalOpen(true)}
+              >
                 Liberar Acesso
               </Button>
             </div>
@@ -61,6 +69,11 @@ const HowSection = () => {
         </div>
         </div>
       </section>
+      
+      <DiagnosticModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </>;
 };
 export default HowSection;

@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import DiagnosticModal from "@/components/DiagnosticModal";
 
-
-console.log('teste')
 const BenefitsSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <section className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway rounded-t-[50px] lg:rounded-t-[100px] py-12 md:py-16 lg:py-20 relative">
@@ -60,7 +61,12 @@ const BenefitsSection = () => {
             
             {/* Button inside card */}
             <div className="w-full max-w-[360px] mx-auto mt-2">
-              <Button variant="hero" size="hero" className="w-full">
+              <Button 
+                variant="hero" 
+                size="hero" 
+                className="w-full"
+                onClick={() => setIsModalOpen(true)}
+              >
                 Liberar Acesso
               </Button>
             </div>
@@ -119,13 +125,23 @@ const BenefitsSection = () => {
 
         {/* Bottom CTA Button */}
         <div className="w-full max-w-[360px] mx-auto">
-          <Button variant="hero" size="hero" className="w-full">
+          <Button 
+            variant="hero" 
+            size="hero" 
+            className="w-full"
+            onClick={() => setIsModalOpen(true)}
+          >
             Liberar Acesso
           </Button>
         </div>
 
       </div>
     </section>
+    
+    <DiagnosticModal 
+      isOpen={isModalOpen} 
+      onClose={() => setIsModalOpen(false)} 
+    />
     </>
   );
 };

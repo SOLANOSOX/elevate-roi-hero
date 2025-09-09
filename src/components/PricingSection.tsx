@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import DiagnosticModal from "@/components/DiagnosticModal";
 const PricingSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway">
@@ -133,13 +136,23 @@ const PricingSection = () => {
             </div>
 
             <div className="w-full max-w-[360px] mx-auto">
-              <Button variant="hero" size="hero" className="w-full">
+              <Button 
+                variant="hero" 
+                size="hero" 
+                className="w-full"
+                onClick={() => setIsModalOpen(true)}
+              >
                 QUERO GARANTIR MINHA VAGA
               </Button>
             </div>
           </div>
         </div>
       </section>
+      
+      <DiagnosticModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </>
   );
 };

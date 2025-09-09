@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import DiagnosticModal from "@/components/DiagnosticModal";
 
 const TestimonialsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const slideRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = (slideIndex: number) => {
@@ -174,12 +176,22 @@ const TestimonialsSection = () => {
 
           {/* CTA Button */}
           <div className="w-full max-w-[360px] mx-auto">
-            <Button variant="hero" size="hero" className="w-full">
+            <Button 
+              variant="hero" 
+              size="hero" 
+              className="w-full"
+              onClick={() => setIsModalOpen(true)}
+            >
               Quero ser um case
             </Button>
           </div>
         </div>
       </section>
+      
+      <DiagnosticModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </>
   );
 };
