@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 
+
+console.log('teste')
 const BenefitsSection = () => {
   return (
     <>
@@ -23,6 +25,7 @@ const BenefitsSection = () => {
                 <span className="text-accent">cansado</span>
                 <span className="text-black"> de...</span>
               </h2>
+
               
               <div className="text-black text-sm md:text-base lg:text-[16px] leading-5 md:leading-6 space-y-3 max-w-[600px]">
                 <p>
