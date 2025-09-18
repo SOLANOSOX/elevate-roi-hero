@@ -6,8 +6,7 @@ const ThreeAsSection = () => {
         <div className="w-full max-w-[900px] flex flex-col justify-center items-center gap-5 text-center">
           <div className="w-full">
             <h2 className="text-hero-text text-[28px] md:text-[40px] lg:text-5xl font-semibold leading-tight md:leading-[50px] lg:leading-[57.60px]">
-              Os 3A's da Venda Imobiliária<br />
-              revelados em 2 dias intensivos:
+              O Que Você Vai Dominar em 2 Dias Intensivos
             </h2>
           </div>
         </div>
@@ -24,7 +23,7 @@ const ThreeAsSection = () => {
           <div className="flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 lg:gap-[42px]">
             <div className="w-full">
               <h3 className="text-hero-bg text-[28px] md:text-[32px] lg:text-[40px] font-semibold leading-tight lg:leading-[50px] text-center lg:text-left">
-                Dia 1 - Estrutura de crescimento
+                Dia 1 – Acendendo o Motor da Máquina
               </h3>
             </div>
             
@@ -32,24 +31,24 @@ const ThreeAsSection = () => {
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
                   <div className="text-hero-bg text-sm md:text-base lg:text-lg font-medium leading-tight lg:leading-[23.40px]">
-                    Sistema de Captação 5X: Como gerar 5x mais leads qualificados sem gastar mais em marketing
+                    ✅ Captação 5x mais leads com IA
                   </div>
                 </div>
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
                   <div className="text-hero-bg text-sm md:text-base lg:text-lg font-medium leading-tight lg:leading-[23.40px]">
-                    Pipeline de Conversão: O funil exato que transforma 40% dos leads em clientes pagantes
+                    ✅ Funil de Conversão de até 40%
                   </div>
                 </div>
               </div>
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
                   <div className="text-hero-bg text-sm md:text-base lg:text-lg font-medium leading-tight lg:leading-[23.40px]">
-                    Gestão de Equipe de Alta Performance: Como motivar corretores a venderem 3x mais
+                    ✅ Gestão de equipe imparável
                   </div>
                 </div>
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
                   <div className="text-hero-bg text-sm md:text-base lg:text-lg font-medium leading-tight lg:leading-[23.40px]">
-                    Automação Inteligente: Sistemas que trabalham 24h captando e nutrindo clientes
+                    ✅ Automação que vende 24h
                   </div>
                 </div>
               </div>
@@ -69,7 +68,7 @@ const ThreeAsSection = () => {
           <div className="flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 lg:gap-[42px]">
             <div className="w-full">
               <h3 className="text-hero-bg text-[28px] md:text-[32px] lg:text-[40px] font-semibold leading-tight lg:leading-[50px] text-center lg:text-left">
-                Dia 2 - Implementação e resultados
+                Dia 2 – Acelerando Crescimento e Blindando Resultados
               </h3>
             </div>
             
@@ -77,24 +76,24 @@ const ThreeAsSection = () => {
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
                   <div className="text-hero-bg text-sm md:text-base lg:text-lg font-medium leading-tight lg:leading-[23.40px]">
-                    Expansão Territorial: Como dominar sua região sem concorrência
+                    ✅ Expansão inteligente para dominar sua região
                   </div>
                 </div>
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
                   <div className="text-hero-bg text-sm md:text-base lg:text-lg font-medium leading-tight lg:leading-[23.40px]">
-                    Métricas de Controle: Indicadores que mostram exatamente onde focar
+                    ✅ Métricas que importam para ROI máximo
                   </div>
                 </div>
               </div>
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
                   <div className="text-hero-bg text-sm md:text-base lg:text-lg font-medium leading-tight lg:leading-[23.40px]">
-                    Plano de 7 Dias: Seu roteiro completo para implementar e ver resultados
+                    ✅ Plano de ação em 7 dias
                   </div>
                 </div>
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
                   <div className="text-hero-bg text-sm md:text-base lg:text-lg font-medium leading-tight lg:leading-[23.40px]">
-                    Mesa Redonda de Casos: Possível análise ao vivo de situações reais dos participantes
+                    ✅ Mesa redonda com análise de casos reais
                   </div>
                 </div>
               </div>

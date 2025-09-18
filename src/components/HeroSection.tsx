@@ -38,24 +38,20 @@ const HeroSection = () => {
                 {/* Main Title */}
                 <div className="flex flex-col">
                   <h1 className="text-[24px] md:text-[32px] lg:text-[36px] font-extrabold leading-[28px] md:leading-[36px] lg:leading-[40px] text-hero-text">
-                    Dois dias revelando o método que levou uma imobiliária a ter{" "}
-                    <span className="text-hero-accent">600% de retorno</span>{" "}
-                    <span className="text-hero-accent">em 6 meses!</span>
+                    🚀 Transforme sua Imobiliária em uma Máquina de Vendas com IA – <span className="text-hero-accent">+600% de Faturamento em 6 Meses</span>
                   </h1>
                 </div>
 
                 {/* Description */}
                 <div className="flex flex-col text-hero-text text-sm md:text-base font-medium leading-5 md:leading-6 gap-4 md:gap-6">
-                  <p>
-                    Descubra o sistema exato que transformou uma imobiliária
-                    comum em uma máquina de vendas – e como você pode replicar
-                    esses resultados na sua operação
-                  </p>
-
-                  <p>
-                    Para donos de imobiliárias e gestores que querem FECHAR 2025
-                    batendo todas as metas
-                  </p>
+                  <h2 className="text-hero-text text-lg md:text-xl lg:text-2xl font-bold">
+                    2 dias intensivos. Método testado. Sem mimimi. Sem enrolação.
+                  </h2>
+                  
+                  <div className="flex flex-col gap-2">
+                    <p className="text-sm">✅ Selos de pagamento seguro</p>
+                    <p className="text-sm">✅ Garantia 100% risco zero</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -69,7 +65,7 @@ const HeroSection = () => {
               className="w-full max-w-[360px] md:w-auto"
               onClick={() => setIsModalOpen(true)}
             >
-              LIBERAR ACESSO
+              👉 Quero garantir minha vaga por apenas R$47
             </Button>
           </div>
         </div>

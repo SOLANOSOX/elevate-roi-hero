@@ -1,4 +1,10 @@
-const StorySection = () => {
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import DiagnosticModal from "@/components/DiagnosticModal";
+
+const BigIdeaSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway mb-0">
@@ -44,11 +50,28 @@ const StorySection = () => {
                 </p>
               </div>
             </div>
+
+            {/* CTA Button */}
+            <div className="w-full flex justify-center mt-6">
+              <Button
+                variant="hero"
+                size="hero"
+                className="w-full max-w-[300px]"
+                onClick={() => setIsModalOpen(true)}
+              >
+                Quero aplicar o sistema agora
+              </Button>
+            </div>
           </div>
         </div>
       </section>
+
+      <DiagnosticModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </>
   );
 };
 
-export default StorySection;
+export default BigIdeaSection;

@@ -1,29 +1,27 @@
 import HeroSection from "@/components/HeroSection";
-import StorySection from "@/components/StorySection";
-import HowSection from "@/components/HowSection";
 import BenefitsSection from "@/components/BenefitsSection";
+import BigIdeaSection from "@/components/BigIdeaSection";
 import ThreeAsSection from "@/components/ThreeAsSection";
-import ScheduleSection from "@/components/ScheduleSection";
+import MentorsSection from "@/components/MentorsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import PricingSection from "@/components/PricingSection";
-import AboutSection from "@/components/AboutSection";
-import GuaranteeSection from "@/components/GuaranteeSection";
 import FAQSection from "@/components/FAQSection";
+import PricingSection from "@/components/PricingSection";
+import UrgencySection from "@/components/UrgencySection";
+import AuthoritySection from "@/components/AuthoritySection";
 
 const Index = () => {
   return (
     <>
       <HeroSection />
-      <StorySection />
-      <HowSection />
       <BenefitsSection />
+      <BigIdeaSection />
       <ThreeAsSection />
-      <ScheduleSection />
+      <MentorsSection />
       <TestimonialsSection />
-      <PricingSection />
-      <AboutSection />
-      <GuaranteeSection />
       <FAQSection />
+      <PricingSection />
+      <UrgencySection />
+      <AuthoritySection />
     </>
   );
 };
