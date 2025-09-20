@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
-import background from "@/assets/background.jpg";
+import background2 from "@/assets/background2.jpg";
 
-const MentorsSection = () => {
+const MentorsSectionSol = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -11,7 +11,7 @@ const MentorsSection = () => {
       <section
         className="relative px-4 md:px-6 lg:px-[100px] font-raleway min-h-[400px] md:min-h-[878px] bg-[#FDF8ED] md:bg-cover md:bg-center md:bg-no-repeat"
         style={{
-          backgroundImage: `url(${background})`,
+          backgroundImage: `url(${background2})`,
         }}
       >
         {/* Hide background on mobile with overlay */}
@@ -25,25 +25,24 @@ const MentorsSection = () => {
               </h2>
             </div>
 
-            {/* Mentors (colados mais na direita) */}
-            <div className="flex flex-col items-center text-center md:items-end md:text-right md:ml-auto md:pr-4 lg:pr-8 gap-8">
-              {/* Adel Gabrielle */}
-              <div className="flex flex-col gap-5 items-center text-center md:items-end md:text-right">
+            {/* Mentor Solano (colado mais à esquerda) */}
+            <div className="flex flex-col items-center text-center md:items-start md:text-left md:mr-auto md:pl-4 lg:pl-8 gap-8">
+              {/* Solano Massochin */}
+              <div className="flex flex-col gap-5 items-center text-center md:items-start md:text-left">
                 <div className="pb-[0.58px]">
                   <h3 className="text-[#010D15] text-[24px] font-extrabold leading-[28.8px]">
-                    Adel Gabrielle – A Estrategista que Sente o Mercado
+                    Solano Massochin – O Arquiteto da Tecnologia
                   </h3>
                 </div>
 
                 <div className="text-[#010D15] text-base font-medium leading-[24px] max-w-[480px]">
-                  Anos de experiência em comportamento humano e vendas de alto
-                  impacto. Vai te mostrar como ler o mercado e criar estratégias
-                  que convertem.
+                  Especialista em Inteligência Artificial aplicada. Simplifica
+                  tecnologia para resultados práticos.
                 </div>
               </div>
 
-              {/* CTA Button (também à direita) */}
-              <div className="w-full max-w-[360px] md:ml-auto">
+              {/* CTA Button (também à esquerda) */}
+              <div className="w-full max-w-[360px] md:mr-auto">
                 <Button
                   variant="hero"
                   size="hero"
@@ -66,4 +65,4 @@ const MentorsSection = () => {
   );
 };
 
-export default MentorsSection;
+export default MentorsSectionSol;

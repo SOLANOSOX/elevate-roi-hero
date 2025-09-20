@@ -10,7 +10,7 @@ const PricingSection = () => {
           {/* Main Title */}
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-hero-text mb-4 md:text-4xl">
-              💰 O Valor Real do Workshop LEGADO Imobiliário
+              💰 O Valor Real do Workshop ImobiliárIA Lucrativa
             </h2>
           </div>
 

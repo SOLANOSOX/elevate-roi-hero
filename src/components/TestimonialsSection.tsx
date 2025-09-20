@@ -8,12 +8,6 @@ const TestimonialsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const slideRef = useRef<HTMLDivElement>(null);
 
-  const nextSlide = (slideIndex: number) => {
-    if (slideIndex < maxSlides) {
-      setCurrentSlide(slideIndex);
-    }
-  };
-
   const slides = [
     "/lovable-uploads/fa485f0f-b244-4e06-8d00-6cdb0a7c166a.png",
     "/lovable-uploads/1342d0dc-ce18-4efd-bcae-520ab6ce304f.png",
@@ -25,14 +19,20 @@ const TestimonialsSection = () => {
     "/lovable-uploads/9621122d-95fe-47eb-9e24-36ac6d9e3e30.png",
   ];
 
-  const totalSlides = slides.length; // Number of slides available
-  const itemsToShow = 3; // Number of items to show at once on desktop
-  const maxSlides = totalSlides - itemsToShow + 1; // Maximum slides we can navigate to
-  // calcula largura do slide no carregamento e resize
+  const totalSlides = slides.length;
+  const itemsToShow = 3; // quantos itens mostrar ao mesmo tempo
+  const maxSlides = totalSlides - itemsToShow + 1;
+
   // --- Drag states ---
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [translate, setTranslate] = useState(0);
+
+  const nextSlide = (slideIndex: number) => {
+    if (slideIndex < maxSlides) {
+      setCurrentSlide(slideIndex);
+    }
+  };
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     setIsDragging(true);
@@ -81,6 +81,17 @@ const TestimonialsSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [currentSlide]);
 
+  // --- Autoplay ---
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) =>
+        prev < maxSlides - 1 ? prev + 1 : 0 // volta pro começo
+      );
+    }, 3000); // 4 segundos
+
+    return () => clearInterval(interval);
+  }, [maxSlides]);
+
   return (
     <>
       <section className="w-full bg-[#FDF8ED] rounded-t-[50px] md:rounded-t-[100px] py-12 md:py-16 lg:py-20">
@@ -122,10 +133,12 @@ const TestimonialsSection = () => {
             <div className="flex flex-col items-center">
               <div className="w-full overflow-hidden">
                 <div
-                  className="flex items-start transition-transform duration-300 ease-in-out gap-4 md:gap-5"
+                  className="flex items-start transition-transform duration-500 ease-in-out gap-4 md:gap-5"
                   style={{
                     transform: `translateX(-${
-                      currentSlide * (slideWidth + 16) // 16px = gap-4
+                      isDragging
+                        ? -translate
+                        : currentSlide * (slideWidth + 16)
                     }px)`,
                     width: "fit-content",
                   }}
@@ -137,7 +150,6 @@ const TestimonialsSection = () => {
                   onTouchMove={handleDragMove}
                   onTouchEnd={handleDragEnd}
                 >
-                  {/* Testimonial images */}
                   {slides.map((imageSrc, index) => (
                     <div
                       key={index}
@@ -157,7 +169,7 @@ const TestimonialsSection = () => {
               </div>
             </div>
 
-            {/* Carousel Indicators - Interactive */}
+            {/* Carousel Indicators */}
             <div className="flex justify-center items-center gap-3 py-4 mt-8 md:mt-12">
               {Array.from({ length: maxSlides }).map((_, index) => (
                 <button
@@ -176,9 +188,9 @@ const TestimonialsSection = () => {
 
           {/* CTA Button */}
           <div className="w-full max-w-[360px] mx-auto">
-            <Button 
-              variant="hero" 
-              size="hero" 
+            <Button
+              variant="hero"
+              size="hero"
               className="w-full"
               onClick={() => setIsModalOpen(true)}
             >
@@ -187,10 +199,10 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </section>
-      
-      <DiagnosticModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+
+      <DiagnosticModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </>
   );

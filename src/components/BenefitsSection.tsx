@@ -23,7 +23,7 @@ const BenefitsSection = () => {
 
             <div className="flex flex-col gap-4 md:gap-5 lg:gap-6 mb-8">
               {/* Problem items */}
-              <div className="w-full bg-gradient-to-r from-red-500/85 to-red-600/85 rounded-[10px] flex items-center p-4 md:p-6 lg:p-[30px] gap-4">
+              <div className="w-full bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-4 md:p-6 lg:p-[30px] gap-4">
                 <span className="text-white text-[24px] md:text-[28px] lg:text-[31px] flex-shrink-0 font-bold">
                   ❌
                 </span>
@@ -32,7 +32,7 @@ const BenefitsSection = () => {
                 </div>
               </div>
 
-              <div className="w-full bg-gradient-to-r from-red-500/85 to-red-600/85 rounded-[10px] flex items-center p-4 md:p-6 lg:p-[30px] gap-4">
+              <div className="w-full bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-4 md:p-6 lg:p-[30px] gap-4">
                 <span className="text-white text-[24px] md:text-[28px] lg:text-[31px] flex-shrink-0 font-bold">
                   ❌
                 </span>
@@ -41,7 +41,7 @@ const BenefitsSection = () => {
                 </div>
               </div>
 
-              <div className="w-full bg-gradient-to-r from-red-500/85 to-red-600/85 rounded-[10px] flex items-center p-4 md:p-6 lg:p-[30px] gap-4">
+              <div className="w-full bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-4 md:p-6 lg:p-[30px] gap-4">
                 <span className="text-white text-[24px] md:text-[28px] lg:text-[31px] flex-shrink-0 font-bold">
                   ❌
                 </span>
@@ -50,7 +50,7 @@ const BenefitsSection = () => {
                 </div>
               </div>
 
-              <div className="w-full bg-gradient-to-r from-red-500/85 to-red-600/85 rounded-[10px] flex items-center p-4 md:p-6 lg:p-[30px] gap-4">
+              <div className="w-full bg-gradient-to-r from-hero-bg/85 to-[rgba(0,26,43,0.85)] rounded-[10px] flex items-center p-4 md:p-6 lg:p-[30px] gap-4">
                 <span className="text-white text-[24px] md:text-[28px] lg:text-[31px] flex-shrink-0 font-bold">
                   ❌
                 </span>

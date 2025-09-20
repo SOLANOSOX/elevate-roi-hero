@@ -22,7 +22,7 @@ const BigIdeaSection = () => {
               <div className="flex-1 flex flex-col items-center lg:items-start lg:pl-6">
                 <div className="w-full text-center lg:text-left">
                   <h2 className="text-hero-text text-[10px] sm:text-[12px] lg:text-[10px] xl:text-[12px] font-bold uppercase leading-relaxed tracking-[6px] sm:tracking-[10px] lg:tracking-[20px]">
-                    BIG IDEA + PROMESSA
+                    {/* BIG IDEA + PROMESSA */}
                   </h2>
                 </div>
               </div>
@@ -42,8 +42,10 @@ const BigIdeaSection = () => {
             <div className="w-full">
               <div className="text-center space-y-4">
                 <p className="text-hero-bg text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed">
-                  Imobiliárias comuns, muitas com menos de 10 corretores, já estão crescendo{" "}
-                  <span className="font-bold">+600% em apenas 6 meses</span> com este sistema validado.
+                  Imobiliárias comuns, muitas com menos de 10 corretores, já
+                  estão crescendo{" "}
+                  <span className="font-bold">+600% em apenas 6 meses</span> com
+                  este sistema validado.
                 </p>
                 <p className="text-hero-bg text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-relaxed">
                   Não é sorte. Não é mágica. É método.
@@ -56,7 +58,7 @@ const BigIdeaSection = () => {
               <Button
                 variant="hero"
                 size="hero"
-                className="w-full max-w-[300px]"
+                className="w-full max-w-[400px] px-6 py-3 text-center"
                 onClick={() => setIsModalOpen(true)}
               >
                 Quero aplicar o sistema agora
@@ -66,9 +68,9 @@ const BigIdeaSection = () => {
         </div>
       </section>
 
-      <DiagnosticModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+      <DiagnosticModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </>
   );

@@ -10,7 +10,6 @@ const FAQSection = () => {
     <section
       className="relative bg-black font-raleway py-12 md:py-16 lg:py-20 overflow-hidden"
       style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='15%25' y='50%25' font-size='400' font-weight='900' fill='%23E5E5E5' font-family='Arial, sans-serif' opacity='0.3'%3E1%3C/text%3E%3Ctext x='75%25' y='80%25' font-size='400' font-weight='900' fill='%23E5E5E5' font-family='Arial, sans-serif' opacity='0.3'%3E3%3C/text%3E%3C/svg%3E")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

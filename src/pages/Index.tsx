@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import PricingSection from "@/components/PricingSection";
 import UrgencySection from "@/components/UrgencySection";
 import AuthoritySection from "@/components/AuthoritySection";
+import MentorsSectionSol from "@/components/MentorsSectionSol";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <BigIdeaSection />
       <ThreeAsSection />
       <MentorsSection />
+      <MentorsSectionSol />
       <TestimonialsSection />
       <FAQSection />
       <PricingSection />
