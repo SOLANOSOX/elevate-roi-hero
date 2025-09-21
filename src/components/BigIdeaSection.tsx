@@ -59,13 +59,13 @@ const BigIdeaSection = () => {
                 variant="hero"
                 size="hero"
                 className="
-      w-full max-w-[360px]
-      whitespace-normal break-words text-center
-      px-3 py-2 text-xs       /* mobile */
-      sm:px-4 sm:py-3 sm:text-sm   /* tablet */
-      md:px-6 md:py-3 md:text-base /* desktop médio */
-      lg:px-8 lg:py-4 lg:text-lg   /* desktop grande */
-    "
+                w-full max-w-[360px] 
+                whitespace-normal break-words text-center 
+                px-3 py-0 text-xs   /* mobile */
+                sm:px-4 sm:py-3 sm:text-xs   /* tablet */
+                md:px-6 md:py-3 md:text-xs  /* desktop médio */
+                lg:px-8 lg:py-4 lg:text-xs   /* desktop grande */
+              "
                 onClick={() => setIsModalOpen(true)}
               >
                 Quero aplicar o sistema agora

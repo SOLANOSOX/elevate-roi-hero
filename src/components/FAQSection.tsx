@@ -138,10 +138,10 @@ const FAQSection = () => {
                 className="
     w-full max-w-[360px] mx-auto 
     whitespace-normal break-words text-center
-    px-4 py-3 text-sm h-auto       /* mobile base */
-    sm:px-5 sm:py-3 sm:text-base   /* tablet */
-    md:px-6 md:py-3 md:text-lg     /* desktop médio */
-    lg:px-8 lg:py-4 lg:text-xl     /* desktop grande */
+      px-3 py-0 text-xs   /* mobile */
+      sm:px-4 sm:py-3 sm:text-xs   /* tablet */
+      md:px-6 md:py-3 md:text-xs  /* desktop médio */
+      lg:px-8 lg:py-4 lg:text-xs   /* desktop grande */
     bg-gradient-to-r from-[#C9A456] to-[#82652F] 
     hover:from-[#B8943F] hover:to-[#71582A] 
     text-[#000C14] font-bold uppercase tracking-wide
