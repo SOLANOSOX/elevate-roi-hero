@@ -10,7 +10,7 @@ const PricingSection = () => {
           {/* Main Title */}
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-hero-text mb-4 md:text-4xl">
-              💰 O Valor Real do Workshop ImobiliárIA Lucrativa
+              O Valor Real do Workshop ImobiliárIA Lucrativa
             </h2>
           </div>
 
@@ -19,37 +19,37 @@ const PricingSection = () => {
             <div className="space-y-4 text-hero-text">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 border-b border-hero-text/20 gap-1 sm:gap-0">
                 <span className="text-lg font-medium">
-                  📚 Consultoria Individual:
+                  Consultoria Individual:
                 </span>
                 <span className="text-xl font-bold text-accent">R$ 2.500</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 border-b border-hero-text/20 gap-1 sm:gap-0">
                 <span className="text-lg font-medium">
-                  📈 Sistema de Captação:
+                  Sistema de Captação:
                 </span>
                 <span className="text-xl font-bold text-accent">R$ 1.200</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 border-b border-hero-text/20 gap-1 sm:gap-0">
                 <span className="text-lg font-medium">
-                  👥 Método de Gestão de Equipe:
+                  Método de Gestão de Equipe:
                 </span>
                 <span className="text-xl font-bold text-accent">R$ 800</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 border-b border-hero-text/20 gap-1 sm:gap-0">
                 <span className="text-lg font-medium">
-                  🤖 Automação Completa:
+                  Automação Completa:
                 </span>
                 <span className="text-xl font-bold text-accent">R$ 900</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 border-b border-hero-text/20 gap-1 sm:gap-0">
                 <span className="text-lg font-medium">
-                  📊 Métricas e Controle:
+                  Métricas e Controle:
                 </span>
                 <span className="text-xl font-bold text-accent">R$ 600</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 border-b border-hero-text/20 gap-1 sm:gap-0">
                 <span className="text-lg font-medium">
-                  🎯 Plano de Implementação:
+                  Plano de Implementação:
                 </span>
                 <span className="text-xl font-bold text-accent">R$ 400</span>
               </div>
@@ -65,7 +65,7 @@ const PricingSection = () => {
           {/* Special Offer */}
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl font-extrabold text-hero-text mb-6">
-              🎁 OFERTA ESPECIAL DE FECHAMENTO DE ANO
+              OFERTA ESPECIAL DE FECHAMENTO DE ANO
             </h3>
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6 text-center">
