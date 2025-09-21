@@ -4,6 +4,7 @@ import DiagnosticModal from "@/components/DiagnosticModal";
 import logo from "@/assets/logo.png";
 import NewLogo from "@/assets/1.svg";
 import NewLogo2 from "@/assets/2.svg";
+import newHero from "@/assets/newBackgroundHero.png";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,7 +14,7 @@ const HeroSection = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
           style={{
-            backgroundImage: "url(https://i.imgur.com/HXG9QSN.png)",
+            // backgroundImage: newHero,
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
             backgroundPosition: "top left",
@@ -23,17 +24,17 @@ const HeroSection = () => {
           {/* Logo */}
           <div className="w-full max-w-[546px]">
             <div className="flex flex-col gap-6 md:gap-7">
-              <div className="flex items-center gap-3 md:gap-4 -ml-2 md:-ml-4">
+              <div className="flex flex-col items-center justify-center -ml-2 md:-ml-4">
                 <img
-                  // src="/lovable-uploads/72560b92-d983-4b8b-9b48-3b2178120bc6.png"
                   src={NewLogo}
                   alt="Legado Imobiliário Logo"
-                  className="w-[120px] h-[120px] md:w-[160px] md:h-[160px] lg:w-[200px] lg:h-[200px] object-contain drop-shadow-lg"
+                  className="
+      w-[180px] h-[180px]      /* mobile */
+      md:w-[240px] md:h-[240px]  /* tablet */
+      lg:w-[300px] lg:h-[300px]  /* desktop */
+      object-contain drop-shadow-lg
+    "
                 />
-
-                <span className="text-hero-text font-bold text-lg md:text-xl lg:text-2xl">
-                  Workshop ImobiliárIA Lucrativa
-                </span>
               </div>
 
               {/* Main Content */}

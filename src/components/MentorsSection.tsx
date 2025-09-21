@@ -31,7 +31,7 @@ const MentorsSection = () => {
               <div className="flex flex-col gap-5 items-center text-center md:items-end md:text-right">
                 <div className="pb-[0.58px]">
                   <h3 className="text-[#010D15] text-[24px] font-extrabold leading-[28.8px]">
-                    Adel Gabrielle – A Estrategista que Sente o Mercado
+                    A Estrategista que Sente o Mercado
                   </h3>
                 </div>
 

@@ -31,7 +31,7 @@ const MentorsSectionSol = () => {
               <div className="flex flex-col gap-5 items-center text-center md:items-start md:text-left">
                 <div className="pb-[0.58px]">
                   <h3 className="text-[#010D15] text-[24px] font-extrabold leading-[28.8px]">
-                    Solano Massochin – O Arquiteto da Tecnologia
+                    O Arquiteto da Tecnologia
                   </h3>
                 </div>
 
