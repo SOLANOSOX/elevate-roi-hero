@@ -14,10 +14,15 @@ const ThreeAsSection = () => {
         {/* Day 1 Card */}
         <div className="w-full max-w-[1230px] p-6 md:p-10 lg:p-14 bg-hero-text rounded-2xl lg:rounded-3xl flex flex-col lg:flex-row justify-start items-start lg:items-center gap-6 lg:gap-[54px]">
           <div className="w-full lg:w-[318px] h-[300px] lg:h-[469px] relative overflow-hidden rounded-[14px] flex-shrink-0">
-            <img 
-              className="w-full h-full object-cover rounded-[14px]" 
-              src="/lovable-uploads/117b7064-bbda-4822-ac7f-dae76bc73752.png" 
+            <img
+              src="/lovable-uploads/117b7064-bbda-4822-ac7f-dae76bc73752.png"
               alt="Fundamentos da Venda Imobiliária"
+              className="
+    w-full max-w-full 
+    h-auto 
+    object-contain 
+    rounded-[14px]
+  "
             />
           </div>
           <div className="flex-1 flex flex-col justify-start items-start gap-6 md:gap-8 lg:gap-[42px]">
@@ -26,7 +31,7 @@ const ThreeAsSection = () => {
                 Dia 1 – Acendendo o Motor da Máquina
               </h3>
             </div>
-            
+
             <div className="w-full flex flex-col gap-4 md:gap-6">
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
@@ -59,9 +64,14 @@ const ThreeAsSection = () => {
         {/* Day 2 Card */}
         <div className="w-full max-w-[1230px] p-6 md:p-10 lg:p-14 bg-hero-text rounded-2xl lg:rounded-3xl flex flex-col lg:flex-row justify-start items-start lg:items-center gap-6 lg:gap-[54px]">
           <div className="w-full lg:w-[318px] h-[300px] lg:h-[469px] relative overflow-hidden rounded-[14px] flex-shrink-0">
-            <img 
-              className="w-full h-full object-cover rounded-[14px]" 
-              src="/lovable-uploads/089f8aea-92fc-42e1-aaa8-d5a308c4ce32.png" 
+            <img
+              className="
+              w-full max-w-full 
+              h-auto 
+              object-contain 
+              rounded-[14px]
+            "
+              src="/lovable-uploads/089f8aea-92fc-42e1-aaa8-d5a308c4ce32.png"
               alt="Implementação da Venda Imobiliária"
             />
           </div>
@@ -71,7 +81,7 @@ const ThreeAsSection = () => {
                 Dia 2 – Acelerando Crescimento e Blindando Resultados
               </h3>
             </div>
-            
+
             <div className="w-full flex flex-col gap-4 md:gap-6">
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                 <div className="flex-1 p-4 md:p-6 rounded-xl lg:rounded-2xl border border-[rgba(167,187,210,0.70)]">
