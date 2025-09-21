@@ -54,11 +54,18 @@ const BigIdeaSection = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="w-full flex justify-center mt-6">
+            <div className="w-full flex justify-center mt-6 mb-6 px-4">
               <Button
                 variant="hero"
                 size="hero"
-                className="w-full max-w-[400px] px-6 py-3 text-center"
+                className="
+      w-full max-w-[360px]
+      whitespace-normal break-words text-center
+      px-3 py-2 text-xs       /* mobile */
+      sm:px-4 sm:py-3 sm:text-sm   /* tablet */
+      md:px-6 md:py-3 md:text-base /* desktop médio */
+      lg:px-8 lg:py-4 lg:text-lg   /* desktop grande */
+    "
                 onClick={() => setIsModalOpen(true)}
               >
                 Quero aplicar o sistema agora

@@ -19,16 +19,26 @@ const AuthoritySection = () => {
           {/* Content */}
           <div className="w-full max-w-[800px] text-[#FDF8ED] text-lg md:text-xl leading-relaxed text-center">
             <p>
-              Assim como a Imersão Copy Experience New Edition (12 a 14 de setembro, R$97), que entrega copywriting com IA para aumentar comparecimento e reduzir custos, este workshop entrega IA aplicada ao mercado imobiliário para multiplicar seu faturamento.
+              Assim como a Imersão Copy Experience New Edition (12 a 14 de
+              setembro, R$97), que entrega copywriting com IA para aumentar
+              comparecimento e reduzir custos, este workshop entrega IA aplicada
+              ao mercado imobiliário para multiplicar seu faturamento.
             </p>
           </div>
 
           {/* CTA Button */}
           <div className="w-full max-w-[400px] mx-auto">
-            <Button 
-              variant="hero" 
-              size="hero" 
-              className="w-full"
+            <Button
+              variant="hero"
+              size="hero"
+              className="
+              w-full max-w-[360px]
+              whitespace-normal break-words text-center
+              px-3 py-2 text-xs       /* mobile */
+              sm:px-4 sm:py-3 sm:text-sm   /* tablet */
+              md:px-6 md:py-3 md:text-base /* desktop médio */
+              lg:px-8 lg:py-4 lg:text-lg   /* desktop grande */
+            "
               onClick={() => setIsModalOpen(true)}
             >
               Liberar minha vaga agora
@@ -37,9 +47,9 @@ const AuthoritySection = () => {
         </div>
       </section>
 
-      <DiagnosticModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+      <DiagnosticModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </>
   );

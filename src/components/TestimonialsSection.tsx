@@ -84,8 +84,8 @@ const TestimonialsSection = () => {
   // --- Autoplay ---
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) =>
-        prev < maxSlides - 1 ? prev + 1 : 0 // volta pro começo
+      setCurrentSlide(
+        (prev) => (prev < maxSlides - 1 ? prev + 1 : 0) // volta pro começo
       );
     }, 3000); // 4 segundos
 
@@ -136,9 +136,7 @@ const TestimonialsSection = () => {
                   className="flex items-start transition-transform duration-500 ease-in-out gap-4 md:gap-5"
                   style={{
                     transform: `translateX(-${
-                      isDragging
-                        ? -translate
-                        : currentSlide * (slideWidth + 16)
+                      isDragging ? -translate : currentSlide * (slideWidth + 16)
                     }px)`,
                     width: "fit-content",
                   }}
@@ -191,7 +189,14 @@ const TestimonialsSection = () => {
             <Button
               variant="hero"
               size="hero"
-              className="w-full"
+              className="
+      w-full max-w-[360px]
+      whitespace-normal break-words text-center
+      px-3 py-2 text-xs       /* mobile */
+      sm:px-4 sm:py-3 sm:text-sm   /* tablet */
+      md:px-6 md:py-3 md:text-base /* desktop médio */
+      lg:px-8 lg:py-4 lg:text-lg   /* desktop grande */
+    "
               onClick={() => setIsModalOpen(true)}
             >
               Quero ser um case

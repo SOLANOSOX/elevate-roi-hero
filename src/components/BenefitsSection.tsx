@@ -4,7 +4,7 @@ import DiagnosticModal from "@/components/DiagnosticModal";
 
 const BenefitsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   return (
     <>
       <section
@@ -28,7 +28,9 @@ const BenefitsSection = () => {
                   ❌
                 </span>
                 <div className="text-white text-sm md:text-lg lg:text-[20px] leading-5 md:leading-6 text-left flex-1">
-                  <span className="font-extrabold">Leads caros e desqualificados</span>
+                  <span className="font-extrabold">
+                    Leads caros e desqualificados
+                  </span>
                 </div>
               </div>
 
@@ -46,7 +48,9 @@ const BenefitsSection = () => {
                   ❌
                 </span>
                 <div className="text-white text-sm md:text-lg lg:text-[20px] leading-5 md:leading-6 text-left flex-1">
-                  <span className="font-extrabold">Processos que travam sua imobiliária</span>
+                  <span className="font-extrabold">
+                    Processos que travam sua imobiliária
+                  </span>
                 </div>
               </div>
 
@@ -55,24 +59,34 @@ const BenefitsSection = () => {
                   ❌
                 </span>
                 <div className="text-white text-sm md:text-lg lg:text-[20px] leading-5 md:leading-6 text-left flex-1">
-                  <span className="font-extrabold">Concorrência disparando enquanto você fica para trás</span>
+                  <span className="font-extrabold">
+                    Concorrência disparando enquanto você fica para trás
+                  </span>
                 </div>
               </div>
             </div>
 
             <div className="text-center mb-8">
               <p className="text-black text-lg md:text-xl font-bold">
-                👉 Se você se reconhece aqui, está deixando dinheiro e clientes na mesa.
+                👉 Se você se reconhece aqui, está deixando dinheiro e clientes
+                na mesa.
               </p>
             </div>
           </div>
 
           {/* Bottom CTA Button */}
-          <div className="w-full max-w-[360px] mx-auto">
-            <Button 
-              variant="hero" 
-              size="hero" 
-              className="w-full"
+          <div className="w-full flex justify-center mt-6 mb-6 px-4">
+            <Button
+              variant="hero"
+              size="hero"
+              className="
+      w-full max-w-[360px]
+      whitespace-normal break-words text-center
+      px-3 py-2 text-xs       /* mobile */
+      sm:px-4 sm:py-3 sm:text-sm   /* tablet */
+      md:px-6 md:py-3 md:text-base /* desktop médio */
+      lg:px-8 lg:py-4 lg:text-lg   /* desktop grande */
+    "
               onClick={() => setIsModalOpen(true)}
             >
               Quero aplicar o sistema agora
@@ -80,10 +94,10 @@ const BenefitsSection = () => {
           </div>
         </div>
       </section>
-      
-      <DiagnosticModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+
+      <DiagnosticModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </>
   );

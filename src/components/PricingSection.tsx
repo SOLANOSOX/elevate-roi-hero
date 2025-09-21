@@ -136,10 +136,17 @@ const PricingSection = () => {
             </div>
 
             <div className="w-full max-w-[360px] mx-auto">
-              <Button 
-                variant="hero" 
-                size="hero" 
-                className="w-full"
+              <Button
+                variant="hero"
+                size="hero"
+                className="
+                w-full max-w-[360px]
+                whitespace-normal break-words text-center
+                px-3 py-2 text-xs       /* mobile */
+                sm:px-4 sm:py-3 sm:text-sm   /* tablet */
+                md:px-6 md:py-3 md:text-base /* desktop médio */
+                lg:px-8 lg:py-4 lg:text-lg   /* desktop grande */
+              "
                 onClick={() => setIsModalOpen(true)}
               >
                 QUERO GARANTIR MINHA VAGA
@@ -148,10 +155,10 @@ const PricingSection = () => {
           </div>
         </div>
       </section>
-      
-      <DiagnosticModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+
+      <DiagnosticModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </>
   );

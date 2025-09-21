@@ -27,10 +27,17 @@ const UrgencySection = () => {
 
           {/* CTA Button */}
           <div className="w-full max-w-[400px] mx-auto">
-            <Button 
-              variant="hero" 
-              size="hero" 
-              className="w-full bg-white text-[#010D15] hover:bg-gray-100"
+            <Button
+              variant="hero"
+              size="hero"
+              className="
+              w-full max-w-[360px]
+              whitespace-normal break-words text-center
+              px-3 py-2 text-xs       /* mobile */
+              sm:px-4 sm:py-3 sm:text-sm   /* tablet */
+              md:px-6 md:py-3 md:text-base /* desktop médio */
+              lg:px-8 lg:py-4 lg:text-lg   /* desktop grande */
+            "
               onClick={() => setIsModalOpen(true)}
             >
               Quero garantir minha vaga agora
@@ -39,9 +46,9 @@ const UrgencySection = () => {
         </div>
       </section>
 
-      <DiagnosticModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+      <DiagnosticModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </>
   );

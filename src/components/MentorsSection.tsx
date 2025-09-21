@@ -47,7 +47,14 @@ const MentorsSection = () => {
                 <Button
                   variant="hero"
                   size="hero"
-                  className="w-full"
+                  className="
+      w-full max-w-[360px]
+      whitespace-normal break-words text-center
+      px-3 py-2 text-xs       /* mobile */
+      sm:px-4 sm:py-3 sm:text-sm   /* tablet */
+      md:px-6 md:py-3 md:text-base /* desktop médio */
+      lg:px-8 lg:py-4 lg:text-lg   /* desktop grande */
+    "
                   onClick={() => setIsModalOpen(true)}
                 >
                   Quero aprender com Adel e Solano
