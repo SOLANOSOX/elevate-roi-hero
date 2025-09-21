@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
 import logo from "@/assets/logo.png";
-import NewLogo from "@/assets/new_Logo.svg";
+import NewLogo from "@/assets/1.svg";
+import NewLogo2 from "@/assets/2.svg";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,10 +25,10 @@ const HeroSection = () => {
             <div className="flex flex-col gap-6 md:gap-7">
               <div className="flex items-center gap-3 md:gap-4 -ml-2 md:-ml-4">
                 <img
-                // src="/lovable-uploads/72560b92-d983-4b8b-9b48-3b2178120bc6.png"
+                  // src="/lovable-uploads/72560b92-d983-4b8b-9b48-3b2178120bc6.png"
                   src={NewLogo}
                   alt="Legado Imobiliário Logo"
-                  className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] object-contain"
+                  className="w-[120px] h-[120px] md:w-[160px] md:h-[160px] lg:w-[200px] lg:h-[200px] object-contain drop-shadow-lg"
                 />
 
                 <span className="text-hero-text font-bold text-lg md:text-xl lg:text-2xl">
@@ -65,7 +66,7 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="w-full flex justify-center mt-6 mb-6 px-4">
+          <div className="w-full flex justify-center mt-6 mb-6">
             <Button
               variant="hero"
               size="hero"
@@ -76,10 +77,14 @@ const HeroSection = () => {
       sm:px-4 sm:py-3 sm:text-xs   /* tablet */
       md:px-6 md:py-3 md:text-xs  /* desktop médio */
       lg:px-8 lg:py-4 lg:text-xs   /* desktop grande */
-    "
+    flex flex-col items-center justify-center
+  "
               onClick={() => setIsModalOpen(true)}
             >
-              👉 Quero garantir minha vaga por apenas R$47
+              👉 Quero garantir minha vaga
+              <span className="text-[0.85em] leading-snug">
+                por apenas R$47
+              </span>
             </Button>
           </div>
         </div>
