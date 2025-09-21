@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
 import logo from "@/assets/logo.png";
+import NewLogo from "@/assets/new_Logo.svg";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,10 +24,12 @@ const HeroSection = () => {
             <div className="flex flex-col gap-6 md:gap-7">
               <div className="flex items-center gap-3 md:gap-4 -ml-2 md:-ml-4">
                 <img
-                  src="/lovable-uploads/72560b92-d983-4b8b-9b48-3b2178120bc6.png"
+                // src="/lovable-uploads/72560b92-d983-4b8b-9b48-3b2178120bc6.png"
+                  src={NewLogo}
                   alt="Legado Imobiliário Logo"
                   className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] object-contain"
                 />
+
                 <span className="text-hero-text font-bold text-lg md:text-xl lg:text-2xl">
                   Workshop ImobiliárIA Lucrativa
                 </span>
