@@ -62,11 +62,16 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="w-full flex justify-center md:justify-start mt-6">
+          <div className="w-full flex justify-center mt-6 mb-6 px-4">
             <Button
               variant="hero"
               size="hero"
-              className="max-w-[360px] w-full whitespace-normal break-words px-4 py-3 text-center"
+              className="
+      w-full max-w-[360px] 
+      whitespace-normal break-words text-center 
+      px-4 py-3 
+      text-sm sm:text-base
+    "
               onClick={() => setIsModalOpen(true)}
             >
               👉 Quero garantir minha vaga por apenas R$47
