@@ -57,9 +57,114 @@ const HeroSection = () => {
                     enrolação.
                   </h2>
 
-                  <div className="flex flex-col gap-2">
-                    <p className="text-sm">✅ Selos de pagamento seguro</p>
-                    <p className="text-sm">✅ Garantia 100% risco zero</p>
+                  <div className="flex flex-row gap-6 justify-center md:justify-start">
+                    {/* Selo Pagamento Seguro */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 200 200"
+                      className="w-20 h-20"
+                    >
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="90"
+                        fill="white"
+                        stroke="#16a34a"
+                        strokeWidth="8"
+                      />
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="75"
+                        fill="none"
+                        stroke="#16a34a"
+                        strokeWidth="4"
+                        strokeDasharray="8 6"
+                      />
+                      <text
+                        x="100"
+                        y="95"
+                        textAnchor="middle"
+                        fontSize="18"
+                        fontWeight="bold"
+                        fill="#16a34a"
+                      >
+                        PAGAMENTO
+                      </text>
+                      <text
+                        x="100"
+                        y="120"
+                        textAnchor="middle"
+                        fontSize="22"
+                        fontWeight="bold"
+                        fill="#16a34a"
+                      >
+                        SEGURO
+                      </text>
+                      <path
+                        d="M70 140l15 15 35-35"
+                        stroke="#16a34a"
+                        strokeWidth="8"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+
+                    {/* Selo Garantia */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 200 200"
+                      className="w-20 h-20"
+                    >
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="90"
+                        fill="white"
+                        stroke="#eab308"
+                        strokeWidth="8"
+                      />
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="75"
+                        fill="none"
+                        stroke="#eab308"
+                        strokeWidth="4"
+                        strokeDasharray="8 6"
+                      />
+                      <text
+                        x="100"
+                        y="90"
+                        textAnchor="middle"
+                        fontSize="18"
+                        fontWeight="bold"
+                        fill="#eab308"
+                      >
+                        GARANTIA
+                      </text>
+                      <text
+                        x="100"
+                        y="115"
+                        textAnchor="middle"
+                        fontSize="22"
+                        fontWeight="bold"
+                        fill="#eab308"
+                      >
+                        100%
+                      </text>
+                      <text
+                        x="100"
+                        y="140"
+                        textAnchor="middle"
+                        fontSize="16"
+                        fontWeight="bold"
+                        fill="#eab308"
+                      >
+                        RISCO ZERO
+                      </text>
+                    </svg>
                   </div>
                 </div>
               </div>
