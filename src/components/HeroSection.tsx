@@ -103,7 +103,7 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          <div className="flex flex-row flex-wrap gap-6 justify-center md:justify-start">
+          <div className="flex flex-row flex-wrap gap-6 justify-center">
             {/* Selo Pagamento Seguro */}
             {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
