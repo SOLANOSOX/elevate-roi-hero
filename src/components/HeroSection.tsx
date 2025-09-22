@@ -5,6 +5,8 @@ import logo from "@/assets/logo.png";
 import NewLogo from "@/assets/1.svg";
 import NewLogo2 from "@/assets/2.svg";
 import newHero from "@/assets/newBackgroundHero.png";
+import garantia from "@/assets/garantia (1).png";
+import garantia2 from "@/assets/garantia (2).png";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -57,7 +59,7 @@ const HeroSection = () => {
                     enrolação.
                   </h2>
 
-                  <div className="flex flex-row gap-6 justify-center md:justify-start">
+                  <div className="flex flex-row flex-wrap gap-6 justify-center md:justify-start">
                     {/* Selo Pagamento Seguro */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -165,6 +167,20 @@ const HeroSection = () => {
                         RISCO ZERO
                       </text>
                     </svg>
+
+                    {/* Selo Garantia PNG 1 */}
+                    <img
+                      src={garantia}
+                      alt="Garantia selo 1"
+                      className="w-20 h-20 object-contain"
+                    />
+
+                    {/* Selo Garantia PNG 2 */}
+                    <img
+                      src={garantia2}
+                      alt="Garantia selo 2"
+                      className="w-20 h-20 object-contain"
+                    />
                   </div>
                 </div>
               </div>
