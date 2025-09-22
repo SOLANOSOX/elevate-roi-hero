@@ -4,7 +4,8 @@ import DiagnosticModal from "@/components/DiagnosticModal";
 import logo from "@/assets/logo.png";
 import NewLogo from "@/assets/1.svg";
 import NewLogo2 from "@/assets/2.svg";
-import newHero from "@/assets/newBackgroundHero.png";
+import newHero from "@/assets/1.png";
+import newHero3 from "@/assets/3.png";
 import garantia from "@/assets/garantia (1).png";
 import garantia2 from "@/assets/garantia (2).png";
 
@@ -14,14 +15,28 @@ const HeroSection = () => {
     <>
       <section className="relative bg-hero-bg py-8 md:py-12 lg:py-[60px] px-4 md:px-6 lg:px-[418px] font-raleway">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
+          className="
+    absolute inset-0 
+    hidden md:block lg:hidden   /* aparece só entre md e lg */
+    bg-no-repeat bg-center bg-cover
+  "
           style={{
-            // backgroundImage: newHero,
-            backgroundSize: "cover",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "top left",
+            backgroundImage: `url(${newHero})`,
           }}
         ></div>
+
+        {/* Versão para telas grandes (>= lg) */}
+        <div
+          className="
+    absolute inset-0 
+    hidden lg:block   /* aparece só em telas lg pra cima */
+    bg-no-repeat bg-center bg-cover
+  "
+          style={{
+            backgroundImage: `url(${newHero3})`,
+          }}
+        ></div>
+
         <div className="relative z-10 max-w-[1060px] mx-auto min-h-[500px] md:min-h-[600px] lg:h-[718px] flex flex-col items-start justify-center gap-6 md:gap-8">
           {/* Logo */}
           <div className="w-full max-w-[546px]">
@@ -61,7 +76,7 @@ const HeroSection = () => {
 
                   <div className="flex flex-row flex-wrap gap-6 justify-center md:justify-start">
                     {/* Selo Pagamento Seguro */}
-                    <svg
+                    {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 200 200"
                       className="w-20 h-20"
@@ -114,7 +129,7 @@ const HeroSection = () => {
                     </svg>
 
                     {/* Selo Garantia */}
-                    <svg
+                    {/*<svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 200 200"
                       className="w-20 h-20"
@@ -166,20 +181,20 @@ const HeroSection = () => {
                       >
                         RISCO ZERO
                       </text>
-                    </svg>
+                    </svg> */}
 
                     {/* Selo Garantia PNG 1 */}
-                    <img
+                    {/* <img
                       src={garantia}
                       alt="Garantia selo 1"
                       className="w-20 h-20 object-contain"
-                    />
+                    /> */}
 
                     {/* Selo Garantia PNG 2 */}
                     <img
                       src={garantia2}
                       alt="Garantia selo 2"
-                      className="w-20 h-20 object-contain"
+                      className="w-40 h-30 object-contain"
                     />
                   </div>
                 </div>

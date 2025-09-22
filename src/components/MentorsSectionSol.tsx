@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
-import background2 from "@/assets/background2.jpg";
+import background2 from "@/assets/background2.png";
 
 const MentorsSectionSol = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,12 +15,12 @@ const MentorsSectionSol = () => {
         }}
       >
         {/* Hide background on mobile with overlay */}
-        <div className="absolute inset-0 bg-[#FDF8ED] md:hidden"></div>
+        <div className="absolute inset-0 bg-[#FFF] md:hidden"></div>
         <div className="w-full pt-8 md:pt-[83px] pb-8 md:pb-[96px] relative z-10">
           <div className="w-full pt-[7px] flex flex-col gap-8">
             {/* Section Title (sempre centralizado) */}
             <div className="pb-[0.58px] text-center">
-              <h2 className="text-[#010D15] text-[32px] font-extrabold leading-[38.4px]">
+              <h2 className="text-[#FFF] text-[32px] font-extrabold leading-[38.4px]">
                 Conheça Seus Guias Nessa Jornada
               </h2>
             </div>
@@ -30,12 +30,12 @@ const MentorsSectionSol = () => {
               {/* Solano Massochin */}
               <div className="flex flex-col gap-5 items-center text-center md:items-start md:text-left">
                 <div className="pb-[0.58px]">
-                  <h3 className="text-[#010D15] text-[24px] font-extrabold leading-[28.8px]">
+                  <h3 className="text-[#FFF] text-[24px] font-extrabold leading-[28.8px]">
                     O Arquiteto da Tecnologia
                   </h3>
                 </div>
 
-                <div className="text-[#010D15] text-base font-medium leading-[24px] max-w-[480px]">
+                <div className="text-[#FFF] text-base font-medium leading-[24px] max-w-[480px]">
                   Especialista em Inteligência Artificial aplicada. Simplifica
                   tecnologia para resultados práticos.
                 </div>
