@@ -14,10 +14,10 @@ const BenefitsSection = () => {
   pb-12 md:pb-16 lg:pb-20         
   relative"
       >
-        <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-8 md:gap-12 lg:gap-16 relative">
+        <div className="max-w-[1060px] mx-auto flex flex-col items-center relative">
           {/* Identification Section - "Você vive essa realidade?" */}
           <div className="w-full">
-            <h2 className="text-black text-[24px] md:text-[28px] lg:text-[32px] font-extrabold leading-tight text-center mb-8 md:mb-12">
+            <h2 className="text-black text-[30px] md:text-[35px] lg:text-[40px] font-extrabold leading-tight text-center mb-10 md:mb-16">
               Você vive essa realidade?
             </h2>
 
@@ -68,7 +68,7 @@ const BenefitsSection = () => {
 
             <div className="text-center mb-8">
               <p className="text-black text-lg md:text-xl font-bold">
-                👉 Se você se reconhece aqui, está deixando dinheiro e clientes
+                Se você se reconhece aqui, está deixando dinheiro e clientes
                 na mesa.
               </p>
             </div>
