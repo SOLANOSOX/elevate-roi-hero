@@ -15,7 +15,7 @@ const MentorsSectionSol = () => {
         }}
       >
         {/* Hide background on mobile with overlay */}
-        <div className="absolute inset-0 bg-[#FFF] md:hidden"></div>
+        <div className="absolute inset-0 bg-[#0E141B] md:hidden"></div>
         <div className="w-full pt-8 md:pt-[83px] pb-8 md:pb-[96px] relative z-10">
           <div className="w-full pt-[7px] flex flex-col gap-8">
             {/* Section Title (sempre centralizado) */}
