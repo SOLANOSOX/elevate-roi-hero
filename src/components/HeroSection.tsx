@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
 import logo from "@/assets/logo.png";
 import NewLogo from "@/assets/1.svg";
-import NewLogo2 from "@/assets/2.svg";
+import NewLogo2 from "@/assets/new_logo2.svg";
 import newHero from "@/assets/1.png";
 import newHero3 from "@/assets/3.png";
 import garantia from "@/assets/garantia (1).png";
@@ -41,14 +41,14 @@ const HeroSection = () => {
           {/* Logo */}
           <div className="w-full max-w-[546px]">
             <div className="flex flex-col gap-6 md:gap-7">
-              <div className="flex flex-col items-center justify-center -ml-2 md:-ml-4">
+              <div className="flex flex-col items-center justify-center -ml-2 md:-ml-4 overflow-hidden">
                 <img
-                  src={NewLogo}
+                  src={NewLogo2}
                   alt="Legado Imobiliário Logo"
                   className="
-      w-[180px] h-[180px]      /* mobile */
-      md:w-[240px] md:h-[240px]  /* tablet */
-      lg:w-[300px] lg:h-[300px]  /* desktop */
+      w-[180px] h-[auto]      /* mobile */
+      md:w-[240px] md:h-auto  /* tablet */
+      lg:w-[300px] lg:h-auto  /* desktop */
       object-contain drop-shadow-lg
     "
                 />
