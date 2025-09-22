@@ -78,7 +78,7 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="w-full flex justify-center mt-6 mb-6">
+          <div className="w-full flex justify-start mt-6 mb-6">
             <Button
               variant="hero"
               size="hero"
