@@ -24,14 +24,14 @@ const HeroSection = () => {
 
         {/* xl até 2xl-1 (1280px até 1535px) */}
         <div
-          className="absolute inset-0 hidden xl:block 2xl:hidden bg-cover bg-center"
+          className="absolute inset-0 hidden md:block 2xl:hidden bg-cover bg-center"
           style={{ backgroundImage: `url(${hero2})` }}
         ></div>
 
         {/* 2xl pra cima (>=1536px) */}
         <div
           className="absolute inset-0 hidden 2xl:block bg-cover bg-center"
-          style={{ backgroundImage: `url(${hero})` }}
+          style={{ backgroundImage: `url(${hero2})` }}
         ></div>
 
         <div className="relative z-10 max-w-[1060px] mx-auto min-h-[500px] md:min-h-[600px] lg:h-[718px] flex flex-col items-start justify-center gap-6 md:gap-8">
