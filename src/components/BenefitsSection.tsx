@@ -17,7 +17,7 @@ const BenefitsSection = () => {
         <div className="max-w-[1060px] mx-auto flex flex-col items-center relative">
           {/* Identification Section - "Você vive essa realidade?" */}
           <div className="w-full">
-            <h2 className="text-black text-[30px] md:text-[35px] lg:text-[40px] font-extrabold leading-tight text-center mb-10 md:mb-16">
+            <h2 className="text-black text-[30px] md:text-[35px] lg:text-[40px] font-bold leading-tight text-center mb-10 md:mb-16">
               Você vive essa realidade?
             </h2>
 

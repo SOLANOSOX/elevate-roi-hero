@@ -31,7 +31,7 @@ const HeroSection = () => {
         {/* 2xl pra cima (>=1536px) */}
         <div
           className="absolute inset-0 hidden 2xl:block bg-cover bg-center"
-          style={{ backgroundImage: `url(${hero2})` }}
+          style={{ backgroundImage: `url(${hero})` }}
         ></div>
 
         <div className="relative z-10 max-w-[1060px] mx-auto min-h-[500px] md:min-h-[600px] lg:h-[718px] flex flex-col items-start justify-center gap-6 md:gap-8">
@@ -51,16 +51,13 @@ const HeroSection = () => {
                 />{" "}
                 <div
                   className="
-      text-hero-accent
-      text-[28px]
-      md:text-[30px]
-      lg:text-[32px]
-      font-semibold
-      leading-none   /* deixa o texto mais colado */
-      -mt-1          /* força subir um pouco mais */
-    "
+    text-hero-accent
+    text-[18px] md:text-[22px] lg:text-[26px]
+    font-bold text-center
+    leading-tight -mt-2
+  "
                 >
-                  25 e 26 de Outubro | Ao Vivo
+                  25 e 26 de Outubro | Ao Vivo | Online
                 </div>
               </div>
 
@@ -114,114 +111,6 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-row flex-wrap gap-6 justify-center">
-            {/* Selo Pagamento Seguro */}
-            {/* <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 200 200"
-                      className="w-20 h-20"
-                    >
-                      <circle
-                        cx="100"
-                        cy="100"
-                        r="90"
-                        fill="white"
-                        stroke="#16a34a"
-                        strokeWidth="8"
-                      />
-                      <circle
-                        cx="100"
-                        cy="100"
-                        r="75"
-                        fill="none"
-                        stroke="#16a34a"
-                        strokeWidth="4"
-                        strokeDasharray="8 6"
-                      />
-                      <text
-                        x="100"
-                        y="95"
-                        textAnchor="middle"
-                        fontSize="18"
-                        fontWeight="bold"
-                        fill="#16a34a"
-                      >
-                        PAGAMENTO
-                      </text>
-                      <text
-                        x="100"
-                        y="120"
-                        textAnchor="middle"
-                        fontSize="22"
-                        fontWeight="bold"
-                        fill="#16a34a"
-                      >
-                        SEGURO
-                      </text>
-                      <path
-                        d="M70 140l15 15 35-35"
-                        stroke="#16a34a"
-                        strokeWidth="8"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-
-                    {/* Selo Garantia */}
-            {/*<svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 200 200"
-                      className="w-20 h-20"
-                    >
-                      <circle
-                        cx="100"
-                        cy="100"
-                        r="90"
-                        fill="white"
-                        stroke="#eab308"
-                        strokeWidth="8"
-                      />
-                      <circle
-                        cx="100"
-                        cy="100"
-                        r="75"
-                        fill="none"
-                        stroke="#eab308"
-                        strokeWidth="4"
-                        strokeDasharray="8 6"
-                      />
-                      <text
-                        x="100"
-                        y="90"
-                        textAnchor="middle"
-                        fontSize="18"
-                        fontWeight="bold"
-                        fill="#eab308"
-                      >
-                        GARANTIA
-                      </text>
-                      <text
-                        x="100"
-                        y="115"
-                        textAnchor="middle"
-                        fontSize="22"
-                        fontWeight="bold"
-                        fill="#eab308"
-                      >
-                        100%
-                      </text>
-                      <text
-                        x="100"
-                        y="140"
-                        textAnchor="middle"
-                        fontSize="16"
-                        fontWeight="bold"
-                        fill="#eab308"
-                      >
-                        RISCO ZERO
-                      </text>
-                    </svg> */}
-
             {/* Selo Garantia PNG 2 */}
             <img
               src={garantia2}

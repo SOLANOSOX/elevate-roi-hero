@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
-import BenefitsSection from "@/components/BenefitsSection";
+// import BenefitsSection from "@/components/BenefitsSection";
+import SecondSection from "@/components/SecondSection";
 import BigIdeaSection from "@/components/BigIdeaSection";
 import ThreeAsSection from "@/components/ThreeAsSection";
 import MentorsSection from "@/components/MentorsSection";
@@ -14,7 +15,8 @@ const Index = () => {
   return (
     <>
       <HeroSection />
-      <BenefitsSection />
+      {/* <BenefitsSection /> */}
+      <SecondSection />
       <BigIdeaSection />
       <ThreeAsSection />
       <MentorsSection />
