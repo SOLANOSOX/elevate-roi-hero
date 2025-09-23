@@ -1,7 +1,7 @@
 const ScheduleSection = () => {
   return (
     <>
-      <section className="bg-hero-bg w-full py-12 md:py-16 lg:py-[50px] px-4 md:px-6 lg:px-12 flex flex-col justify-center items-center gap-8 md:gap-12 lg:gap-16 font-geist mx-auto">
+      <section className="bg-hero-bg w-full py-12 md:py-16 lg:py-[50px] px-4 md:px-6 lg:px-12 flex flex-col justify-center items-center gap-8 md:gap-12 lg:gap-16 font-geist  mx-auto">
         {/* Top divider line */}
         <div className="w-full max-w-[1186px] h-[3px] bg-gradient-to-r from-transparent via-hero-text/20 to-transparent"></div>
 

@@ -8,7 +8,7 @@ const HowSection = () => {
   return (
     <>
       {/* ↑ adicionamos pb-* para reservar espaço do card que vai flutuar e invadir a seção seguinte */}
-      <section className="relative bg-hero-bg py-10 px-4 md:px-6 lg:px-[374px] pb-[28px] md:pb-[36px] lg:pb-[44px] font-raleway overflow-visible">
+      <section className="relative bg-hero-bg py-10 px-4 md:px-6 lg:px-[374px] pb-[28px] md:pb-[36px] lg:pb-[44px] font-geist overflow-visible">
         {/* Background Image - hidden on mobile */}
         <div
           className="absolute inset-0 bg-cover bg-left bg-no-repeat opacity-30 hidden md:block"

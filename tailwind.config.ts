@@ -19,6 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
 				raleway: ['Raleway', 'sans-serif'],
 				geist: ['Geist', 'sans-serif'],
 			},

@@ -12,7 +12,7 @@ const AboutSection = () => {
   return (
     <>
       <section
-        className="relative px-4 md:px-6 lg:px-[418px] font-raleway min-h-[400px] md:min-h-[878px] bg-[#FDF8ED] md:bg-cover md:bg-center md:bg-no-repeat"
+        className="relative px-4 md:px-6 lg:px-[418px] font-geist min-h-[400px] md:min-h-[878px] bg-[#FDF8ED] md:bg-cover md:bg-center md:bg-no-repeat"
         style={{
           backgroundImage: `url(${background})`,
         }}

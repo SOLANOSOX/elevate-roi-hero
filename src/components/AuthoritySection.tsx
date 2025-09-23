@@ -7,7 +7,7 @@ const AuthoritySection = () => {
 
   return (
     <>
-      <section className="text-[#010D15] px-4 md:px-6 lg:px-[418px] font-raleway py-12 md:py-16 lg:py-20">
+      <section className="text-[#010D15] px-4 md:px-6 lg:px-[418px] font-geist py-12 md:py-16 lg:py-20">
         <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-8 md:gap-12">
           {/* Title */}
           <div className="w-full text-center">

@@ -5,7 +5,7 @@ const PricingSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway">
+      <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-geist">
         <div className="max-w-[1060px] mx-auto py-20">
           {/* Main Title */}
           <div className="text-center mb-12">

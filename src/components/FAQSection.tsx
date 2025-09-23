@@ -13,7 +13,7 @@ const FAQSection = () => {
   return (
     <>
       <section
-        className="relative bg-black font-raleway py-12 md:py-16 lg:py-20 overflow-hidden"
+        className="relative bg-black font-geist py-12 md:py-16 lg:py-20 overflow-hidden"
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",

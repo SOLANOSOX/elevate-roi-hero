@@ -7,7 +7,7 @@ const UrgencySection = () => {
 
   return (
     <>
-      <section className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway py-12 md:py-16 lg:py-20">
+      <section className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-geist py-12 md:py-16 lg:py-20">
         <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-8 md:gap-12 text-center">
           {/* Title */}
           <div className="w-full">

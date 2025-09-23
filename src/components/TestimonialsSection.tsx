@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
           {/* Header Content */}
           <div className="w-full flex flex-col items-center mb-8 md:mb-12 lg:mb-16">
             <div className="w-full max-w-[572px] text-center">
-              {/* <h2 className="text-[20px] md:text-[28px] lg:text-[32px] font-bold leading-tight md:leading-[38.40px] font-['Raleway'] mb-4 md:mb-6">
+              {/* <h2 className="text-[20px] md:text-[28px] lg:text-[32px] font-bold leading-tight md:leading-[38.40px] font-['inter'] mb-4 md:mb-6">
                 <span className="text-[#B8943F]">Resultados Reais</span>
                 <span className="text-[#010D15]">
                   {" "}
@@ -113,7 +113,7 @@ const TestimonialsSection = () => {
                 Eles Já Aplicaram e Lucraram
               </h2>
 
-              {/* <div className="flex flex-col items-center gap-4 md:gap-6 text-[#010D15] text-sm md:text-base font-medium leading-5 md:leading-6 font-['Raleway']">
+              {/* <div className="flex flex-col items-center gap-4 md:gap-6 text-[#010D15] text-sm md:text-base font-medium leading-5 md:leading-6 font-['inter']">
                 <p className="text-center">
                   Corretores e imobiliárias que saíram da zona de conforto e
                   implementaram

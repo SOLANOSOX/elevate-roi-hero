@@ -7,7 +7,7 @@ const BigIdeaSection = () => {
 
   return (
     <>
-      <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-raleway mb-0">
+      <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-geist mb-0">
         <div className="max-w-[1060px] mx-auto min-h-[400px] md:min-h-[750px] flex flex-col items-center relative py-6">
           {/* Header with logo and title - proper spacing to avoid overlap */}
           <div className="w-full flex flex-col items-center mb-6 relative z-10">

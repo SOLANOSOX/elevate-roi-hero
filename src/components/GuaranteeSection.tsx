@@ -1,7 +1,7 @@
 const GuaranteeSection = () => {
   return (
     <>
-      <section className="relative bg-hero-primary font-geist">
+      <section className="relative bg-hero-primary font-geist ">
         <div className="max-w-[1392px] mx-auto px-4 md:px-6 lg:px-[450px] py-40">
           <div className="w-full max-w-[492px] mx-auto flex flex-col justify-center items-center gap-5">
             {/* Guarantee Icon */}

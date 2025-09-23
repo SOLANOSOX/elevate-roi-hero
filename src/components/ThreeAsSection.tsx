@@ -1,7 +1,7 @@
 const ThreeAsSection = () => {
   return (
     <>
-      <section className="bg-hero-bg min-h-screen w-full py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-20 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-[90px] font-geist mx-auto">
+      <section className="bg-hero-bg min-h-screen w-full py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-20 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-[90px] font-geist  mx-auto">
         {/* Title */}
         <div className="w-full max-w-[900px] flex flex-col justify-center items-center gap-5 text-center">
           <div className="w-full">

@@ -8,7 +8,7 @@ const BenefitsSection = () => {
   return (
     <>
       <section
-        className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-raleway rounded-t-[50px] lg:rounded-t-[100px] 
+        className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-geist rounded-t-[50px] lg:rounded-t-[100px] 
   -mt-8 md:-mt-10 lg:-mt-12         
   pt-20 md:pt-24 lg:pt-28          
   pb-12 md:pb-16 lg:pb-20         

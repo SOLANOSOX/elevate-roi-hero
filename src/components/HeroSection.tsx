@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
 import logo from "@/assets/logo.png";
 import NewLogo from "@/assets/1.svg";
-import NewLogo2 from "@/assets/new_logo2.svg";
+import NewLogo2 from "@/assets/new_logo3.svg";
 import newHero from "@/assets/12.png";
 import newHero3 from "@/assets/32.png";
+import hero from "@/assets/2new.png";
+import hero2 from "@/assets/2new2.png";
 import garantia from "@/assets/garantia (1).png";
 import garantia2 from "@/assets/garantia (2).png";
 
@@ -13,28 +15,23 @@ const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <section className="relative bg-hero-bg py-8 md:py-12 lg:py-[60px] px-4 md:px-6 lg:px-[418px] font-raleway">
+      <section className="relative bg-hero-bg py-8 md:py-12 lg:py-[60px] px-4 md:px-6 lg:px-[418px] font-geist">
+        {/* md até xl-1 (768px até 1279px) */}
         <div
-          className="
-    absolute inset-0 
-    hidden md:block lg:hidden   /* aparece só entre md e lg */
-    bg-no-repeat bg-center bg-cover
-  "
-          style={{
-            backgroundImage: `url(${newHero})`,
-          }}
+          className="absolute inset-0 hidden md:block xl:hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${hero2})` }}
         ></div>
 
-        {/* Versão para telas grandes (>= lg) */}
+        {/* xl até 2xl-1 (1280px até 1535px) */}
         <div
-          className="
-    absolute inset-0 
-    hidden lg:block   /* aparece só em telas lg pra cima */
-    bg-no-repeat bg-center bg-cover
-  "
-          style={{
-            backgroundImage: `url(${newHero3})`,
-          }}
+          className="absolute inset-0 hidden xl:block 2xl:hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${hero2})` }}
+        ></div>
+
+        {/* 2xl pra cima (>=1536px) */}
+        <div
+          className="absolute inset-0 hidden 2xl:block bg-cover bg-center"
+          style={{ backgroundImage: `url(${hero})` }}
         ></div>
 
         <div className="relative z-10 max-w-[1060px] mx-auto min-h-[500px] md:min-h-[600px] lg:h-[718px] flex flex-col items-start justify-center gap-6 md:gap-8">
@@ -51,14 +48,27 @@ const HeroSection = () => {
       lg:w-[3000px] lg:h-auto  /* desktop */
       object-contain drop-shadow-lg
     "
-                />
+                />{" "}
+                <div
+                  className="
+      text-hero-accent
+      text-[28px]
+      md:text-[30px]
+      lg:text-[32px]
+      font-semibold
+      leading-none   /* deixa o texto mais colado */
+      -mt-1          /* força subir um pouco mais */
+    "
+                >
+                  25 e 26 de Outubro | Ao Vivo
+                </div>
               </div>
 
               {/* Main Content */}
               <div className="flex flex-col gap-4 md:gap-6">
                 {/* Main Title */}
                 <div className="flex flex-col">
-                  <h1 className="text-[24px] md:text-[32px] lg:text-[36px] font-extrabold leading-[28px] md:leading-[36px] lg:leading-[40px] text-hero-text">
+                  <h1 className="text-[24px] md:text-[32px] lg:text-[36px] font-bold leading-[28px] md:leading-[36px] lg:leading-[40px] text-hero-text">
                     Transforme sua Imobiliária em uma Máquina de Vendas com IA –{" "}
                     <span className="text-hero-accent">
                       +600% de Faturamento em 6 Meses
@@ -69,8 +79,8 @@ const HeroSection = () => {
                 {/* Description */}
                 <div className="flex flex-col text-hero-text text-sm md:text-base font-medium leading-5 md:leading-6 gap-4 md:gap-6">
                   <h2 className="text-hero-text text-lg md:text-xl lg:text-2xl font-bold">
-                    2 dias intensivos. Método testado. Sem mimimi. Sem
-                    enrolação.
+                    2 dias intensivos. VENDAS RECORRENTES COM INTELIGÊNCIA
+                    ARTIFICIAL DE R$ 997 POR R$ 47
                   </h2>
                 </div>
               </div>
@@ -94,7 +104,7 @@ const HeroSection = () => {
               onClick={() => setIsModalOpen(true)}
             >
               <span className="block font-bold text-[18px] leading-none">
-                Quero garantir minha vaga
+                GARANTIR INGRESSO | LOTE 0
               </span>
 
               <span className="text-[0.85em] font-semibold leading-none -mt-2">
