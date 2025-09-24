@@ -49,7 +49,7 @@ const HeroSection = () => {
             </div>
 
             {/* Main Content */}
-            <div className="flex flex-col gap-4 md:gap-6">
+            <div className="flex flex-col gap-4 md:gap-6 text-center md:text-left">
               {/* Main Title */}
               <div className="flex flex-col">
                 <h1
@@ -59,7 +59,8 @@ const HeroSection = () => {
     text-hero-text
   "
                 >
-                  Transforme sua Imobiliária em uma Máquina de Vendas com IA –{" "}
+                  Transforme sua Imobiliária em uma Máquina de Vendas com IA{" "}
+                  <br />
                   <span className="text-hero-accent">
                     +600% de Faturamento em 6 Meses
                   </span>
@@ -75,44 +76,53 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-hero-text text-[14px] md:text-[16px] lg:text-[18px] m-0 p-0 leading-none">
-            DE R$ 997 POR R$ 47
-          </h2>
+          <div className="w-full flex justify-center">
+            <h2
+              className="
+    text-hero-text
+    text-[14px] md:text-[16px] lg:text-[18px]
+    m-0 p-0 leading-none
+    w-full text-center md:text-left
+  "
+            >
+              DE R$ 997 POR R$ 47
+            </h2>
+          </div>
 
           {/* CTA Button */}
-          <div className="w-full flex justify-start mb-6 -mt-1">
+          <div className="w-full flex justify-center md:justify-start mb-6 -mt-1">
             <Button
               variant="hero"
               size="hero"
               className="
       w-full max-w-[360px] 
       whitespace-normal break-words text-center 
-      px-3 py-0 text-xs   /* mobile */
-      sm:px-4 sm:py-3 sm:text-xs   /* tablet */
-      md:px-6 md:py-3 md:text-xs  /* desktop médio */
-      lg:px-8 lg:py-4 lg:text-xs   /* desktop grande */
+      px-3 py-0 text-xs
+      sm:px-4 sm:py-3 sm:text-xs
+      md:px-6 md:py-3 md:text-xs
+      lg:px-8 lg:py-4 lg:text-xs
       flex flex-col items-center justify-center
-      shadow-none
-      ring-0 focus:ring-0 focus:outline-none
-      m-0
+      font-bold
+      rounded-full
+      text-black
+      bg-gradient-to-r from-[#CBA135] to-[#F5D78E]
+      shadow-none ring-0 focus:ring-0 focus:outline-none
+      transition-all duration-300 ease-in-out
+      hover:from-[#FFD85D] hover:to-[#FFF3C0]
+      hover:shadow-[0_0_20px_rgba(255,215,0,0.7)]
     "
               onClick={() => setIsModalOpen(true)}
             >
               <span className="block font-bold text-[18px] leading-none">
                 GARANTIR INGRESSO | LOTE 0
               </span>
-
-              <span className="text-[0.85em] font-semibold leading-none -mt-2">
+              {/* <span className="text-[1.30em] font-semibold leading-none -mt-1">
                 por apenas R$47
-              </span>
+              </span> */}
             </Button>
           </div>
 
-          <div className="flex flex-row flex-wrap gap-6 justify-center">
-            {/* Selo Garantia PNG 2 */}
-
-            {/* Selo Garantia PNG 1 */}
-          </div>
+          <div className="flex flex-row flex-wrap gap-6 justify-center"></div>
         </div>
       </section>
 
