@@ -1,6 +1,7 @@
 import background from "@/assets/dobraquatro.png";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import DiagnosticModal from "@/components/DiagnosticModal";
 
 const FourthSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -106,6 +107,11 @@ const FourthSection = () => {
         px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-3
         text-[12px] md:text-[14px] lg:text-[15px] font-bold tracking-wide
         flex items-center justify-center
+              bg-gradient-to-r from-[#CBA135] to-[#F5D78E]
+      shadow-none ring-0 focus:ring-0 focus:outline-none
+      transition-all duration-300 ease-in-out
+      hover:from-[#FFD85D] hover:to-[#FFF3C0]
+      hover:shadow-[0_0_20px_rgba(255,215,0,0.7)]
       "
               onClick={() => setIsModalOpen(true)}
             >
@@ -115,6 +121,10 @@ const FourthSection = () => {
         </div>
         {/* CTA Button */}
       </div>
+      <DiagnosticModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
