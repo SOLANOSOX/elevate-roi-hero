@@ -79,10 +79,11 @@ const HeroSection = () => {
           <div className="w-full flex justify-center">
             <h2
               className="
-      text-hero-text
-      text-[14px] md:text-[16px] lg:text-[18px]
-      m-0 p-0 leading-none
-    "
+    text-hero-text
+    text-[14px] md:text-[16px] lg:text-[18px]
+    m-0 p-0 leading-none
+    w-full text-center md:text-left
+  "
             >
               DE R$ 997 POR R$ 47
             </h2>
