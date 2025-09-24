@@ -6,7 +6,7 @@ import NewLogo from "@/assets/1.svg";
 import NewLogo2 from "@/assets/1.svg";
 import newHero from "@/assets/12.png";
 import newHero3 from "@/assets/32.png";
-import hero from "@/assets/2new.png";
+import hero from "@/assets/2bew.png";
 import hero2 from "@/assets/2new2.png";
 
 const HeroSection = () => {
