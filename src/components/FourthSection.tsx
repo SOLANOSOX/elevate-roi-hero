@@ -115,7 +115,7 @@ const FourthSection = () => {
       "
               onClick={() => setIsModalOpen(true)}
             >
-              QUERO APLICAR O SISTEMA AGORA
+              QUERO RESULTADOS CONSISTENTES
             </Button>
           </div>
         </div>
