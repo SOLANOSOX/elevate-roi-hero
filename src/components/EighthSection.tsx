@@ -57,7 +57,7 @@ const EighthSection = () => {
               className="
       text-white 
       text-[18px] md:text-[22px] lg:text-[26px] 
-      font-extrabold 
+      font-bold 
       leading-snug 
       drop-shadow-sm
     "
