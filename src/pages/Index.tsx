@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection";
-// import BenefitsSection from "@/components/BenefitsSection";
+import EighthSection from "@/components/EighthSection";
 import SecondSection from "@/components/SecondSection";
 import ThirdSection from "@/components/ThirdSection";
 import ThreeAsSection from "@/components/ThreeAsSection";
@@ -23,6 +23,7 @@ const Index = () => {
       <ThreeAsSection />
       <SixthSection />
       <SeventhSection />
+      <EighthSection />
       <MentorsSection />
       <MentorsSectionSol />
       <FAQSection />
