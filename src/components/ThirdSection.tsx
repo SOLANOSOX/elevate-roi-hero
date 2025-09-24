@@ -30,7 +30,7 @@ const ThirdSection = () => {
       <section className="bg-[#0E141B] px-4 md:px-6 lg:px-[418px] font-geist text-white">
         <div className="max-w-[1060px] mx-auto py-12 md:py-20 flex flex-col items-center gap-10">
           {/* Título */}
-          <h2 className="text-[28px] md:text-[40px] lg:text-[48px] text-center leading-tight font-extrabold">
+          <h2 className="text-[28px] md:text-[40px] lg:text-[48px] text-center leading-tight font-bold">
             Quem Já Aplicou e Lucrou
           </h2>
 

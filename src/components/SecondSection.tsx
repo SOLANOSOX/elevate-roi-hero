@@ -16,7 +16,7 @@ const SecondSection = () => {
       >
         <div className="max-w-[1060px] mx-auto flex flex-col items-center relative gap-10">
           {/* Título */}
-          <h2 className="text-black text-[26px] md:text-[34px] lg:text-[40px] font-extrabold leading-tight text-center">
+          <h2 className="text-black text-[26px] md:text-[34px] lg:text-[40px] font-bold leading-tight text-center">
             O Salto Que Sua Imobiliária Precisa
           </h2>
 

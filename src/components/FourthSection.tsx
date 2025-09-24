@@ -1,6 +1,9 @@
 import background from "@/assets/dobraquatro.png";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const FourthSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="relative font-geist text-white bg-[#0E141B]">
       {/* Background só do md pra cima */}
@@ -94,7 +97,23 @@ const FourthSection = () => {
               consistentes.
             </p>
           </div>
+          <div className="w-full flex justify-center mt-2 mb-4 px-4">
+            <Button
+              variant="hero"
+              size="hero"
+              className="
+        w-full max-w-[300px] md:max-w-[340px] lg:max-w-[360px]
+        px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-3
+        text-[12px] md:text-[14px] lg:text-[15px] font-bold tracking-wide
+        flex items-center justify-center
+      "
+              onClick={() => setIsModalOpen(true)}
+            >
+              QUERO APLICAR O SISTEMA AGORA
+            </Button>
+          </div>
         </div>
+        {/* CTA Button */}
       </div>
     </section>
   );
