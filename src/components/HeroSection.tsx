@@ -59,7 +59,8 @@ const HeroSection = () => {
     text-hero-text
   "
                 >
-                  Transforme sua Imobiliária em uma Máquina de Vendas com IA –{" "}
+                  Transforme sua Imobiliária em uma Máquina de Vendas com IA{" "}
+                  <br />
                   <span className="text-hero-accent">
                     +600% de Faturamento em 6 Meses
                   </span>
@@ -75,9 +76,17 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-hero-text text-[14px] md:text-[16px] lg:text-[18px] m-0 p-0 leading-none">
-            DE R$ 997 POR R$ 47
-          </h2>
+          <div className="w-full flex justify-center">
+            <h2
+              className="
+      text-hero-text
+      text-[14px] md:text-[16px] lg:text-[18px]
+      m-0 p-0 leading-none
+    "
+            >
+              DE R$ 997 POR R$ 47
+            </h2>
+          </div>
 
           {/* CTA Button */}
           <div className="w-full flex justify-center md:justify-start mb-6 -mt-1">
@@ -106,9 +115,9 @@ const HeroSection = () => {
               <span className="block font-bold text-[18px] leading-none">
                 GARANTIR INGRESSO | LOTE 0
               </span>
-              <span className="text-[1.30em] font-semibold leading-none -mt-1">
+              {/* <span className="text-[1.30em] font-semibold leading-none -mt-1">
                 por apenas R$47
-              </span>
+              </span> */}
             </Button>
           </div>
 
