@@ -35,17 +35,12 @@ const HeroSection = () => {
         <div className="relative z-10 max-w-[1060px] mx-auto min-h-[500px] md:min-h-[600px] lg:h-[718px] flex flex-col items-start justify-center gap-6 md:gap-8">
           {/* Logo */}
           <div className="w-full max-w-[546px] flex flex-col gap-6 md:gap-7">
-            <div className="flex flex-col items-center justify-center -ml-2 md:-ml-4 overflow-hidden">
+            <div className="flex flex-col items-center justify-center overflow-hidden">
               <img
                 src={NewLogo2}
                 alt="Legado Imobiliário Logo"
-                className="
-      w-[1800px] h-[auto]      /* mobile */
-      md:w-[2400px] md:h-auto  /* tablet */
-      lg:w-[3000px] lg:h-auto  /* desktop */
-      object-contain drop-shadow-lg
-    "
-              />{" "}
+                className="w-full max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] h-auto object-contain drop-shadow-lg"
+              />
             </div>
 
             {/* Main Content */}

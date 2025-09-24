@@ -69,9 +69,9 @@ const SixthSection = () => {
                       <span className="font-semibold">
                         Modelo Efetivo de Contrato de Parceria:
                       </span>{" "}
-                      Documento jurídico validado para firmar novas parcerias de
-                      forma segura e estratégica, ampliando sua rede de
-                      negócios.
+                      Documento jurídico base referência para firmar novas
+                      parcerias de forma segura e estratégica, assegurando e
+                      fortalecendo seu time comercial.
                     </p>
                   </li>
 
