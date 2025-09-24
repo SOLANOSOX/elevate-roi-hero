@@ -6,11 +6,11 @@ import ThreeAsSection from "@/components/ThreeAsSection";
 import MentorsSection from "@/components/MentorsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
-import PricingSection from "@/components/PricingSection";
 import UrgencySection from "@/components/UrgencySection";
 import AuthoritySection from "@/components/AuthoritySection";
 import MentorsSectionSol from "@/components/MentorsSectionSol";
 import FourthSection from "@/components/FourthSection";
+import SixthSection from "@/components/SixthSection";
 
 const Index = () => {
   return (
@@ -21,11 +21,11 @@ const Index = () => {
       <ThirdSection />
       <FourthSection />
       <ThreeAsSection />
+      <SixthSection />
       <MentorsSection />
       <MentorsSectionSol />
       <TestimonialsSection />
       <FAQSection />
-      <PricingSection />
       <UrgencySection />
       {/* <AuthoritySection /> */}
     </>
