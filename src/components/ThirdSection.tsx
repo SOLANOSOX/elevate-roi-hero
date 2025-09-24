@@ -76,7 +76,7 @@ const ThirdSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="w-full flex justify-center mt-6 mb-6 px-4">
+          {/* <div className="w-full flex justify-center mt-6 mb-6 px-4">
             <Button
               variant="hero"
               size="hero"
@@ -94,7 +94,7 @@ const ThirdSection = () => {
             >
               Quero aplicar o sistema agora
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
