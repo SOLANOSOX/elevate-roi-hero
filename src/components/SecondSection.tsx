@@ -21,8 +21,8 @@ const SecondSection = () => {
           </h2>
 
           {/* Texto explicativo */}
-          <div className="flex flex-col gap-5 text-center max-w-3xl">
-            <p className="text-[#0E141B] text-base md:text-lg lg:text-xl font-medium leading-relaxed">
+          <div className="flex flex-col gap-3 text-center max-w-3xl">
+            <p className="text-[#0E141B] text-[12px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed">
               Imobiliárias comuns e reais, muitas delas com menos de 10
               corretores, estão{" "}
               <span className="font-extrabold text-hero-accent">
@@ -31,7 +31,7 @@ const SecondSection = () => {
               .
             </p>
 
-            <p className="text-[#0E141B] text-base md:text-lg lg:text-xl font-medium leading-relaxed">
+            <p className="text-[#0E141B] text-[12px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed">
               Estamos vendo retornos de{" "}
               <span className="font-extrabold text-hero-accent">
                 +600% em apenas 6 meses
@@ -39,7 +39,7 @@ const SecondSection = () => {
               .
             </p>
 
-            <p className="text-[#0E141B] text-base md:text-lg lg:text-xl font-medium leading-relaxed">
+            <p className="text-[#0E141B] text-[12px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed">
               Isso não é magia, é <span className="font-extrabold">método</span>
               . Com um sistema completo, testado e validado no campo de batalha,
               você vai{" "}
