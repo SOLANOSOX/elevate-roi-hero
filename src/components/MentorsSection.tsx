@@ -10,10 +10,27 @@ const MentorsSection = () => {
   return (
     <>
       {/* Section Title - global */}
-      <div className="w-full bg-[#FDF8ED] text-center px-4 md:px-6 lg:px-[100px] pt-10 md:pt-16 lg:pt-20">
-        <h2 className="text-[#010D15] text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight">
-          Conheça Seus Guias Nessa Jornada
+
+      <div
+        className="w-full bg-[#FDF8ED] text-center px-4 md:px-6 lg:px-[100px] 
+                pt-12 md:pt-20 lg:pt-24 
+                pb-12 md:pb-20 lg:pb-24 
+                border-y-4 border-[#FDF8ED]"
+      >
+        <h2 className="text-[#010D15] text-[30px] md:text-[45px] leading-snug font-bold">
+          <span className="text-hero-accent">
+            Conheça Seus Guias
+            <br className="block md:hidden" /> {/* só quebra em mobile */}
+            <span className="hidden md:inline"> </span>{" "}
+            {/* espaço normal em desktop */}
+            Nessa Jornada
+          </span>
         </h2>
+        {/* <img
+          src="/lovable-uploads/f17cd4d8-1d68-4eb2-b47d-9272481f8f90.png"
+          alt="Company Logo"
+          className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] h-auto object-contain"
+        /> */}
       </div>
 
       <section
@@ -83,11 +100,11 @@ const MentorsSection = () => {
     "
             >
               <span className="font-semibold text-hero-accent">
-                Sua experiência prova: não é só sobre vender
+                Sua experiência prova:{" "}
               </span>
-              , é sobre construir relacionamentos que duram e faturam. Ela vai
-              te ensinar a ler o mercado como ninguém, usando sua percepção
-              aguçada para antecipar movimentos.
+              não é só sobre vender, é sobre construir relacionamentos que duram
+              e faturam. Ela vai te ensinar a ler o mercado como ninguém, usando
+              sua percepção aguçada para antecipar movimentos.
             </p>
           </div>
         </div>
