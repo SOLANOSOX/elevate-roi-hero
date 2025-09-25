@@ -48,13 +48,13 @@ const MentorsSection = () => {
           >
             <h2
               className="
-      text-[16px] xs:text-[18px] sm:text-[20px] md:text-[28px] lg:text-[30px] 
-      font-bold 
-      leading-snug md:leading-snug lg:leading-snug
-      text-hero-accent
-      max-w-[220px] xs:max-w-[260px] sm:max-w-[300px] md:max-w-[420px] lg:max-w-[500px]
-      ml-[-8px] xs:ml-[-12px] sm:ml-[-15px] md:ml-0
-    "
+    text-[16px] xs:text-[18px] sm:text-[20px] md:text-[28px] lg:text-[30px] 
+    font-bold 
+    leading-snug
+    text-hero-accent
+    max-w-[180px] xs:max-w-[220px] sm:max-w-[260px] md:max-w-[420px] lg:max-w-[500px]
+    ml-0 xs:ml-0 sm:ml-0 md:ml-0
+  "
             >
               Estrategista e Visionária que sente os movimentos do mercado
             </h2>
