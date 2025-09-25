@@ -9,13 +9,13 @@ const SecondSection = () => {
   return (
     <>
       <section
-        className="bg-hero-text px-4 md:px-6 lg:px-[418px] font-geist rounded-t-[40px] lg:rounded-t-[80px] 
+        className="bg-hero-text px-4 md:px-6 lg:px-[100px] font-geist rounded-t-[40px] lg:rounded-t-[80px] 
           -mt-8 md:-mt-10 lg:-mt-12         
           pt-16 md:pt-24 lg:pt-28          
           pb-12 md:pb-16 lg:pb-20         
           relative"
       >
-        <div className="max-w-[1060px] mx-auto flex flex-col items-center relative gap-10">
+        <div className="max-w-[1400px] mx-auto flex flex-col items-center relative gap-10">
           {/* Título */}
           <h2 className="text-black text-[26px] md:text-[34px] lg:text-[40px] font-bold leading-tight text-center">
             O Salto Que Sua Imobiliária Precisa
@@ -47,24 +47,18 @@ const SecondSection = () => {
               <span className="font-extrabold">dominar neste workshop</span>.
             </p>
           </div>
-
           {/* Espaço para gráficos */}
-          <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8">
             {/* Gráfico dinâmico */}
-            <div className="w-full md:w-1/2">
-              <div
-                className="w-full h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] 
-                    bg-[#0E141B] rounded-xl shadow-lg overflow-hidden p-4"
-              >
-                <ChartComponent />
-              </div>
+            <div className="w-full md:w-1/2 lg:w-1/2">
+                  <ChartComponent />
             </div>
 
             {/* Gráfico estático */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 lg:w-1/2">
               <div
-                className="w-full h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] 
-                    bg-[#0E141B] rounded-xl shadow-lg overflow-hidden p-4 flex items-center justify-center"
+                className="w-full h-[260px] sm:h-[300px] md:h-[360px] lg:h-[420px] 
+        bg-[#0E141B] rounded-xl shadow-lg overflow-hidden p-4 flex items-center justify-center"
               >
                 <img
                   src={chart2}

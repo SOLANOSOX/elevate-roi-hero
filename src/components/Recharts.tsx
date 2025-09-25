@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import {
-  LineChart,
+  ComposedChart,
   Line,
   XAxis,
   YAxis,
@@ -7,18 +8,19 @@ import {
   Tooltip,
   ResponsiveContainer,
   Area,
+  LabelList,
 } from "recharts";
 
 const data = [
-  { mes: "jan. de 2024", valor1: 3804000, valor2: 1900520 },
-  { mes: "fev. de 2024", valor1: 4794000, valor2: 4794000 },
-  { mes: "mar. de 2024", valor1: 7244000, valor2: 18163141 },
-  { mes: "abr. de 2024", valor1: 8609000, valor2: 34279141 },
-  { mes: "mai. de 2024", valor1: 17734000, valor2: 37788541 },
-  { mes: "jun. de 2024", valor1: 20559000, valor2: 44158541 },
-  { mes: "jul. de 2024", valor1: 33922000, valor2: 47645541 },
-  { mes: "ago. de 2024", valor1: 51428000, valor2: 62627405 },
-  { mes: "set. de 2024", valor1: 63309300, valor2: 70007405 },
+  { mes: "jan ", valor1: 3804000, valor2: 1900520 },
+  { mes: "fev ", valor1: 4794000, valor2: 4794000 },
+  { mes: "mar ", valor1: 7244000, valor2: 18163141 },
+  { mes: "abr ", valor1: 8609000, valor2: 34279141 },
+  { mes: "mai ", valor1: 17734000, valor2: 37788541 },
+  { mes: "jun ", valor1: 20559000, valor2: 44158541 },
+  { mes: "jul ", valor1: 33922000, valor2: 47645541 },
+  { mes: "ago ", valor1: 51428000, valor2: 62627405 },
+  { mes: "set ", valor1: 63309300, valor2: 70007405 },
 ];
 
 // formatador de valores em R$
@@ -26,80 +28,145 @@ const formatCurrency = (value: number) =>
   value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
 export default function ChartComponent() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="w-full h-[400px] bg-[#0E141B] rounded-xl shadow-md p-4">
+    <div
+      className="
+        w-full 
+        h-[300px] sm:h-[350px] md:h-[420px] lg:h-[480px] 
+        bg-[#0E141B] rounded-xl shadow-md p-2 sm:p-4
+      "
+    >
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 30, right: 30, left: 10, bottom: 10 }}>
-          {/* Definição do gradiente */}
+        <ComposedChart
+          data={data}
+          margin={{ top: 40, right: 10, left: 10, bottom: isMobile ? 10 : 30 }}
+        >
+          {/* Título fixo no topo */}
+          <text
+            x="50%"
+            y={20}
+            textAnchor="middle"
+            fill="#ffffff"
+            fontSize={isMobile ? 12 : 16}
+            fontWeight="bold"
+          >
+            VGV ACUMULADO | 2024
+          </text>
+
+          {/* Gradientes */}
           <defs>
-            <linearGradient id="colorFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#f1c40f" stopOpacity={0.4} />
+            <linearGradient id="gradientValor2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#FBBF0C" stopOpacity={0.4} />
+              <stop offset="100%" stopColor="#0E141B" stopOpacity={0} />
+            </linearGradient>
+
+            <linearGradient id="gradientValor1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#F6DE96" stopOpacity={0.3} />
               <stop offset="100%" stopColor="#0E141B" stopOpacity={0} />
             </linearGradient>
           </defs>
 
-          {/* Grid escondido */}
+          {/* Grid */}
           <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
 
-          {/* Eixo X com estilo */}
+          {/* Eixo X */}
           <XAxis
             dataKey="mes"
             stroke="#aaa"
-            tick={{ fontSize: 12 }}
-            tickMargin={10}
+            tickMargin={isMobile ? 10 : 12}
+            interval={0}
+            minTickGap={isMobile ? 5 : 15}
+            tick={{
+              fontSize: isMobile ? 10 : 13,
+              angle: isMobile ? -35 : 0,
+              textAnchor: isMobile ? "end" : "middle",
+            }}
           />
 
-          {/* Eixo Y escondido */}
           <YAxis hide />
 
-          {/* Tooltip estilizado */}
+          {/* Tooltip */}
           <Tooltip
             formatter={(value: number) => formatCurrency(value)}
             labelStyle={{ color: "#fff" }}
-            contentStyle={{ backgroundColor: "#1f2937", border: "none" }}
+            contentStyle={{
+              backgroundColor: "#1f2937",
+              border: "none",
+              borderRadius: "6px",
+            }}
           />
 
-          {/* Área preenchida */}
+          {/* Áreas preenchidas */}
+          {/* Áreas preenchidas (sem tooltip próprio) */}
+          <Area
+            type="monotone"
+            dataKey="valor2"
+            stroke="none"
+            fill="url(#gradientValor2)"
+            fillOpacity={1}
+            isAnimationActive={false}
+            activeDot={false}
+            tooltipType="none"
+          />
           <Area
             type="monotone"
             dataKey="valor1"
             stroke="none"
-            fill="url(#colorFill)"
+            fill="url(#gradientValor1)"
+            fillOpacity={1}
+            isAnimationActive={false}
+            activeDot={false}
+            tooltipType="none"
           />
 
-          {/* Linha tracejada (inferior) */}
-          <Line
-            type="monotone"
-            dataKey="valor1"
-            stroke="#F6DE96"
-            strokeWidth={2}
-            dot={{ r: 4, fill: "#F6DE96" }}
-            strokeDasharray="10 5"
-            label={{
-              position: "top",
-              fill: "#F6DE96",
-              fontSize: 12,
-              formatter: formatCurrency,
-            }}
-          />
-
-          {/* Linha sólida (superior) */}
+          {/* Linhas por cima */}
           <Line
             type="monotone"
             dataKey="valor2"
             stroke="#FBBF0C"
             strokeWidth={3}
-            dot={{ r: 5, fill: "#FBBF0C" }}
+            dot={{ r: 4, fill: "#FBBF0C" }}
             strokeDasharray="10 5"
-            label={{
-              position: "top",
-              fill: "#FBBF0C",
-              fontWeight: "bold",
-              fontSize: 12,
-              formatter: formatCurrency,
-            }}
-          />
-        </LineChart>
+          >
+            <LabelList
+              dataKey="valor2"
+              formatter={formatCurrency}
+              position="top"
+              style={{
+                fill: "#FBBF0C",
+                fontSize: isMobile ? 8 : 12,
+                fontWeight: "bold",
+              }}
+            />
+          </Line>
+
+          <Line
+            type="monotone"
+            dataKey="valor1"
+            stroke="#F6DE96"
+            strokeWidth={2}
+            dot={{ r: 3, fill: "#F6DE96" }}
+            strokeDasharray="10 5"
+          >
+            <LabelList
+              dataKey="valor1"
+              formatter={formatCurrency}
+              position="top"
+              style={{
+                fill: "#F6DE96",
+                fontSize: isMobile ? 8 : 12,
+              }}
+            />
+          </Line>
+        </ComposedChart>
       </ResponsiveContainer>
     </div>
   );
