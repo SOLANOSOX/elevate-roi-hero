@@ -48,13 +48,12 @@ const MentorsSection = () => {
           >
             <h2
               className="
-    text-[16px] md:text-[30px] 
+    text-[16px] sm:text-[20px] md:text-[28px] lg:text-[30px] 
     font-bold 
-    leading-snug 
+    leading-snug md:leading-snug lg:leading-snug
     text-hero-accent
-    max-w-[220px] md:max-w-[500px]
-    ml-[-20px]          /* puxa mais pra esquerda no mobile */
-    md:ml-0             /* normaliza no desktop */
+    max-w-[240px] sm:max-w-[300px] md:max-w-[420px] lg:max-w-[500px]
+    ml-[-10px] sm:ml-[-15px] md:ml-0
   "
             >
               Estrategista e Visionária que sente os movimentos do mercado
@@ -62,12 +61,12 @@ const MentorsSection = () => {
 
             <p
               className="
-      text-sm md:text-lg 
-      leading-relaxed 
-      font-medium
-      w-full
-      max-w-[155px] md:max-w-[500px]   /* mais espaço no mobile */
-    "
+    text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px]
+    leading-relaxed 
+    font-medium
+    w-full
+    max-w-[200px] sm:max-w-[260px] md:max-w-[420px] lg:max-w-[500px]
+  "
             >
               Anos de trincheira e um olhar único para o comportamento humano e
               as tendências de mercado, Adel é a mente criativa que desenha as
@@ -76,12 +75,12 @@ const MentorsSection = () => {
 
             <p
               className="
-      text-sm md:text-lg 
-      leading-relaxed 
-      font-medium
-      w-full
-      max-w-[153px] md:max-w-[500px]
-    "
+    text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px]
+    leading-relaxed 
+    font-medium
+    w-full
+    max-w-[200px] sm:max-w-[260px] md:max-w-[420px] lg:max-w-[500px]
+  "
             >
               <span className="font-semibold text-hero-accent">
                 Sua experiência prova: não é só sobre vender
