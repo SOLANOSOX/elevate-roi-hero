@@ -43,30 +43,30 @@ const MentorsSection = () => {
     ml-0 md:ml-auto
     px-2 md:px-0
     mt-[120px] md:mt-0
-    pr-10              /* afasta do lado direito no mobile */
+    pr-10
   "
           >
             <h2
               className="
-    text-[16px] sm:text-[20px] md:text-[28px] lg:text-[30px] 
-    font-bold 
-    leading-snug md:leading-snug lg:leading-snug
-    text-hero-accent
-    max-w-[240px] sm:max-w-[300px] md:max-w-[420px] lg:max-w-[500px]
-    ml-[-10px] sm:ml-[-15px] md:ml-0
-  "
+      text-[16px] xs:text-[18px] sm:text-[20px] md:text-[28px] lg:text-[30px] 
+      font-bold 
+      leading-snug md:leading-snug lg:leading-snug
+      text-hero-accent
+      max-w-[220px] xs:max-w-[260px] sm:max-w-[300px] md:max-w-[420px] lg:max-w-[500px]
+      ml-[-8px] xs:ml-[-12px] sm:ml-[-15px] md:ml-0
+    "
             >
               Estrategista e Visionária que sente os movimentos do mercado
             </h2>
 
             <p
               className="
-    text-sm md:text-base lg:text-lg
-    leading-relaxed 
-    font-medium
-    w-full
-    max-w-[200px] sm:max-w-[200px] md:max-w-[400px] lg:max-w-[500px]
-  "
+      text-sm xs:text-[15px] sm:text-base lg:text-lg
+      leading-relaxed 
+      font-medium
+      w-full
+      max-w-[180px] xs:max-w-[220px] sm:max-w-[260px] md:max-w-[400px] lg:max-w-[500px]
+    "
             >
               Anos de trincheira e um olhar único para o comportamento humano e
               as tendências de mercado, Adel é a mente criativa que desenha as
@@ -75,12 +75,12 @@ const MentorsSection = () => {
 
             <p
               className="
-    text-sm md:text-base lg:text-lg
-    leading-relaxed 
-    font-medium
-    w-full
-    max-w-[170px] sm:max-w-[200px] md:max-w-[400px] lg:max-w-[500px]
-  "
+      text-sm xs:text-[15px] sm:text-base lg:text-lg
+      leading-relaxed 
+      font-medium
+      w-full
+      max-w-[160px] xs:max-w-[200px] sm:max-w-[260px] md:max-w-[400px] lg:max-w-[500px]
+    "
             >
               <span className="font-semibold text-hero-accent">
                 Sua experiência prova: não é só sobre vender

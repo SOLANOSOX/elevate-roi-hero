@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			 screens: {
+        xs: "480px", // 🔥 Novo breakpoint para celulares menores
+      },
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
 				raleway: ['Raleway', 'sans-serif'],
