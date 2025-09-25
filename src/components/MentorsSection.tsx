@@ -61,11 +61,11 @@ const MentorsSection = () => {
 
             <p
               className="
-    text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px]
+    text-sm md:text-base lg:text-lg
     leading-relaxed 
     font-medium
     w-full
-    max-w-[200px] sm:max-w-[260px] md:max-w-[420px] lg:max-w-[500px]
+    max-w-[155px] sm:max-w-[200px] md:max-w-[400px] lg:max-w-[500px]
   "
             >
               Anos de trincheira e um olhar único para o comportamento humano e
@@ -75,11 +75,11 @@ const MentorsSection = () => {
 
             <p
               className="
-    text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px]
+    text-sm md:text-base lg:text-lg
     leading-relaxed 
     font-medium
     w-full
-    max-w-[200px] sm:max-w-[260px] md:max-w-[420px] lg:max-w-[500px]
+    max-w-[153px] sm:max-w-[200px] md:max-w-[400px] lg:max-w-[500px]
   "
             >
               <span className="font-semibold text-hero-accent">
