@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
 import background from "@/assets/backgroundAdel.png";
-import backgroundMobile from "@/assets/backgroundMobile/7.png";
+import backgroundMobile from "@/assets/backgroundMobile/72.png";
 
 const MentorsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,47 +36,52 @@ const MentorsSection = () => {
         <div className="relative z-10 w-full pt-8 md:pt-[83px] pb-8 md:pb-[96px]">
           <div
             className="
-      flex flex-col gap-5 text-[#010D15]
-      text-center md:text-center              /* mobile esquerda, desktop continua esquerda */
-      items-start md:items-start
-      w-full md:max-w-[540px]             /* limita largura no desktop */
-      ml-0 md:ml-auto                     /* cola na direita em telas grandes */
-      px-2 md:px-0
-      mt-[120px] md:mt-0
-    "
+    flex flex-col gap-5 text-[#010D15]
+    text-center md:text-center
+    items-start md:items-start
+    w-full md:max-w-[540px]
+    ml-0 md:ml-auto
+    px-2 md:px-0
+    mt-[120px] md:mt-0
+    pr-10              /* afasta do lado direito no mobile */
+  "
           >
             <h2
               className="
-        text-[18px] md:text-[30px] 
-        font-bold 
-        leading-snug 
-        text-hero-accent
-        max-w-[240px] md:max-w-[420px]   /* espremido no mobile */
-      "
+    text-[16px] md:text-[30px] 
+    font-bold 
+    leading-snug 
+    text-hero-accent
+    max-w-[220px] md:max-w-[500px]
+    ml-[-20px]          /* puxa mais pra esquerda no mobile */
+    md:ml-0             /* normaliza no desktop */
+  "
             >
               Estrategista e Visionária que sente os movimentos do mercado
             </h2>
+
             <p
               className="
-    text-sm md:text-lg 
-    leading-relaxed 
-    font-medium
-    w-full
-    max-w-[155px] md:max-w-[500px]
-  "
+      text-sm md:text-lg 
+      leading-relaxed 
+      font-medium
+      w-full
+      max-w-[155px] md:max-w-[500px]   /* mais espaço no mobile */
+    "
             >
               Anos de trincheira e um olhar único para o comportamento humano e
               as tendências de mercado, Adel é a mente criativa que desenha as
-              estratégias que realmente convertem.{" "}
+              estratégias que realmente convertem.
             </p>
+
             <p
               className="
-    text-sm md:text-lg 
-    leading-relaxed 
-    font-medium
-    w-full
-  max-w-[155px] md:max-w-[500px]
-  "
+      text-sm md:text-lg 
+      leading-relaxed 
+      font-medium
+      w-full
+      max-w-[153px] md:max-w-[500px]
+    "
             >
               <span className="font-semibold text-hero-accent">
                 Sua experiência prova: não é só sobre vender
