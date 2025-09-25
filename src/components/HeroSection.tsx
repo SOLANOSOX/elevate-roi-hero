@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
 import logo from "@/assets/logo.png";
 import NewLogo from "@/assets/1.svg";
-import NewLogo2 from "@/assets/1.svg";
+import NewLogo2 from "@/assets/log.svg";
 import newHero from "@/assets/12.png";
 import newHero3 from "@/assets/32.png";
 import hero from "@/assets/2bew.png";

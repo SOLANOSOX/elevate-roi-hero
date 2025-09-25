@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
-import background from "@/assets/background.jpg";
+import background from "@/assets/backgroundAdel.png";
 import backgroundMobile from "@/assets/backgroundMobile/7.png";
 
 const MentorsSection = () => {
@@ -18,7 +18,7 @@ const MentorsSection = () => {
 
       <section
         className="relative px-4 md:px-6 lg:px-[100px] font-geist 
-  min-h-[700px] md:min-h-[878px] bg-cover bg-center bg-no-repeat"
+        min-h-[700px] md:min-h-[878px] bg-cover bg-center bg-no-repeat"
       >
         {/* Background Mobile */}
         <div
@@ -33,49 +33,51 @@ const MentorsSection = () => {
         ></div>
 
         {/* Conteúdo */}
-        <div
-          className="
-    relative z-10 
-    w-full 
-    pt-8 md:pt-[83px] pb-8 md:pb-[96px] 
-  "
-        >
+        <div className="relative z-10 w-full pt-8 md:pt-[83px] pb-8 md:pb-[96px]">
           <div
             className="
-      flex flex-col gap-5 
-      text-[#010D15] 
-      text-left 
-      md:text-right 
-      md:items-end 
-      max-w-[540px] 
-      ml-0 md:ml-auto
-      px-2          /* deixa mais estreito no mobile */
-      mt-[120px]    /* empurra para baixo no mobile */
-      md:mt-0       /* remove espaçamento extra em telas grandes */
+      flex flex-col gap-5 text-[#010D15]
+      text-center md:text-center              /* mobile esquerda, desktop continua esquerda */
+      items-start md:items-start
+      w-full md:max-w-[540px]             /* limita largura no desktop */
+      ml-0 md:ml-auto                     /* cola na direita em telas grandes */
+      px-2 md:px-0
+      mt-[120px] md:mt-0
     "
           >
-            <h3
+            <h2
               className="
-        text-[18px] md:text-[24px] 
+        text-[18px] md:text-[30px] 
         font-bold 
         leading-snug 
         text-hero-accent
+        max-w-[240px] md:max-w-[420px]   /* espremido no mobile */
       "
             >
               Estrategista e Visionária que sente os movimentos do mercado
-            </h3>
+            </h2>
             <p
               className="
-        text-sm md:text-lg 
-        leading-relaxed 
-        font-medium
-        max-w-[320px]   /* deixa mais estreito no mobile */
-        md:max-w-[520px]
-      "
+    text-sm md:text-lg 
+    leading-relaxed 
+    font-medium
+    w-full
+    max-w-[155px] md:max-w-[500px]
+  "
             >
               Anos de trincheira e um olhar único para o comportamento humano e
               as tendências de mercado, Adel é a mente criativa que desenha as
               estratégias que realmente convertem.{" "}
+            </p>
+            <p
+              className="
+    text-sm md:text-lg 
+    leading-relaxed 
+    font-medium
+    w-full
+  max-w-[155px] md:max-w-[500px]
+  "
+            >
               <span className="font-semibold text-hero-accent">
                 Sua experiência prova: não é só sobre vender
               </span>
