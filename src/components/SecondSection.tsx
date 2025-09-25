@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import DiagnosticModal from "@/components/DiagnosticModal";
+import chart1 from "@/assets/charts/18.png";
+import chart2 from "@/assets/charts/19.png";
 
 const SecondSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,44 +50,26 @@ const SecondSection = () => {
           {/* Espaço para gráficos */}
           <div className="w-full flex flex-col md:flex-row items-center justify-center gap-6">
             <div className="w-full md:w-1/2">
-              <div className="w-full aspect-[16/9] bg-gray-100 rounded-xl shadow-md flex items-center justify-center">
-                <span className="text-gray-500 text-sm md:text-base">
-                  [Gráfico/Print 1]
-                </span>
+              <div className="w-full bg-gray-100 rounded-xl shadow-md overflow-hidden">
+                <img
+                  src={chart1}
+                  alt="Gráfico 1"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <div className="w-full aspect-[16/9] bg-gray-100 rounded-xl shadow-md flex items-center justify-center">
-                <span className="text-gray-500 text-sm md:text-base">
-                  [Gráfico/Print 2]
-                </span>
+              <div className="w-full bg-gray-100 rounded-xl shadow-md overflow-hidden">
+                <img
+                  src={chart2}
+                  alt="Gráfico 2"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
-
-          {/* CTA Button */}
-          {/* <div className="w-full flex justify-center mt-6 mb-6 px-4">
-            <Button
-              variant="hero"
-              size="hero"
-              className="
-    w-full max-w-[300px] md:max-w-[340px] lg:max-w-[360px]
-    px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-3
-    text-[12px] md:text-[14px] lg:text-[15px] font-bold tracking-wide
-    flex items-center justify-center
-  "
-              onClick={() => setIsModalOpen(true)}
-            >
-              QUERO APLICAR O SISTEMA AGORA
-            </Button>
-          </div> */}
         </div>
       </section>
-
-      <DiagnosticModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
     </>
   );
 };

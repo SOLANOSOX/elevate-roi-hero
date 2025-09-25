@@ -26,11 +26,6 @@ const MentorsSection = () => {
             Nessa Jornada
           </span>
         </h2>
-        {/* <img
-          src="/lovable-uploads/f17cd4d8-1d68-4eb2-b47d-9272481f8f90.png"
-          alt="Company Logo"
-          className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] h-auto object-contain"
-        /> */}
       </div>
 
       <section
