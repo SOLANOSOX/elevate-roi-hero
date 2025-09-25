@@ -65,7 +65,7 @@ const MentorsSection = () => {
     leading-relaxed 
     font-medium
     w-full
-    max-w-[155px] sm:max-w-[200px] md:max-w-[400px] lg:max-w-[500px]
+    max-w-[200px] sm:max-w-[200px] md:max-w-[400px] lg:max-w-[500px]
   "
             >
               Anos de trincheira e um olhar único para o comportamento humano e
@@ -79,7 +79,7 @@ const MentorsSection = () => {
     leading-relaxed 
     font-medium
     w-full
-    max-w-[153px] sm:max-w-[200px] md:max-w-[400px] lg:max-w-[500px]
+    max-w-[170px] sm:max-w-[200px] md:max-w-[400px] lg:max-w-[500px]
   "
             >
               <span className="font-semibold text-hero-accent">
