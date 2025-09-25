@@ -2,65 +2,87 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
 import background from "@/assets/background.jpg";
+import backgroundMobile from "@/assets/backgroundMobile/7.png";
 
 const MentorsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
+      {/* Section Title - global */}
+      <div className="w-full bg-[#FDF8ED] text-center px-4 md:px-6 lg:px-[100px] pt-10 md:pt-16 lg:pt-20">
+        <h2 className="text-[#010D15] text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-tight">
+          Conheça Seus Guias Nessa Jornada
+        </h2>
+      </div>
+
       <section
-        className="relative px-4 md:px-6 lg:px-[100px] font-geist min-h-[400px] md:min-h-[878px] bg-[#FDF8ED] md:bg-cover md:bg-center md:bg-no-repeat"
-        style={{
-          backgroundImage: `url(${background})`,
-        }}
+        className="relative px-4 md:px-6 lg:px-[100px] font-geist 
+  min-h-[700px] md:min-h-[878px] bg-cover bg-center bg-no-repeat"
       >
-        {/* Hide background on mobile with overlay */}
-        <div className="absolute inset-0 bg-[#FDF8ED] md:hidden"></div>
-        <div className="w-full pt-8 md:pt-[83px] pb-8 md:pb-[96px] relative z-10">
-          <div className="w-full pt-[7px] flex flex-col gap-8">
-            {/* Section Title (sempre centralizado) */}
-            <div className="pb-[0.58px] text-center">
-              <h2 className="text-[#010D15] text-[32px] font-extrabold leading-[38.4px]">
-                Conheça Seus Guias Nessa Jornada
-              </h2>
-            </div>
+        {/* Background Mobile */}
+        <div
+          className="absolute inset-0 md:hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${backgroundMobile})` }}
+        ></div>
 
-            {/* Mentors (colados mais na direita) */}
-            <div className="flex flex-col items-center text-center md:items-end md:text-right md:ml-auto md:pr-4 lg:pr-8 gap-8">
-              {/* Adel Gabrielle */}
-              <div className="flex flex-col gap-5 items-center text-center md:items-end md:text-right">
-                <div className="pb-[0.58px]">
-                  <h3 className="text-[#010D15] text-[24px] font-extrabold leading-[28.8px]">
-                    A Estrategista que Sente o Mercado
-                  </h3>
-                </div>
+        {/* Background Desktop */}
+        <div
+          className="absolute inset-0 hidden md:block bg-cover bg-center"
+          style={{ backgroundImage: `url(${background})` }}
+        ></div>
 
-                <div className="text-[#010D15] text-base font-medium leading-[24px] max-w-[480px]">
-                  Anos de experiência em comportamento humano e vendas de alto
-                  impacto. Vai te mostrar como ler o mercado e criar estratégias
-                  que convertem.
-                </div>
-              </div>
-
-              {/* CTA Button (também à direita) */}
-              <div className="w-full max-w-[360px] md:ml-auto">
-                <Button
-                  variant="hero"
-                  size="hero"
-                  className="
-                  w-full max-w-[360px] 
-                  whitespace-normal break-words text-center 
-                  px-3 py-0 text-xs   /* mobile */
-                  sm:px-4 sm:py-3 sm:text-xs   /* tablet */
-                  md:px-6 md:py-3 md:text-xs  /* desktop médio */
-                  lg:px-8 lg:py-4 lg:text-xs   /* desktop grande */
-                "
-                  onClick={() => setIsModalOpen(true)}
-                >
-                  Quero aprender com Adel e Solano
-                </Button>
-              </div>
-            </div>
+        {/* Conteúdo */}
+        <div
+          className="
+    relative z-10 
+    w-full 
+    pt-8 md:pt-[83px] pb-8 md:pb-[96px] 
+  "
+        >
+          <div
+            className="
+      flex flex-col gap-5 
+      text-[#010D15] 
+      text-left 
+      md:text-right 
+      md:items-end 
+      max-w-[540px] 
+      ml-0 md:ml-auto
+      px-2          /* deixa mais estreito no mobile */
+      mt-[120px]    /* empurra para baixo no mobile */
+      md:mt-0       /* remove espaçamento extra em telas grandes */
+    "
+          >
+            <h3
+              className="
+        text-[18px] md:text-[24px] 
+        font-extrabold 
+        leading-snug 
+        text-hero-accent
+      "
+            >
+              Estrategista e Visionária que sente os movimentos do mercado
+            </h3>
+            <p
+              className="
+        text-sm md:text-lg 
+        leading-relaxed 
+        font-medium
+        max-w-[320px]   /* deixa mais estreito no mobile */
+        md:max-w-[520px]
+      "
+            >
+              Anos de trincheira e um olhar único para o comportamento humano e
+              as tendências de mercado, Adel é a mente criativa que desenha as
+              estratégias que realmente convertem.{" "}
+              <span className="font-semibold text-hero-accent">
+                Sua experiência prova: não é só sobre vender
+              </span>
+              , é sobre construir relacionamentos que duram e faturam. Ela vai
+              te ensinar a ler o mercado como ninguém, usando sua percepção
+              aguçada para antecipar movimentos.
+            </p>
           </div>
         </div>
       </section>

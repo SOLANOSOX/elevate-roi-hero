@@ -19,12 +19,6 @@ const MentorsSectionSol = () => {
         <div className="w-full pt-8 md:pt-[83px] pb-8 md:pb-[96px] relative z-10">
           <div className="w-full pt-[7px] flex flex-col gap-8">
             {/* Section Title (sempre centralizado) */}
-            <div className="pb-[0.58px] text-center">
-              <h2 className="text-[#FFF] text-[32px] font-extrabold leading-[38.4px]">
-                Conheça Seus Guias Nessa Jornada
-              </h2>
-            </div>
-
             {/* Mentor Solano (colado mais à esquerda) */}
             <div className="flex flex-col items-center text-center md:items-start md:text-left md:mr-auto md:pl-4 lg:pl-8 gap-8">
               {/* Solano Massochin */}
@@ -36,17 +30,24 @@ const MentorsSectionSol = () => {
                 </div>
 
                 <div className="text-[#FFF] text-base font-medium leading-[24px] max-w-[480px]">
-                  Especialista em Inteligência Artificial aplicada. Simplifica
-                  tecnologia para resultados práticos.
+                  O cérebro por trás da implementação. Solano desmistifica
+                  ferramentas, as IA’s e a tecnologia, mostrando como
+                  transformar complexidade em ferramentas simples e eficazes.
+                  Com ele, você entenderá o "como" e o "porquê" de cada
+                  automação, garantindo que sua imobiliária opere com a
+                  eficiência de uma máquina do futuro.
                 </div>
               </div>
 
               {/* CTA Button (também à esquerda) */}
-              <div className="w-full max-w-[360px] md:mr-auto">
-                <Button
-                  variant="hero"
-                  size="hero"
-                  className="
+            </div>
+          </div>
+        </div>
+        <div className="w-full max-w-[360px] md:mr-auto">
+          <Button
+            variant="hero"
+            size="hero"
+            className="
                   w-full max-w-[360px] 
                   whitespace-normal break-words text-center 
                   px-3 py-0 text-xs   /* mobile */
@@ -54,13 +55,10 @@ const MentorsSectionSol = () => {
                   md:px-6 md:py-3 md:text-xs  /* desktop médio */
                   lg:px-8 lg:py-4 lg:text-xs   /* desktop grande */
                 "
-                  onClick={() => setIsModalOpen(true)}
-                >
-                  Quero aprender com Adel e Solano
-                </Button>
-              </div>
-            </div>
-          </div>
+            onClick={() => setIsModalOpen(true)}
+          >
+            Quero aprender com Adel e Solano
+          </Button>
         </div>
       </section>
 
