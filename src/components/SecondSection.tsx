@@ -1,6 +1,7 @@
 import { useState } from "react";
 import chart1 from "@/assets/charts/18.png";
-import chart2 from "@/assets/charts/19.png";
+import chart2 from "@/assets/charts/vgv_acumulado_2024.svg";
+import ChartComponent from "@/components/Recharts"; // ajuste o caminho conforme a pasta
 
 const SecondSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,22 +49,27 @@ const SecondSection = () => {
           </div>
 
           {/* Espaço para gráficos */}
-          <div className="w-full flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8">
+            {/* Gráfico dinâmico */}
             <div className="w-full md:w-1/2">
-              <div className="w-full bg-gray-100 rounded-xl shadow-md overflow-hidden">
-                <img
-                  src={chart1}
-                  alt="Gráfico 1"
-                  className="w-full h-full object-cover"
-                />
+              <div
+                className="w-full h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] 
+                    bg-[#0E141B] rounded-xl shadow-lg overflow-hidden p-4"
+              >
+                <ChartComponent />
               </div>
             </div>
+
+            {/* Gráfico estático */}
             <div className="w-full md:w-1/2">
-              <div className="w-full bg-gray-100 rounded-xl shadow-md overflow-hidden">
+              <div
+                className="w-full h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] 
+                    bg-[#0E141B] rounded-xl shadow-lg overflow-hidden p-4 flex items-center justify-center"
+              >
                 <img
                   src={chart2}
                   alt="Gráfico 2"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
