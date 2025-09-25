@@ -11,7 +11,7 @@ const MentorsSection = () => {
     <>
       {/* Section Title - global */}
       <div className="w-full bg-[#FDF8ED] text-center px-4 md:px-6 lg:px-[100px] pt-10 md:pt-16 lg:pt-20">
-        <h2 className="text-[#010D15] text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-tight">
+        <h2 className="text-[#010D15] text-[28px] md:text-[36px] lg:text-[42px] font-semibold leading-tight">
           Conheça Seus Guias Nessa Jornada
         </h2>
       </div>
@@ -57,7 +57,7 @@ const MentorsSection = () => {
             <h3
               className="
         text-[18px] md:text-[24px] 
-        font-extrabold 
+        font-bold 
         leading-snug 
         text-hero-accent
       "
