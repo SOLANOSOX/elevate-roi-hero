@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import DiagnosticModal from "@/components/DiagnosticModal";
 import background from "@/assets/backgroundAdel.png";
 import backgroundMobile from "@/assets/backgroundMobile/72.png";
 
@@ -91,7 +89,7 @@ const MentorsSection = () => {
       leading-relaxed 
       font-medium
       w-full
-      max-w-[160px] xs:max-w-[200px] sm:max-w-[260px] md:max-w-[400px] lg:max-w-[500px]
+      max-w-[180px] xs:max-w-[220px] sm:max-w-[260px] md:max-w-[400px] lg:max-w-[500px]
     "
             >
               <span className="font-semibold text-hero-accent">
@@ -101,14 +99,10 @@ const MentorsSection = () => {
               e faturam. Ela vai te ensinar a ler o mercado como ninguém, usando
               sua percepção aguçada para antecipar movimentos.
             </p>
+           
           </div>
         </div>
       </section>
-
-      <DiagnosticModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
     </>
   );
 };

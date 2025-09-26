@@ -6,37 +6,42 @@ const SixthSection = () => {
   return (
     <>
       <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-geist">
-        <div className="max-w-[1060px] mx-auto py-20">
+        <div className="max-w-[1060px] mx-auto pb-20">
           {/* Main Title */}
-          {/* Main Title */}
-          <div className="text-center mb-2">
-            <h2 className="text-[26px] md:text-[32px] lg:text-4xl font-bold text-hero-text leading-snug">
-              A Arquitetura do Seu Lucro: <br className="block sm:hidden" />
-              Bônus e Preço
-            </h2>
+          <div className="w-full max-w-[1100px] mx-auto rounded-[30px] md:rounded-[50px] p-6 md:p-12 shadow-lg">
+            {/* Título */}
+
+            {/* Caixa interna da lista */}
+            <div className="bg-[#1A1F25] rounded-[25px] md:rounded-[40px] p-6 md:p-10 shadow-md w-full max-w-[950px] mx-auto">
+              <div className="text-center mb-6">
+                <h2 className="text-[26px] md:text-[32px] lg:text-4xl font-bold text-hero-text leading-snug pb-5">
+                  A Arquitetura do Seu Lucro: <br className="block sm:hidden" />
+                  Bônus e Preço
+                </h2>
+              </div>
+
+              <ul className="divide-y divide-hero-text/20 list-disc list-inside">
+                {[
+                  "Estratégia Detalhada de Captação 5X com IA",
+                  "Funil de Conversão Otimizado e Validado",
+                  "Modelo Estruturado de Gestão de Equipe de Alta Performance",
+                  "Ferramentas de Automação Validadas de Nutrição, Aquecimento para Vender 24h",
+                  "Estratégia de Expansão Inteligente para Domínio Regional",
+                  "Painel de Controle de Métricas Essenciais para Retorno Máximo",
+                  "Plano de Ação de 7 Dias Pós-Workshop",
+                  "Análise de Projeto Pessoal (Mesa Redonda)",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    className="py-4 text-base md:text-lg lg:text-xl font-medium text-hero-text text-center sm:text-left"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          {/* Value Breakdown como lista */}
-          <div className="bg-hero-bg rounded-[25px] md:rounded-[40px] p-6 md:p-10 shadow-md w-full max-w-[950px] mx-auto">
-            <ul className="divide-y divide-hero-text/20 list-disc list-inside">
-              {[
-                "Estratégia Detalhada de Captação 5X com IA",
-                "Funil de Conversão Otimizado e Validado",
-                "Modelo Estruturado de Gestão de Equipe de Alta Performance",
-                "Ferramentas de Automação Validadas de Nutrição, Aquecimento para Vender 24h",
-                "Estratégia de Expansão Inteligente para Domínio Regional",
-                "Painel de Controle de Métricas Essenciais para Retorno Máximo",
-                "Plano de Ação de 7 Dias Pós-Workshop",
-                "Análise de Projeto Pessoal (Mesa Redonda)",
-              ].map((item, i) => (
-                <li
-                  key={i}
-                  className="py-4 text-base md:text-lg lg:text-xl font-medium text-hero-text text-center sm:text-left"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+
           {/* Special Offer */}
           <div className="text-center mb-2 mt-12">
             <h3 className="text-3xl md:text-4xl font-bold text-accent mb-6">
