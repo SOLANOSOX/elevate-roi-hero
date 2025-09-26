@@ -1,28 +1,34 @@
 import { useState } from "react";
 import compasso from "@/assets/video_thumbs/23.png";
-import antoniocarlos from "@/assets/video_thumbs/23.png";
-import triad from "@/assets/video_thumbs/24.png";
+import antoniocarlos from "@/assets/video_thumbs/24.png";
+import triad from "@/assets/video_thumbs/25.png";
 
 const ThirdSection = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(0); // índice ativo do carrossel
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const thumbs = [
     {
       img: compasso,
       video: "https://www.youtube.com/embed/zEtEy67WlNY",
       title: "Emerson - Compasso",
+      hoverText:
+        "Gestão de excelência que hoje já superou +600% de ROI”. - Emerson",
     },
     {
       img: antoniocarlos,
       video: "https://www.youtube.com/embed/yJ5O_2CtRf4",
       title: "Michel - Antônio Carlos",
+      hoverText:
+        "Visionário supera +R$7 MILHÕES em vendas nos primeiros meses de projeto”. - Michel",
     },
     {
       img: triad,
       video: "https://www.youtube.com/embed/4QmAylcFbwE",
       title: "Bruno - Triad",
+      hoverText:
+        "Líder sente a transformação e resultados dedicando 30min/dia”. - Bruno",
     },
   ];
 
@@ -61,7 +67,7 @@ const ThirdSection = () => {
             </p>
           </div>
 
-          {/* Mobile: carrossel com setas */}
+          {/* Mobile: carrossel */}
           <div className="w-full sm:hidden relative flex items-center justify-center">
             <button
               onClick={prevSlide}
@@ -75,18 +81,40 @@ const ThirdSection = () => {
                 setActiveVideo(thumbs[currentIndex].video);
                 setIsVideoOpen(true);
               }}
-              className="w-[260px] bg-[#1A1F25] rounded-xl overflow-hidden shadow-lg text-left"
+              className="relative w-[260px] bg-[#1A1F25] rounded-xl overflow-hidden shadow-lg group"
             >
               <img
                 src={thumbs[currentIndex].img}
                 alt={thumbs[currentIndex].title}
-                className="w-full aspect-[9/16] object-cover rounded-xl"
+                className="w-full h-[360px] object-cover rounded-xl"
               />
-              <div className="p-3">
+
+              {/* Play button */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#CBA135] to-[#F5D78E] flex items-center justify-center shadow-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="black"
+                    className="w-6 h-6"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Overlay hover */}
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-4">
+                <p className="text-sm text-white font-medium">
+                  {thumbs[currentIndex].hoverText}
+                </p>
+              </div>
+
+              {/* <div className="p-3 relative z-10">
                 <h3 className="font-bold text-base">
                   {thumbs[currentIndex].title}
                 </h3>
-              </div>
+              </div> */}
             </button>
 
             <button
@@ -97,7 +125,7 @@ const ThirdSection = () => {
             </button>
           </div>
 
-          {/* Desktop: grid normal */}
+          {/* Desktop: grid */}
           <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {thumbs.map((t, i) => (
               <button
@@ -106,23 +134,45 @@ const ThirdSection = () => {
                   setActiveVideo(t.video);
                   setIsVideoOpen(true);
                 }}
-                className="bg-[#1A1F25] rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition text-left"
+                className="relative group bg-[#1A1F25] rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition text-left"
               >
                 <img
                   src={t.img}
                   alt={t.title}
-                  className="w-full aspect-[16/9] object-cover rounded-xl"
+                  className="w-full h-[400px] object-cover rounded-xl"
                 />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg">{t.title}</h3>
+
+                {/* Play button */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#CBA135] to-[#F5D78E] flex items-center justify-center shadow-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="black"
+                      className="w-6 h-6"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
                 </div>
+
+                {/* Overlay hover */}
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center p-4">
+                  <p className="text-sm md:text-base text-white font-medium">
+                    {t.hoverText}
+                  </p>
+                </div>
+
+                {/* <div className="p-4 relative z-10">
+                  <h3 className="font-bold text-lg">{t.title}</h3>
+                </div> */}
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Modal de Vídeo */}
+      {/* Modal */}
       {isVideoOpen && activeVideo && (
         <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
           <div className="relative w-full max-w-4xl aspect-video">
