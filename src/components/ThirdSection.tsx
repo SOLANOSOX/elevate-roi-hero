@@ -1,29 +1,38 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import DiagnosticModal from "@/components/DiagnosticModal";
+import compasso from "@/assets/video_thumbs/22.png";
+import antoniocarlos from "@/assets/video_thumbs/23.png";
+import triad from "@/assets/video_thumbs/24.png";
 
 const ThirdSection = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false); // Modal do formulário
-  const [isVideoOpen, setIsVideoOpen] = useState(false); // Modal dos vídeos
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0); // índice ativo do carrossel
 
   const thumbs = [
     {
-      img: "/uploads/michel-thumb.png",
+      img: compasso,
+      video: "https://www.youtube.com/embed/wk5t1p03I8I",
+      title: "Emerson - Compasso",
+    },
+    {
+      img: antoniocarlos,
       video: "https://www.youtube.com/embed/yJ5O_2CtRf4",
       title: "Michel - Antônio Carlos",
     },
     {
-      img: "/uploads/bruno-thumb.png",
+      img: triad,
       video: "https://www.youtube.com/embed/4QmAylcFbwE",
       title: "Bruno - Triad",
     },
-    {
-      img: "/uploads/emerson-thumb.png",
-      video: "https://www.youtube.com/embed/wk5t1p03I8I",
-      title: "Emerson - Compasso",
-    },
   ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % thumbs.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + thumbs.length) % thumbs.length);
+  };
 
   return (
     <>
@@ -52,21 +61,57 @@ const ThirdSection = () => {
             </p>
           </div>
 
-          {/* Grid de thumbs */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          {/* Mobile: carrossel com setas */}
+          <div className="w-full sm:hidden relative flex items-center justify-center">
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
+            >
+              ◀
+            </button>
+
+            <button
+              onClick={() => {
+                setActiveVideo(thumbs[currentIndex].video);
+                setIsVideoOpen(true);
+              }}
+              className="w-[260px] bg-[#1A1F25] rounded-xl overflow-hidden shadow-lg text-left"
+            >
+              <img
+                src={thumbs[currentIndex].img}
+                alt={thumbs[currentIndex].title}
+                className="w-full aspect-[9/16] object-cover rounded-xl"
+              />
+              <div className="p-3">
+                <h3 className="font-bold text-base">
+                  {thumbs[currentIndex].title}
+                </h3>
+              </div>
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
+            >
+              ▶
+            </button>
+          </div>
+
+          {/* Desktop: grid normal */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {thumbs.map((t, i) => (
               <button
                 key={i}
                 onClick={() => {
                   setActiveVideo(t.video);
-                  setIsVideoOpen(true); // Agora só abre o modal de vídeo
+                  setIsVideoOpen(true);
                 }}
                 className="bg-[#1A1F25] rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition text-left"
               >
                 <img
                   src={t.img}
                   alt={t.title}
-                  className="w-full aspect-[9/16] md:aspect-[16/9] object-cover rounded-xl"
+                  className="w-full aspect-[16/9] object-cover rounded-xl"
                 />
                 <div className="p-4">
                   <h3 className="font-bold text-lg">{t.title}</h3>
@@ -74,27 +119,6 @@ const ThirdSection = () => {
               </button>
             ))}
           </div>
-
-          {/* CTA Button */}
-          {/* <div className="w-full flex justify-center mt-6 mb-6 px-4">
-            <Button
-              variant="hero"
-              size="hero"
-              className="
-                w-full max-w-[360px] 
-                whitespace-normal break-words text-center 
-                px-3 py-0 text-xs
-                sm:px-4 sm:py-3 sm:text-xs
-                md:px-6 md:py-3 md:text-sm
-                lg:px-8 lg:py-4 lg:text-base
-                bg-gradient-to-r from-[#CBA135] to-[#F5D78E]
-                text-black rounded-full font-bold
-              "
-              onClick={() => setIsFormOpen(true)} // Agora só abre o form
-            >
-              Quero aplicar o sistema agora
-            </Button>
-          </div> */}
         </div>
       </section>
 
@@ -121,12 +145,6 @@ const ThirdSection = () => {
           </div>
         </div>
       )}
-
-      {/* Modal do Form */}
-      <DiagnosticModal
-        isOpen={isFormOpen}
-        onClose={() => setIsFormOpen(false)}
-      />
     </>
   );
 };
