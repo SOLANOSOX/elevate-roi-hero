@@ -26,7 +26,7 @@ const UrgencySection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="w-full max-w-[400px] mx-auto">
+          <div className="w-full max-w-[360px] mx-auto ">
             <Button
               variant="hero"
               size="hero"
