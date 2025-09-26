@@ -31,16 +31,27 @@ const UrgencySection = () => {
               variant="hero"
               size="hero"
               className="
-              w-full max-w-[360px] 
-              whitespace-normal break-words text-center 
-              px-3 py-0 text-xs   /* mobile */
-              sm:px-4 sm:py-3 sm:text-xs   /* tablet */
-              md:px-6 md:py-3 md:text-xs  /* desktop médio */
-              lg:px-8 lg:py-4 lg:text-xs   /* desktop grande */
-            "
+      w-full max-w-[360px] 
+      whitespace-normal break-words text-center 
+      px-3 py-0 text-xs
+      sm:px-4 sm:py-3 sm:text-xs
+      md:px-6 md:py-3 md:text-xs
+      lg:px-8 lg:py-4 lg:text-xs
+      flex flex-col items-center justify-center
+      font-bold
+      rounded-full
+      text-black
+      bg-gradient-to-r from-[#CBA135] to-[#F5D78E]
+      shadow-none ring-0 focus:ring-0 focus:outline-none
+      transition-all duration-300 ease-in-out
+      hover:from-[#FFD85D] hover:to-[#FFF3C0]
+      hover:shadow-[0_0_20px_rgba(255,215,0,0.7)]
+    "
               onClick={() => setIsModalOpen(true)}
             >
-              Quero garantir minha vaga agora
+              <span className="block font-bold text-[18px] leading-none">
+                GARANTIR INGRESSO | LOTE 0
+              </span>
             </Button>
           </div>
         </div>

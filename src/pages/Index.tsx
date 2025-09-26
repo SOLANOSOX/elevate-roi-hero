@@ -26,9 +26,9 @@ const Index = () => {
       <EighthSection />
       <MentorsSection />
       <MentorsSectionSol />
-      <FAQSection />
       <UrgencySection />
-      {/* <AuthoritySection /> */}
+      <FAQSection />
+      <AuthoritySection />
     </>
   );
 };
