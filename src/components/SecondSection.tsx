@@ -1,7 +1,7 @@
 import { useState } from "react";
 import chart1 from "@/assets/charts/18.png";
 import chart2 from "@/assets/charts/vgv_acumulado_2024.svg";
-import ChartComponent from "@/components/Recharts"; // ajuste o caminho conforme a pasta
+import ChartsWrapper from "@/components/ChartsWrapper";
 
 const SecondSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,26 +48,8 @@ const SecondSection = () => {
             </p>
           </div>
           {/* Espaço para gráficos */}
-          <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8">
-            {/* Gráfico dinâmico */}
-            <div className="w-full md:w-1/2 lg:w-1/2">
-                  <ChartComponent />
-            </div>
 
-            {/* Gráfico estático */}
-            <div className="w-full md:w-1/2 lg:w-1/2">
-              <div
-                className="w-full h-[260px] sm:h-[300px] md:h-[360px] lg:h-[420px] 
-        bg-[#0E141B] rounded-xl shadow-lg overflow-hidden p-4 flex items-center justify-center"
-              >
-                <img
-                  src={chart2}
-                  alt="Gráfico 2"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
+          <ChartsWrapper />
         </div>
       </section>
     </>

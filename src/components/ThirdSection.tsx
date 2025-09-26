@@ -1,5 +1,5 @@
 import { useState } from "react";
-import compasso from "@/assets/video_thumbs/22.png";
+import compasso from "@/assets/video_thumbs/23.png";
 import antoniocarlos from "@/assets/video_thumbs/23.png";
 import triad from "@/assets/video_thumbs/24.png";
 

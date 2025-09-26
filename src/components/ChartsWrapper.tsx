@@ -11,23 +11,35 @@ import {
   LabelList,
 } from "recharts";
 
-const data = [
-  { mes: "jan ", valor1: 3804000, valor2: 1900520 },
-  { mes: "fev ", valor1: 4794000, valor2: 4794000 },
-  { mes: "mar ", valor1: 7244000, valor2: 18163141 },
-  { mes: "abr ", valor1: 8609000, valor2: 34279141 },
-  { mes: "mai ", valor1: 17734000, valor2: 37788541 },
-  { mes: "jun ", valor1: 20559000, valor2: 44158541 },
-  { mes: "jul ", valor1: 33922000, valor2: 47645541 },
-  { mes: "ago ", valor1: 51428000, valor2: 62627405 },
-  { mes: "set ", valor1: 63309300, valor2: 70007405 },
+// === Dados do VGV acumulado ===
+const dataAcumulado = [
+  { mes: "jan", 2024: 3804000, 2025: 1900520 },
+  { mes: "fev", 2024: 4794000, 2025: 4794000 },
+  { mes: "mar", 2024: 7244000, 2025: 18163141 },
+  { mes: "abr", 2024: 8609000, 2025: 34279141 },
+  { mes: "mai", 2024: 17734000, 2025: 37788541 },
+  { mes: "jun", 2024: 20559000, 2025: 44158541 },
+  { mes: "jul", 2024: 33922000, 2025: 47645541 },
+  { mes: "ago", 2024: 51428000, 2025: 62627405 },
+  { mes: "set", 2024: 63309300, 2025: 70007405 },
+];
+
+// === Dados do VGV mensal ===
+const dataMensal = [
+  { mes: "jan", 2024: 521786.13, 2025: 1074000.0 },
+  { mes: "fev", 2024: 628000.0, 2025: 995000.0 },
+  { mes: "mar", 2024: 1015000.0, 2025: 1975000.0 },
+  { mes: "abr", 2024: 295000.0, 2025: 2211000.0 },
+  { mes: "mai", 2024: 1215000.0, 2025: 1590000.0 },
+  { mes: "jun", 2024: 280000.0, 2025: 840000.0 },
 ];
 
 // formatador de valores em R$
 const formatCurrency = (value: number) =>
   value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
-export default function ChartComponent() {
+// === Componente base reutilizável ===
+function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   useEffect(() => {
@@ -47,9 +59,14 @@ export default function ChartComponent() {
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           data={data}
-          margin={{ top: 40, right: 10, left: 10, bottom: isMobile ? 10 : 30 }}
+          margin={{
+            top: 40,
+            right: 40, // aumentei aqui
+            left: 40, // e aqui
+            bottom: isMobile ? 10 : 30,
+          }}
         >
-          {/* Título fixo no topo */}
+          {/* Título */}
           <text
             x="50%"
             y={20}
@@ -58,17 +75,16 @@ export default function ChartComponent() {
             fontSize={isMobile ? 12 : 16}
             fontWeight="bold"
           >
-            VGV ACUMULADO | 2024
+            {titulo}
           </text>
 
           {/* Gradientes */}
           <defs>
-            <linearGradient id="gradientValor2" x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id="gradient2025" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#FBBF0C" stopOpacity={0.4} />
               <stop offset="100%" stopColor="#0E141B" stopOpacity={0} />
             </linearGradient>
-
-            <linearGradient id="gradientValor1" x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id="gradient2024" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#F6DE96" stopOpacity={0.3} />
               <stop offset="100%" stopColor="#0E141B" stopOpacity={0} />
             </linearGradient>
@@ -104,40 +120,36 @@ export default function ChartComponent() {
             }}
           />
 
-          {/* Áreas preenchidas */}
-          {/* Áreas preenchidas (sem tooltip próprio) */}
+          {/* Áreas */}
           <Area
             type="monotone"
-            dataKey="valor2"
+            dataKey="2025"
             stroke="none"
-            fill="url(#gradientValor2)"
-            fillOpacity={1}
+            fill="url(#gradient2025)"
             isAnimationActive={false}
             activeDot={false}
             tooltipType="none"
           />
           <Area
             type="monotone"
-            dataKey="valor1"
+            dataKey="2024"
             stroke="none"
-            fill="url(#gradientValor1)"
-            fillOpacity={1}
+            fill="url(#gradient2024)"
             isAnimationActive={false}
             activeDot={false}
             tooltipType="none"
           />
 
-          {/* Linhas por cima */}
+          {/* Linhas */}
           <Line
             type="monotone"
-            dataKey="valor2"
+            dataKey="2025"
             stroke="#FBBF0C"
             strokeWidth={3}
             dot={{ r: 4, fill: "#FBBF0C" }}
-            strokeDasharray="10 5"
           >
             <LabelList
-              dataKey="valor2"
+              dataKey="2025"
               formatter={formatCurrency}
               position="top"
               style={{
@@ -150,14 +162,13 @@ export default function ChartComponent() {
 
           <Line
             type="monotone"
-            dataKey="valor1"
+            dataKey="2024"
             stroke="#F6DE96"
             strokeWidth={2}
             dot={{ r: 3, fill: "#F6DE96" }}
-            strokeDasharray="10 5"
           >
             <LabelList
-              dataKey="valor1"
+              dataKey="2024"
               formatter={formatCurrency}
               position="top"
               style={{
@@ -168,6 +179,19 @@ export default function ChartComponent() {
           </Line>
         </ComposedChart>
       </ResponsiveContainer>
+    </div>
+  );
+}
+// === Export com dois gráficos ===
+export default function ChartsWrapper() {
+  return (
+    <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8">
+      <div className="w-full md:w-1/2">
+        <ChartBase data={dataAcumulado} titulo="VGV ACUMULADO | 2024 vs 2025" />
+      </div>
+      <div className="w-full md:w-1/2">
+        <ChartBase data={dataMensal} titulo="VGV MENSAL | 2024 vs 2025" />
+      </div>
     </div>
   );
 }
