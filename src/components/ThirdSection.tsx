@@ -11,7 +11,7 @@ const ThirdSection = () => {
   const thumbs = [
     {
       img: compasso,
-      video: "https://www.youtube.com/embed/wk5t1p03I8I",
+      video: "https://www.youtube.com/embed/zEtEy67WlNY",
       title: "Emerson - Compasso",
     },
     {
