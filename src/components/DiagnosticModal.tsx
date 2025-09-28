@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useToast } from "@/hooks/use-toast";
+// Assume useToast, Dialog components, and utility components are available
+// from your project structure (e.g., from shadcn/ui).
+import { useToast } from "@/hooks/use-toast"; 
 import { X } from "lucide-react";
 import {
   Dialog,
@@ -30,6 +32,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
+
+// Schema de validação Zod
 const formSchema = z.object({
   nomeCompleto: z.string().min(1, "Nome completo é obrigatório"),
   email: z.string().email("E-mail inválido").min(1, "E-mail é obrigatório"),
@@ -49,8 +53,9 @@ interface DiagnosticModalProps {
 
 const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
-  
+  // Assumindo que useToast está definido e disponível no escopo do seu projeto.
+  const { toast } = useToast(); 
+
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -66,22 +71,27 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
 
   const onSubmit = async (data: FormData) => {
     setIsLoading(true);
-    
-    // Construir URL do checkout com os dados do usuário
+
+    // 1. Construir URL do checkout com os dados do usuário
     const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
-    checkoutUrl.searchParams.append("name", data.nomeCompleto);
+    
+    // Ajuste para usar 'first_name' que é mais compatível com HeroSpark para nome.
+    checkoutUrl.searchParams.append("first_name", data.nomeCompleto); 
     checkoutUrl.searchParams.append("email", data.email);
     checkoutUrl.searchParams.append("phone", data.celular);
 
     let webhookSuccess = false;
-    
+
     try {
       console.log("Enviando dados para o webhook:", data);
-      
-      // Enviar dados para o webhook com timeout
+
+      // 2. Enviar dados para o webhook com timeout
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 segundos timeout
-      
+      const timeoutId = setTimeout(() => {
+        controller.abort();
+        console.warn("Timeout do webhook (10s) - abortando requisição.");
+      }, 10000); // 10 segundos timeout
+
       const webhookResponse = await fetch("https://hook.us1.make.com/2i60eeice22097x3a3ruxhwpslucmnga", {
         method: "POST",
         headers: {
@@ -92,14 +102,14 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       });
 
       clearTimeout(timeoutId);
-      
+
       console.log("Resposta do webhook:", webhookResponse.status, webhookResponse.statusText);
 
       if (webhookResponse.ok) {
         webhookSuccess = true;
         console.log("Webhook enviado com sucesso");
       } else {
-        console.warn("Webhook retornou erro:", webhookResponse.status);
+        console.warn("Webhook retornou erro:", webhookResponse.status, webhookResponse.statusText);
       }
 
     } catch (error) {
@@ -109,26 +119,28 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       }
     }
 
-    // Sempre redirecionar para o checkout, independente do webhook
+    // 3. Sempre redirecionar para o checkout, independente do webhook
     try {
       toast({
-        title: "Sucesso!",
-        description: webhookSuccess 
-          ? "Dados enviados com sucesso. Redirecionando para o checkout..." 
-          : "Redirecionando para o checkout...",
+        title: webhookSuccess ? "Sucesso!" : "Redirecionando...",
+        description: webhookSuccess
+          ? "Dados enviados para o CRM. Abrindo checkout em nova aba..."
+          : "Não foi possível conectar ao CRM, mas estamos te redirecionando para o checkout.",
+        variant: webhookSuccess ? "success" : "warning",
       });
 
       // Fechar modal e redirecionar após um breve delay
       setTimeout(() => {
         onClose();
-        window.open(checkoutUrl.toString(), "_blank");
+        // Abre o checkout em uma nova aba para não perder a LP
+        window.open(checkoutUrl.toString(), "_blank"); 
       }, 1000);
 
     } catch (error) {
       console.error("Erro ao processar checkout:", error);
       toast({
         title: "Erro",
-        description: "Ocorreu um erro inesperado. Tente novamente.",
+        description: "Ocorreu um erro inesperado ao tentar redirecionar. Copie e cole o link do checkout manualmente.",
         variant: "destructive",
       });
     } finally {
@@ -155,8 +167,9 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
           </p>
         </DialogHeader>
 
-        <Form {...form}>
+        <Form {...form} >
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            
             {/* Nome Completo */}
             <FormField
               control={form.control}
