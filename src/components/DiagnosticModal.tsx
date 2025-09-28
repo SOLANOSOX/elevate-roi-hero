@@ -126,8 +126,8 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       toast({
         title: webhookSuccess ? "Sucesso!" : "Redirecionando...",
         description: webhookSuccess
-          ? "Dados enviados para o CRM. Abrindo checkout em nova aba..."
-          : "Não foi possível conectar ao CRM, mas estamos te redirecionando para o checkout.",
+          ? "Abrindo checkout em nova aba..."
+          : "Estamos te redirecionando para o checkout.",
         // Usando 'default' para sucesso e 'destructive' para aviso/erro.
         variant: webhookSuccess ? "default" : "destructive", 
       });
