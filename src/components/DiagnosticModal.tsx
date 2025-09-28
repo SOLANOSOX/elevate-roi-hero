@@ -126,7 +126,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
         description: webhookSuccess
           ? "Dados enviados para o CRM. Abrindo checkout em nova aba..."
           : "Não foi possível conectar ao CRM, mas estamos te redirecionando para o checkout.",
-        variant: webhookSuccess ? "success" : "warning",
+        variant: webhookSuccess ? "default" : "destructive", 
       });
 
       // Fechar modal e redirecionar após um breve delay
