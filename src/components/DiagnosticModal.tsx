@@ -75,13 +75,12 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     // 1. Construir URL do checkout com os dados do usuário
     const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
     
-    // CORREÇÃO 1: Usando 'full_name' para maior compatibilidade com Nome Completo.
-    checkoutUrl.searchParams.append("full_name", data.nomeCompleto); 
+    // Configurado para enviar apenas Nome e Email (confirmado que funcionam)
+    checkoutUrl.searchParams.append("name", data.nomeCompleto); 
     checkoutUrl.searchParams.append("email", data.email);
     
-    // CORREÇÃO 2: Limpar o celular, removendo todos os caracteres não-dígitos.
-    const cleanPhone = data.celular.replace(/\D/g, ''); 
-    checkoutUrl.searchParams.append("phone", cleanPhone);
+    // O parâmetro de telefone foi removido, pois nenhum funcionou.
+    // A limpeza de telefone também não é mais necessária para a URL.
 
     let webhookSuccess = false;
 
