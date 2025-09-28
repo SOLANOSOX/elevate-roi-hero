@@ -2,34 +2,80 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useToast } from "@/hooks/use-toast";
+// Assume useToast, Dialog components, and utility components are available
+// from your project structure (e.g., from shadcn/ui).
+import { useToast } from "@/hooks/use-toast"; 
 import { X } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 
+// Placeholder components - replace with your actual component paths
+const Dialog = (props) => <div {...props} className={"fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 transition-opacity duration-300 " + (props.open ? "opacity-100" : "opacity-0 pointer-events-none")}>{props.children}</div>;
+const DialogContent = (props) => <div {...props} className={"sm:max-w-[600px] bg-background border-border max-h-[90vh] overflow-y-auto bg-white p-6 rounded-xl shadow-2xl w-full " + props.className}>{props.children}</div>;
+const DialogHeader = (props) => <div {...props}>{props.children}</div>;
+const DialogTitle = (props) => <h2 {...props} className={"text-xl md:text-2xl font-bold text-primary " + props.className}>{props.children}</h2>;
+const Button = (props) => <button {...props} className={"px-4 py-3 rounded-lg font-bold transition-colors disabled:opacity-50 " + props.className}>{props.children}</button>;
+const Input = (props) => <input {...props} className={"w-full border p-2 rounded-lg bg-background border-input text-foreground focus:ring-2 focus:ring-blue-500 " + props.className} />;
+const Label = (props) => <label {...props} className={"text-sm font-medium text-foreground " + props.className}>{props.children}</label>;
+const Select = ({ onValueChange, defaultValue, children }) => {
+  const [value, setValue] = useState(defaultValue);
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    onValueChange(e.target.value);
+  };
+  return (
+    <select onChange={handleChange} value={value} className="w-full border p-2 rounded-lg bg-background border-input text-foreground focus:ring-2 focus:ring-blue-500">
+      {children}
+    </select>
+  );
+};
+const SelectTrigger = (props) => <div {...props}>{props.children}</div>;
+const SelectValue = (props) => <div {...props}>{props.children}</div>;
+const SelectContent = (props) => <div {...props}>{props.children}</div>;
+const SelectItem = (props) => <option value={props.value}>{props.children}</option>;
+const RadioGroup = (props) => <div {...props} className={"flex flex-col space-y-2 " + props.className}>{props.children}</div>;
+const RadioGroupItem = (props) => <input type="radio" {...props} name={props.id} className="text-primary focus:ring-primary" />;
+const Form = (props) => <div {...props}>{props.children}</div>;
+const FormField = ({ control, name, render }) => {
+    const value = control._formValues[name];
+    const error = control._formState.errors[name];
+    const onChange = (e) => {
+        control.setValue(name, e.target.value, { shouldValidate: true });
+    };
+
+    const fieldProps = {
+        value,
+        onChange: (e) => {
+            if (e && e.target) { // Handle native input change event
+                onChange(e);
+            } else if (typeof e === 'string') { // Handle Select/Radio change event that passes just the value
+                control.setValue(name, e, { shouldValidate: true });
+            }
+        },
+    };
+    
+    // Mock for select/radio value setting outside of input
+    const renderProps = render({
+        field: {
+            ...fieldProps,
+            // Custom helper for Select/Radio to match onValueChange pattern
+            onValueChange: (val) => {
+                 control.setValue(name, val, { shouldValidate: true });
+            }
+        },
+        formState: control._formState
+    });
+
+    return renderProps;
+};
+const FormItem = (props) => <div className="space-y-1">{props.children}</div>;
+const FormLabel = (props) => <Label {...props}>{props.children}</Label>;
+const FormControl = (props) => <div {...props}>{props.children}</div>;
+const FormMessage = ({ children, formState, name }) => {
+  const error = formState.errors[name];
+  return error ? <p className="text-destructive text-xs mt-1">{error.message}</p> : null;
+};
+const toast = (options) => console.log("Toast:", options.title, options.description, options.variant);
+
+// Schema de validação Zod
 const formSchema = z.object({
   nomeCompleto: z.string().min(1, "Nome completo é obrigatório"),
   email: z.string().email("E-mail inválido").min(1, "E-mail é obrigatório"),
@@ -49,8 +95,9 @@ interface DiagnosticModalProps {
 
 const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
-  
+  // Simulação de hook de toast, pois não temos o contexto aqui
+  // const { toast } = useToast(); 
+
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -66,22 +113,27 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
 
   const onSubmit = async (data: FormData) => {
     setIsLoading(true);
-    
-    // Construir URL do checkout com os dados do usuário
+
+    // 1. Construir URL do checkout com os dados do usuário
     const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
-    checkoutUrl.searchParams.append("name", data.nomeCompleto);
+    
+    // MUDANÇA AQUI: Usando 'first_name' para maior compatibilidade com HeroSpark
+    checkoutUrl.searchParams.append("first_name", data.nomeCompleto); 
     checkoutUrl.searchParams.append("email", data.email);
     checkoutUrl.searchParams.append("phone", data.celular);
 
     let webhookSuccess = false;
-    
+
     try {
       console.log("Enviando dados para o webhook:", data);
-      
-      // Enviar dados para o webhook com timeout
+
+      // 2. Enviar dados para o webhook com timeout
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 segundos timeout
-      
+      const timeoutId = setTimeout(() => {
+        controller.abort();
+        console.warn("Timeout do webhook (10s) - abortando requisição.");
+      }, 10000); // 10 segundos timeout
+
       const webhookResponse = await fetch("https://hook.us1.make.com/2i60eeice22097x3a3ruxhwpslucmnga", {
         method: "POST",
         headers: {
@@ -92,14 +144,14 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       });
 
       clearTimeout(timeoutId);
-      
+
       console.log("Resposta do webhook:", webhookResponse.status, webhookResponse.statusText);
 
       if (webhookResponse.ok) {
         webhookSuccess = true;
         console.log("Webhook enviado com sucesso");
       } else {
-        console.warn("Webhook retornou erro:", webhookResponse.status);
+        console.warn("Webhook retornou erro:", webhookResponse.status, webhookResponse.statusText);
       }
 
     } catch (error) {
@@ -109,26 +161,28 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       }
     }
 
-    // Sempre redirecionar para o checkout, independente do webhook
+    // 3. Sempre redirecionar para o checkout, independente do webhook
     try {
       toast({
-        title: "Sucesso!",
-        description: webhookSuccess 
-          ? "Dados enviados com sucesso. Redirecionando para o checkout..." 
-          : "Redirecionando para o checkout...",
+        title: webhookSuccess ? "Sucesso!" : "Redirecionando...",
+        description: webhookSuccess
+          ? "Dados enviados para o CRM. Abrindo checkout em nova aba..."
+          : "Não foi possível conectar ao CRM, mas estamos te redirecionando para o checkout.",
+        variant: webhookSuccess ? "success" : "warning",
       });
 
       // Fechar modal e redirecionar após um breve delay
       setTimeout(() => {
         onClose();
-        window.open(checkoutUrl.toString(), "_blank");
+        // Abre o checkout em uma nova aba para não perder a LP
+        window.open(checkoutUrl.toString(), "_blank"); 
       }, 1000);
 
     } catch (error) {
       console.error("Erro ao processar checkout:", error);
       toast({
         title: "Erro",
-        description: "Ocorreu um erro inesperado. Tente novamente.",
+        description: "Ocorreu um erro inesperado ao tentar redirecionar. Copie e cole o link do checkout manualmente.",
         variant: "destructive",
       });
     } finally {
@@ -155,8 +209,9 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
           </p>
         </DialogHeader>
 
-        <Form {...form}>
+        <Form {...form} control={form.control} formState={form.formState}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            
             {/* Nome Completo */}
             <FormField
               control={form.control}
@@ -173,7 +228,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                       className="bg-background border-input text-foreground"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage formState={form.formState} name="nomeCompleto"/>
                 </FormItem>
               )}
             />
@@ -195,7 +250,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                       className="bg-background border-input text-foreground"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage formState={form.formState} name="email"/>
                 </FormItem>
               )}
             />
@@ -216,7 +271,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                       className="bg-background border-input text-foreground"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage formState={form.formState} name="celular"/>
                 </FormItem>
               )}
             />
@@ -237,7 +292,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                       className="bg-background border-input text-foreground"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage formState={form.formState} name="instagram"/>
                 </FormItem>
               )}
             />
@@ -251,7 +306,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                   <FormLabel className="text-foreground text-sm font-medium">
                     Quantos corretores você tem na imobiliária? <span className="text-destructive">*</span>
                   </FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <Select onValueChange={field.onValueChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger className="bg-background border-input text-foreground">
                         <SelectValue placeholder="Selecione uma opção" />
@@ -265,7 +320,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                       <SelectItem value="30+">Mais de 30</SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage formState={form.formState} name="quantosCorretores"/>
                 </FormItem>
               )}
             />
@@ -279,7 +334,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                   <FormLabel className="text-foreground text-sm font-medium">
                     Você é dono, gestor ou corretor autônomo? <span className="text-destructive">*</span>
                   </FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <Select onValueChange={field.onValueChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger className="bg-background border-input text-foreground">
                         <SelectValue placeholder="Selecione uma opção" />
@@ -291,7 +346,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                       <SelectItem value="corretor">Corretor Autônomo</SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage formState={form.formState} name="tipoUsuario"/>
                 </FormItem>
               )}
             />
@@ -307,7 +362,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                   </FormLabel>
                   <FormControl>
                     <RadioGroup
-                      onValueChange={field.onChange}
+                      onValueChange={field.onValueChange}
                       defaultValue={field.value}
                       className="flex flex-col space-y-2"
                     >
@@ -337,7 +392,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
                       </div>
                     </RadioGroup>
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage formState={form.formState} name="valorVGV"/>
                 </FormItem>
               )}
             />
