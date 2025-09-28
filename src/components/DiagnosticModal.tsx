@@ -75,10 +75,13 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     // 1. Construir URL do checkout com os dados do usuário
     const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
     
-    // Ajuste para usar 'first_name' que é mais compatível com HeroSpark para nome.
-    checkoutUrl.searchParams.append("first_name", data.nomeCompleto); 
+    // CORREÇÃO 1: Usando 'full_name' para maior compatibilidade com Nome Completo.
+    checkoutUrl.searchParams.append("full_name", data.nomeCompleto); 
     checkoutUrl.searchParams.append("email", data.email);
-    checkoutUrl.searchParams.append("phone", data.celular);
+    
+    // CORREÇÃO 2: Limpar o celular, removendo todos os caracteres não-dígitos.
+    const cleanPhone = data.celular.replace(/\D/g, ''); 
+    checkoutUrl.searchParams.append("phone", cleanPhone);
 
     let webhookSuccess = false;
 
@@ -126,6 +129,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
         description: webhookSuccess
           ? "Dados enviados para o CRM. Abrindo checkout em nova aba..."
           : "Não foi possível conectar ao CRM, mas estamos te redirecionando para o checkout.",
+        // Usando 'default' para sucesso e 'destructive' para aviso/erro.
         variant: webhookSuccess ? "default" : "destructive", 
       });
 
