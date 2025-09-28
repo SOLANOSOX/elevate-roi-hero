@@ -126,8 +126,8 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       toast({
         title: webhookSuccess ? "Sucesso!" : "Redirecionando...",
         description: webhookSuccess
-          ? "Abrindo checkout em nova aba..."
-          : "Estamos te redirecionando para o checkout.",
+          ? "Dados enviados para o CRM. Redirecionando para o checkout..." // Texto atualizado
+          : "Não foi possível conectar ao CRM, mas estamos te redirecionando para o checkout.",
         // Usando 'default' para sucesso e 'destructive' para aviso/erro.
         variant: webhookSuccess ? "default" : "destructive", 
       });
@@ -135,8 +135,8 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       // Fechar modal e redirecionar após um breve delay
       setTimeout(() => {
         onClose();
-        // Abre o checkout em uma nova aba para não perder a LP
-        window.open(checkoutUrl.toString(), "_blank"); 
+        // ALTERAÇÃO: Redireciona na mesma guia (window.location.href)
+        window.location.href = checkoutUrl.toString(); 
       }, 1000);
 
     } catch (error) {
@@ -364,7 +364,8 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
               disabled={isLoading}
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 text-lg disabled:opacity-50"
             >
-              {isLoading ? "ENVIANDO..." : "QUERO AGENDAR"}
+              {/* ALTERAÇÃO: Novo texto do botão */}
+              {isLoading ? "ENVIANDO..." : "GARANTIR ACESSO"} 
             </Button>
           </form>
         </Form>
