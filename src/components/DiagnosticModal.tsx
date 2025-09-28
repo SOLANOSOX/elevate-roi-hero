@@ -67,29 +67,55 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
   const onSubmit = async (data: FormData) => {
     setIsLoading(true);
     
+    // Construir URL do checkout com os dados do usuário
+    const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
+    checkoutUrl.searchParams.append("name", data.nomeCompleto);
+    checkoutUrl.searchParams.append("email", data.email);
+    checkoutUrl.searchParams.append("phone", data.celular);
+
+    let webhookSuccess = false;
+    
     try {
-      // Enviar dados para o webhook
-      const webhookResponse = await fetch("https://webhook.soxsolucoes.com.br", {
+      console.log("Enviando dados para o webhook:", data);
+      
+      // Enviar dados para o webhook com timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 segundos timeout
+      
+      const webhookResponse = await fetch("https://hook.us1.make.com/2i60eeice22097x3a3ruxhwpslucmnga", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
+        signal: controller.signal,
       });
 
-      if (!webhookResponse.ok) {
-        throw new Error("Erro ao enviar dados");
+      clearTimeout(timeoutId);
+      
+      console.log("Resposta do webhook:", webhookResponse.status, webhookResponse.statusText);
+
+      if (webhookResponse.ok) {
+        webhookSuccess = true;
+        console.log("Webhook enviado com sucesso");
+      } else {
+        console.warn("Webhook retornou erro:", webhookResponse.status);
       }
 
-      // Construir URL do checkout com os dados do usuário
-      const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
-      checkoutUrl.searchParams.append("name", data.nomeCompleto);
-      checkoutUrl.searchParams.append("email", data.email);
-      checkoutUrl.searchParams.append("phone", data.celular);
+    } catch (error) {
+      console.error("Erro ao enviar para webhook:", error);
+      if (error.name === 'AbortError') {
+        console.warn("Timeout do webhook - continuando com checkout");
+      }
+    }
 
+    // Sempre redirecionar para o checkout, independente do webhook
+    try {
       toast({
         title: "Sucesso!",
-        description: "Dados enviados com sucesso. Redirecionando para o checkout...",
+        description: webhookSuccess 
+          ? "Dados enviados com sucesso. Redirecionando para o checkout..." 
+          : "Redirecionando para o checkout...",
       });
 
       // Fechar modal e redirecionar após um breve delay
@@ -99,10 +125,10 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       }, 1000);
 
     } catch (error) {
-      console.error("Erro ao processar formulário:", error);
+      console.error("Erro ao processar checkout:", error);
       toast({
         title: "Erro",
-        description: "Ocorreu um erro ao processar seus dados. Tente novamente.",
+        description: "Ocorreu um erro inesperado. Tente novamente.",
         variant: "destructive",
       });
     } finally {
