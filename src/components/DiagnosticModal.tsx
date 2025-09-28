@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useToast } from "@/hooks/use-toast";
 import { X } from "lucide-react";
 import {
   Dialog,
@@ -47,6 +48,9 @@ interface DiagnosticModalProps {
 }
 
 const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+  
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -60,10 +64,50 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log("Dados do diagnóstico:", data);
-    // Aqui você pode integrar com sua API
-    onClose();
+  const onSubmit = async (data: FormData) => {
+    setIsLoading(true);
+    
+    try {
+      // Enviar dados para o webhook
+      const webhookResponse = await fetch("https://webhook.soxsolucoes.com.br", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!webhookResponse.ok) {
+        throw new Error("Erro ao enviar dados");
+      }
+
+      // Construir URL do checkout com os dados do usuário
+      const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
+      checkoutUrl.searchParams.append("name", data.nomeCompleto);
+      checkoutUrl.searchParams.append("email", data.email);
+      checkoutUrl.searchParams.append("phone", data.celular);
+
+      toast({
+        title: "Sucesso!",
+        description: "Dados enviados com sucesso. Redirecionando para o checkout...",
+      });
+
+      // Fechar modal e redirecionar após um breve delay
+      setTimeout(() => {
+        onClose();
+        window.open(checkoutUrl.toString(), "_blank");
+      }, 1000);
+
+    } catch (error) {
+      console.error("Erro ao processar formulário:", error);
+      toast({
+        title: "Erro",
+        description: "Ocorreu um erro ao processar seus dados. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -275,9 +319,10 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
             {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 text-lg"
+              disabled={isLoading}
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 text-lg disabled:opacity-50"
             >
-              QUERO AGENDAR
+              {isLoading ? "ENVIANDO..." : "QUERO AGENDAR"}
             </Button>
           </form>
         </Form>

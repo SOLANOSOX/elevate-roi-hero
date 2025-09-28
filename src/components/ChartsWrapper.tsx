@@ -102,7 +102,6 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
             minTickGap={isMobile ? 5 : 15}
             tick={{
               fontSize: isMobile ? 10 : 13,
-              angle: isMobile ? -35 : 0,
               textAnchor: isMobile ? "end" : "middle",
             }}
           />
