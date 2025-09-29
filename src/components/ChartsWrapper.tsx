@@ -35,6 +35,17 @@ const dataMensal = [
 ];
 
 // === formatador abreviado ===
+
+// formatador customizado para "mil" e "MI"
+const formatMilhares = (value: number) => {
+  if (value >= 1_000_000) {
+    return `${(value / 1_000_000).toFixed(1)} MI`; // milhões
+  } else if (value >= 1_000) {
+    return `${(value / 1_000).toFixed(0)} Mil`; // milhares
+  }
+  return value.toString(); // abaixo de 1000 mostra normal
+};
+
 const formatCompact = (value: number) =>
   new Intl.NumberFormat("pt-BR", {
     notation: "compact",
@@ -113,7 +124,7 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
 
           {/* Tooltip */}
           <Tooltip
-            formatter={(value: number) => formatCompact(value)}
+            formatter={(value: number) => formatMilhares(value)}
             labelStyle={{ color: "#fff" }}
             contentStyle={{
               backgroundColor: "#1f2937",
@@ -152,7 +163,7 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
           >
             <LabelList
               dataKey="2025"
-              formatter={formatCompact}
+              formatter={formatMilhares}
               position="top"
               style={{
                 fill: "#FBBF0C",
@@ -171,7 +182,7 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
           >
             <LabelList
               dataKey="2024"
-              formatter={formatCompact}
+              formatter={formatMilhares}
               position="top"
               style={{
                 fill: "#F6DE96",
