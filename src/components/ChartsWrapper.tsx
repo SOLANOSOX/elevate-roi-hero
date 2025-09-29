@@ -204,10 +204,10 @@ export default function ChartsWrapper() {
   return (
     <div className="w-full flex flex-col md:flex-row items-center justify-center gap-8">
       <div className="w-full md:w-1/2">
-        <ChartBase data={dataAcumulado} titulo="VGV ACUMULADO | 2024 vs 2025" />
+        <ChartBase data={dataAcumulado} titulo="VGV ACUMULADO [2024-2025]" />
       </div>
       <div className="w-full md:w-1/2">
-        <ChartBase data={dataMensal} titulo="VGV MENSAL | 2024 vs 2025" />
+        <ChartBase data={dataMensal} titulo="VGV ACUMULADO [2024-2025]" />
       </div>
     </div>
   );
