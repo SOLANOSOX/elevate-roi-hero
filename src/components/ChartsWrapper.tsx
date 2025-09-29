@@ -13,8 +13,8 @@ import {
 
 // === Dados do VGV acumulado ===
 const dataAcumulado = [
-  { mes: "jan", 2024: 1625526.41, 2025: 3393500.00 },
-  { mes: "fev", 2024: 3500526.41, 2025: 10863500.00 },
+  { mes: "jan", 2024: 1625526.41, 2025: 3393500.0 },
+  { mes: "fev", 2024: 3500526.41, 2025: 10863500.0 },
   { mes: "mar", 2024: 5460526.41, 2025: 11913532.18 },
   { mes: "abr", 2024: 5460526.41, 2025: 15015403.36 },
   { mes: "mai", 2024: 6060526.41, 2025: 18565403.36 },
@@ -26,17 +26,20 @@ const dataAcumulado = [
 
 // === Dados do VGV mensal ===
 const dataMensal = [
-  { mes: "jan", 2024: 521786.13, 2025: 1074000.00 },
-  { mes: "fev", 2024: 628000.00, 2025: 995000.00 },
-  { mes: "mar", 2024: 1015000.00, 2025: 1975000.00 },
-  { mes: "abr", 2024: 295000.00, 2025: 2211000.00 },
-  { mes: "mai", 2024: 1215000.00, 2025: 1590000.00 },
-  { mes: "jun", 2024: 280000.00, 2025: 840000.00 },
+  { mes: "jan", 2024: 521786.13, 2025: 1074000.0 },
+  { mes: "fev", 2024: 628000.0, 2025: 995000.0 },
+  { mes: "mar", 2024: 1015000.0, 2025: 1975000.0 },
+  { mes: "abr", 2024: 295000.0, 2025: 2211000.0 },
+  { mes: "mai", 2024: 1215000.0, 2025: 1590000.0 },
+  { mes: "jun", 2024: 280000.0, 2025: 840000.0 },
 ];
 
-// formatador de valores em R$
-const formatCurrency = (value: number) =>
-  value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+// === formatador abreviado ===
+const formatCompact = (value: number) =>
+  new Intl.NumberFormat("pt-BR", {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(value);
 
 // === Componente base reutilizável ===
 function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
@@ -61,8 +64,8 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
           data={data}
           margin={{
             top: 40,
-            right: 40, // aumentei aqui
-            left: 40, // e aqui
+            right: 50, // espaço extra pros labels
+            left: 50,
             bottom: isMobile ? 10 : 30,
           }}
         >
@@ -110,7 +113,7 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
 
           {/* Tooltip */}
           <Tooltip
-            formatter={(value: number) => formatCurrency(value)}
+            formatter={(value: number) => formatCompact(value)}
             labelStyle={{ color: "#fff" }}
             contentStyle={{
               backgroundColor: "#1f2937",
@@ -149,7 +152,7 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
           >
             <LabelList
               dataKey="2025"
-              formatter={formatCurrency}
+              formatter={formatCompact}
               position="top"
               style={{
                 fill: "#FBBF0C",
@@ -168,7 +171,7 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
           >
             <LabelList
               dataKey="2024"
-              formatter={formatCurrency}
+              formatter={formatCompact}
               position="top"
               style={{
                 fill: "#F6DE96",
@@ -181,6 +184,7 @@ function ChartBase({ data, titulo }: { data: any[]; titulo: string }) {
     </div>
   );
 }
+
 // === Export com dois gráficos ===
 export default function ChartsWrapper() {
   return (
