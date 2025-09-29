@@ -39,9 +39,9 @@ const dataMensal = [
 // formatador customizado para "mil" e "MI"
 const formatMilhares = (value: number) => {
   if (value >= 1_000_000) {
-    return `${(value / 1_000_000).toFixed(1)} MI`; // milhões
+    return `${(value / 1_000_000).toFixed(1)} M`; // milhões
   } else if (value >= 1_000) {
-    return `${(value / 1_000).toFixed(0)} Mil`; // milhares
+    return `${(value / 1_000).toFixed(0)} mil`; // milhares
   }
   return value.toString(); // abaixo de 1000 mostra normal
 };
