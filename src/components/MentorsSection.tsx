@@ -50,9 +50,9 @@ const MentorsSection = () => {
     text-center md:text-center
     items-start md:items-start
     w-full md:max-w-[540px]
-    ml-0 md:ml-auto
+    ml-0 md:ml-0 lg:ml-[880px]
     px-2 md:px-0
-    mt-[120px] md:mt-0
+    mt-[120px] md:mt-[180px] lg:mt-[250px]   /* 👈 agora no desktop o texto desce */
     pr-10
   "
           >
@@ -99,7 +99,6 @@ const MentorsSection = () => {
               e faturam. Ela vai te ensinar a ler o mercado como ninguém, usando
               sua percepção aguçada para antecipar movimentos.
             </p>
-           
           </div>
         </div>
       </section>
