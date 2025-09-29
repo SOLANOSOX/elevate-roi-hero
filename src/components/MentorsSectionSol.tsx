@@ -33,11 +33,10 @@ const MentorsSectionSol = () => {
       flex flex-col gap-5 text-[#FFF]
       text-center md:text-center
       items-end md:items-center
-      w-full md:max-w-[540px]
-      ml-auto md:ml-0
-      mr-0 md:mr-auto
+      w-full md:max-w-[1000px]
+    ml-0 md:ml-0 lg:ml-[80px]
       px-2 md:px-0
-      mt-[120px] md:mt-[120px]
+    mt-[120px] md:mt-[180px] lg:mt-[300px]   /* 👈 agora no desktop o texto desce */
     "
           >
             <h2
@@ -80,13 +79,13 @@ const MentorsSectionSol = () => {
             </p>
           </div>
         </div>
-        <div className="w-full max-w-[360px] mx-auto mt-12 md:mt-32 lg:mt-40">
+        <div className="w-full max-w-[360px] mx-auto mt-6 md:mt-12 lg:mt-20 mb-10 md:mb-16 lg:mb-24">
           <Button
             variant="hero"
             size="hero"
             className="
       w-full max-w-[360px]
-      px-6 py-4
+      px-6 py-0
       text-[16px] font-bold tracking-wide
       flex flex-col items-center justify-center
       rounded-full
