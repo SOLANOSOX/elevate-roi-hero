@@ -1,3 +1,7 @@
+
+import fundamentosImage from "@/assets/fundamentos.png";
+import implementacaoImage from "@/assets/implementacao.png"
+
 const ThreeAsSection = () => {
   return (
     <section className="bg-hero-bg min-h-screen w-full py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-20 flex flex-col justify-start items-center gap-12 md:gap-16 lg:gap-[90px] font-geist mx-auto">
@@ -13,7 +17,7 @@ const ThreeAsSection = () => {
         {/* Imagem */}
         <div className="w-full lg:w-[318px] h-[300px] lg:h-[469px] overflow-hidden rounded-[14px] flex-shrink-0">
           <img
-            src="/lovable-uploads/117b7064-bbda-4822-ac7f-dae76bc73752.png"
+            src={fundamentosImage}
             alt="Fundamentos da Venda Imobiliária"
             className="w-full h-full object-contain rounded-[14px]"
           />
@@ -80,7 +84,7 @@ const ThreeAsSection = () => {
         {/* Imagem */}
         <div className="w-full lg:w-[318px] h-[300px] lg:h-[469px] overflow-hidden rounded-[14px] flex-shrink-0">
           <img
-            src="/lovable-uploads/089f8aea-92fc-42e1-aaa8-d5a308c4ce32.png"
+            src={implementacaoImage}
             alt="Implementação da Venda Imobiliária"
             className="w-full h-full object-contain rounded-[14px]"
           />

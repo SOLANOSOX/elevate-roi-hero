@@ -50,7 +50,7 @@ const MentorsSection = () => {
     text-center md:text-center
     items-start md:items-start
     w-full md:max-w-[540px]
-    ml-0 md:ml-0 lg:ml-[880px]
+ml-0 md:ml-[200px] lg:ml-[400px] xl:ml-[650px] 2xl:ml-[880px]
     px-2 md:px-0
     mt-[120px] md:mt-[180px] lg:mt-[250px]   /* 👈 agora no desktop o texto desce */
     pr-10
