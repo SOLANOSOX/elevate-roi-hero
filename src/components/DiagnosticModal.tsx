@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 // Assume useToast, Dialog components, and utility components are available
 // from your project structure (e.g., from shadcn/ui).
-import { useToast } from "@/hooks/use-toast"; 
+import { useToast } from "@/hooks/use-toast";
 import { X } from "lucide-react";
 import {
   Dialog,
@@ -22,7 +22,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+// O RadioGroup não é mais necessário, mas vamos mantê-lo por segurança se for usado em outro lugar.
+// import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"; 
 import {
   Form,
   FormControl,
@@ -54,7 +55,7 @@ interface DiagnosticModalProps {
 const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
   // Assumindo que useToast está definido e disponível no escopo do seu projeto.
-  const { toast } = useToast(); 
+  const { toast } = useToast();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -74,11 +75,11 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
 
     // 1. Construir URL do checkout com os dados do usuário
     const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
-    
+
     // Configurado para enviar apenas Nome e Email (confirmado que funcionam)
-    checkoutUrl.searchParams.append("name", data.nomeCompleto); 
+    checkoutUrl.searchParams.append("name", data.nomeCompleto);
     checkoutUrl.searchParams.append("email", data.email);
-    
+
     // O parâmetro de telefone foi removido, pois nenhum funcionou.
     // A limpeza de telefone também não é mais necessária para a URL.
 
@@ -129,14 +130,14 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
           ? "Dados enviados para o CRM. Redirecionando para o checkout..." // Texto atualizado
           : "Não foi possível conectar ao CRM, mas estamos te redirecionando para o checkout.",
         // Usando 'default' para sucesso e 'destructive' para aviso/erro.
-        variant: webhookSuccess ? "default" : "destructive", 
+        variant: webhookSuccess ? "default" : "destructive",
       });
 
       // Fechar modal e redirecionar após um breve delay
       setTimeout(() => {
         onClose();
         // ALTERAÇÃO: Redireciona na mesma guia (window.location.href)
-        window.location.href = checkoutUrl.toString(); 
+        window.location.href = checkoutUrl.toString();
       }, 1000);
 
     } catch (error) {
@@ -172,7 +173,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
 
         <Form {...form} >
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            
+
             {/* Nome Completo */}
             <FormField
               control={form.control}
@@ -312,47 +313,28 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
               )}
             />
 
-            {/* Valor Médio de VGV Mensal */}
+            {/* Valor Médio de VGV Mensal (Alterado para Select) */}
             <FormField
               control={form.control}
               name="valorVGV"
               render={({ field }) => (
-                <FormItem className="space-y-3">
+                <FormItem>
                   <FormLabel className="text-foreground text-sm font-medium">
                     Valor Médio de VGV Mensal <span className="text-destructive">*</span>
                   </FormLabel>
-                  <FormControl>
-                    <RadioGroup
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                      className="flex flex-col space-y-2"
-                    >
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="ate-1.5" id="ate-1.5" />
-                        <Label htmlFor="ate-1.5" className="text-foreground">
-                          Até 1.5 Milhões de VGV por mês
-                        </Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="1.5-3" id="1.5-3" />
-                        <Label htmlFor="1.5-3" className="text-foreground">
-                          De 1.5 a 3 Milhões de VGV por mês
-                        </Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="3-5" id="3-5" />
-                        <Label htmlFor="3-5" className="text-foreground">
-                          De 3 a 5 Milhões de VGV por mês
-                        </Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="5+" id="5+" />
-                        <Label htmlFor="5+" className="text-foreground">
-                          Mais de 5 Milhões de VGV por mês
-                        </Label>
-                      </div>
-                    </RadioGroup>
-                  </FormControl>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger className="bg-background border-input text-foreground">
+                        <SelectValue placeholder="Selecione uma opção" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="ate-1.5">Até 1.5 Milhões de VGV por mês</SelectItem>
+                      <SelectItem value="1.5-3">De 1.5 a 3 Milhões de VGV por mês</SelectItem>
+                      <SelectItem value="3-5">De 3 a 5 Milhões de VGV por mês</SelectItem>
+                      <SelectItem value="5+">Mais de 5 Milhões de VGV por mês</SelectItem>
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}
@@ -364,8 +346,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
               disabled={isLoading}
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 text-lg disabled:opacity-50"
             >
-              {/* ALTERAÇÃO: Novo texto do botão */}
-              {isLoading ? "ENVIANDO..." : "GARANTIR ACESSO"} 
+              {isLoading ? "ENVIANDO..." : "GARANTIR ACESSO"}
             </Button>
           </form>
         </Form>
