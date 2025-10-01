@@ -163,7 +163,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
             <span className="sr-only">Fechar</span>
           </button>
           <DialogTitle className="text-center text-xl md:text-2xl font-bold text-primary">
-            Agende seu Diagnóstico
+            Garanta seu acesso!
           </DialogTitle>
           <p className="text-center text-foreground text-sm md:text-base">
             INSIRA SEUS DADOS ABAIXO
