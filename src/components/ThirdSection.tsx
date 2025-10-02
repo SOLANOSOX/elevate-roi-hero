@@ -36,7 +36,6 @@ const ThirdSection = () => {
   );
 
   const openVideo = (baseUrl: string) => {
-    // autoplay só funciona com gesto do usuário (tap)
     const url =
       baseUrl +
       "?autoplay=1&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3";

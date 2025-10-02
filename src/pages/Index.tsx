@@ -18,7 +18,6 @@ const Index = () => {
   return (
     <>
       <HeroSection />
-      {/* <BenefitsSection /> */}
       <SecondSection />
       <ThirdSection />
       <FourthSection />

@@ -18,9 +18,8 @@ const MentorsSection = () => {
         <h2 className="text-[#010D15] text-[30px] md:text-[45px] leading-snug font-bold">
           <span className="text-hero-accent">
             Conheça Seus Guias
-            <br className="block md:hidden" /> {/* só quebra em mobile */}
+            <br className="block md:hidden" />
             <span className="hidden md:inline"> </span>{" "}
-            {/* espaço normal em desktop */}
             Nessa Jornada
           </span>
         </h2>
