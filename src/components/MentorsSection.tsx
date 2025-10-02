@@ -18,8 +18,9 @@ const MentorsSection = () => {
         <h2 className="text-[#010D15] text-[30px] md:text-[45px] leading-snug font-bold">
           <span className="text-hero-accent">
             Conheça Seus Guias
-            <br className="block md:hidden" />
+            <br className="block md:hidden" /> {/* só quebra em mobile */}
             <span className="hidden md:inline"> </span>{" "}
+            {/* espaço normal em desktop */}
             Nessa Jornada
           </span>
         </h2>
@@ -91,7 +92,7 @@ ml-0 md:ml-[200px] lg:ml-[400px] xl:ml-[650px] 2xl:ml-[880px]
       max-w-[180px] xs:max-w-[220px] sm:max-w-[260px] md:max-w-[400px] lg:max-w-[500px]
     "
             >
-              <span className="font-semibold">
+              <span className="font-semibold text-hero-accent">
                 Sua experiência prova:{" "}
               </span>
               não é só sobre vender, é sobre construir relacionamentos que duram
