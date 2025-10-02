@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
-import andreza from "@/assets/carrossel/andreza2.png";
-import bruno from "@/assets/carrossel/bruno2.png";
-import fernanda from "@/assets/carrossel/fernanda2.png";
-import lincon from "@/assets/carrossel/lincon2.png";
-import michel from "@/assets/carrossel/michel2.png";
+import andreza from "@/assets/carrossel/andreza3.png";
+import bruno from "@/assets/carrossel/bruno3.png";
+import fernanda from "@/assets/carrossel/fernanda3.png";
+import lincon from "@/assets/carrossel/lincon3.png";
+import michel from "@/assets/carrossel/michel3.png";
 
 const SeventhSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

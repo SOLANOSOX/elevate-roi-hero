@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
+import selo from "@/assets/selo.png";
 
 const AuthoritySection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -8,6 +9,14 @@ const AuthoritySection = () => {
   return (
     <>
       <section className=" bg-hero-text text-[#010D15] px-4 md:px-6 lg:px-[418px] font-geist py-12 md:py-16 lg:py-20 ">
+        <div className="mx-auto mb-6 md:mb-8 w-[220px] sm:w-[260px] md:w-[300px] lg:w-[318px] h-auto">
+          <img
+            src={selo}
+            alt="Selo Garantia"
+            className="block w-full h-auto object-contain rounded-[14px]"
+          />
+        </div>
+
         <div className="max-w-[1060px] mx-auto flex flex-col items-center gap-8 md:gap-12">
           {/* Title */}
           <div className="w-full text-center">

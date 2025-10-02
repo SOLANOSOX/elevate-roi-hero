@@ -7,7 +7,7 @@ const DEFAULT_ITEMS: ScheduleItem[] = [
   { time: "9h30",  label: "Início" },
   { time: "12h00", label: "Almoço" },
   { time: "13h30", label: "Retorno" },
-  { time: "20h00", label: "Encerramento*" },
+  { time: "18h30", label: "Encerramento*" },
 ];
 
 export default function BeforeSixSection({

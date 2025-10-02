@@ -1,154 +1,124 @@
-// BeforeSix2.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiagnosticModal from "@/components/DiagnosticModal";
 
-
-const IconClock = ({ className = "w-5 h-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    aria-hidden="true"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <circle cx="12" cy="12" r="9" />
-    <path d="M12 7v5l3 2" />
-  </svg>
-);
-
-const IconUsers = ({ className = "w-5 h-5" }) => (
-  <svg
-    viewBox="0 0 24 24"
-    className={className}
-    aria-hidden="true"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-    <circle cx="9" cy="7" r="4" />
-    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-  </svg>
-);
-
-
-export default function BeforeSix2({
-  date = "Evento acessível",
-  hoursLabel = "16h de conteúdo",
-  expLabel = "Experiência imersiva",
-  priceTitle = "5x de",
-  bigPrice = "R$ 9,40",
-  cashText = "ou R$ 47 à vista",
-  ctaText = "GARANTIR INGRESSO | LOTE 0",
-  onCTAClick = () => {},
-}: {
-  date?: string;
-  hoursLabel?: string;
-  expLabel?: string;
-  priceTitle?: string;
-  bigPrice?: string;
-  cashText?: string;
-  ctaText?: string;
-  onCTAClick?: () => void;
-}
-) {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+const BeforeSix2 = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-geist">
-      <div className="max-w-[1060px] mx-auto py-10 md:py-14">
-        {/* Badge */}
-        <div className="w-full flex justify-center">
-          <span className="inline-flex items-center justify-center rounded-full px-4 py-1.5 text-[12px] md:text-sm font-semibold bg-hero-accent/10 text-hero-text ring-1 ring-hero-accent/30">
-            {date}
-          </span>
+    <>
+      <section
+        className="
+          bg-hero-bg px-4 md:px-6 lg:px-[418px] font-geist
+          pt-10 md:pt-12
+          pb-16 md:pb-24 lg:pb-32
+        "
+        // respeita a safe-area do iPhone
+        style={{ paddingBottom: "max(6rem, env(safe-area-inset-bottom))" }}
+      >
+        {/* Special Offer */}
+        <div className="text-center mb-2 mt-12">
+          <h3 className="text-3xl md:text-4xl font-bold text-accent mb-6">
+            BÔNUS EXCLUSIVOS INCLUÍDOS:
+          </h3>
         </div>
 
-        {/* Título */}
-        <div className="text-center mt-5 md:mt-6">
-          <h2 className="text-hero-text text-[26px] md:text-[34px] lg:text-[38px] font-bold leading-tight">
-            Qual é o <span className="font-extrabold">investimento</span>
-            <br className="hidden sm:block" /> para aprender tudo isso?
-          </h2>
+        {/* Bonus Section */}
+        <div className="bg-hero-bg rounded-[25px] md:rounded-[50px] shadow-sm">
+          <div className="space-y-4 text-hero-text">
+            <div className="bg-hero-bg rounded-[25px] md:rounded-[40px] p-6 md:p-10 shadow-md w-full max-w-[950px] mx-auto">
+              <ul className="space-y-6">
+                <li className="flex flex-col sm:flex-row sm:items-start sm:gap-4 text-center sm:text-left items-center sm:items-start">
+                  <span className="text-hero-accent font-bold text-lg md:text-xl min-w-[120px]">
+                    BÔNUS #1
+                  </span>
+                  <p className="text-hero-text text-base md:text-lg leading-relaxed">
+                    <span className="font-semibold">
+                      Scripts Pré-SOX - Pré-atendimento de Alta Conversão:
+                    </span>{" "}
+                    Roteiros testados para qualificar leads e prepará-los para o
+                    fechamento, otimizando o tempo da sua equipe.
+                  </p>
+                </li>
+
+                <li className="flex flex-col sm:flex-row sm:items-start sm:gap-4 text-center sm:text-left items-center sm:items-start">
+                  <span className="text-hero-accent font-bold text-lg md:text-xl min-w-[120px]">
+                    BÔNUS #2
+                  </span>
+                  <p className="text-hero-text text-base md:text-lg leading-relaxed">
+                    <span className="font-semibold">
+                      Modelo Efetivo de Contrato de Parceria:
+                    </span>{" "}
+                    Base Modelo Documento jurídico para firmar parcerias
+                    comerciais de forma segura e estratégica, ampliando sua rede
+                    de negócios.
+                  </p>
+                </li>
+
+                <li className="flex flex-col sm:flex-row sm:items-start sm:gap-4 text-center sm:text-left items-center sm:items-start">
+                  <span className="text-hero-accent font-bold text-lg md:text-xl min-w-[120px]">
+                    BÔNUS #3
+                  </span>
+                  <p className="text-hero-text text-base md:text-lg leading-relaxed">
+                    <span className="font-semibold">
+                      Direcionamento de Criativos para Tráfego:
+                    </span>{" "}
+                    Diretrizes e exemplos de anúncios que realmente convertem,
+                    para você copiar, colar e adaptar nas suas campanhas de
+                    marketing.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-t border-hero-text/20 pt-6 mt-8 w-full text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-hero-text mb-4">
+                SEU INVESTIMENTO HOJE POR TUDO ISSO:
+              </h3>
+
+              <p className="text-2xl md:text-3xl mb-6 md:mb-8">
+                5x de <span className="text-hero-accent">R$10,60</span> ou{" "}
+                <span className="text-hero-accent">R$47 à vista</span>
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* CARD AMARELO (invertendo cores) */}
-        <div
-          className="
-    mt-6 md:mt-8
-    rounded-2xl md:rounded-3xl
-    bg-[#FCF6E8] ring-1 ring-hero-accent/40 shadow-lg
-    px-5 py-6 md:px-10 md:py-10
-    max-w-[760px] mx-auto
-    text-[#0E141B]
-  "
-        >
-          {/* Features */}
-          <div className="grid grid-cols-1 gap-3 md:gap-4 text-center">
-            <div className="flex items-center justify-center gap-2">
-              <IconClock className="w-5 h-5" />
-              <span className="font-medium text-[15px] md:text-[16px]">
-                {hoursLabel}
-              </span>
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <IconUsers className="w-5 h-5" />
-              <span className="font-medium text-[15px] md:text-[16px]">
-                {expLabel}
-              </span>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <hr className="my-5 md:my-6 border-[#0E141B]/15" />
-
-          {/* Preço */}
-          <div className="text-center">
-            <p className="text-[16px] md:text-[18px] font-semibold">
-              {priceTitle}
-            </p>
-            <p className="font-black text-[40px] md:text-[56px] leading-tight">
-              {bigPrice}
-            </p>
-            <p className="mt-1 text-[16px] md:text-[18px] font-semibold">
-              {cashText}
-            </p>
-          </div>
-
-          {/* CTA */}
-          <div className="w-full flex justify-center mt-6 md:mt-8">
-            <Button
-              variant="hero"
-              size="hero"
-              className="
-                w-full max-w-[380px]
-                px-5 md:px-6 py-3 md:py-4
-                rounded-full
-                text-black font-bold
-                bg-gradient-to-r from-[#CBA135] to-[#F5D78E]
-                hover:from-[#FFD85D] hover:to-[#FFF3C0]
-                transition-all duration-300 ease-in-out
-                shadow-[0_6px_24px_rgba(0,0,0,0.12)]
-              "
-              onClick={() => setIsModalOpen(true)}
+        {/* CTA – agora com respiro acima e abaixo */}
+        <div className="w-full flex justify-center mt-8 md:mt-10 lg:mt-12 mb-16 md:mb-24 lg:mb-28">
+          <Button
+            variant="hero"
+            size="hero"
+            className="
+              w-full max-w-[380px]
+              px-4 sm:px-5 md:px-6
+              py-3 md:py-4
+              text-[14px] sm:text-[15px] md:text-[16px] font-bold tracking-tight
+              flex items-center justify-center
+              rounded-full
+              text-black
+              bg-gradient-to-r from-[#CBA135] to-[#F5D78E]
+              transition-all duration-300 ease-in-out
+              hover:from-[#FFD85D] hover:to-[#FFF3C0]
+              hover:shadow-[0_0_20px_rgba(255,215,0,0.7)]
+            "
+            onClick={() => setIsModalOpen(true)}
+          >
+            <span
+              className="block text-center whitespace-normal break-words leading-tight font-bold
+                         text-[clamp(13px,3.6vw,18px)]"
+              style={{ textWrap: "balance" }}
             >
-              <span
-                className="block text-center whitespace-normal break-words leading-tight font-bold
-                           text-[clamp(13px,3.6vw,18px)]"
-                style={{ textWrap: "balance" }}
-              >
-                {ctaText}
-              </span>
-            </Button>
-          </div>
+              GARANTIR INGRESSO | LOTE 0 por apenas R$&nbsp;47
+            </span>
+          </Button>
         </div>
-      </div>
-      <DiagnosticModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
-    </section>
+
+        <DiagnosticModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      </section>
+    </>
   );
-}
+};
+export default BeforeSix2;

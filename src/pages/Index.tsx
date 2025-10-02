@@ -24,8 +24,8 @@ const Index = () => {
       <FourthSection />
       <ThreeAsSection />
       <BeforeSixSection />
-      <BeforeSix2 />
       <SixthSection />
+      <BeforeSix2 />
       <SeventhSection />
       <EighthSection />
       <MentorsSection />

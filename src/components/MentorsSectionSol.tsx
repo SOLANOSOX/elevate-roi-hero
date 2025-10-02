@@ -104,7 +104,7 @@ const MentorsSectionSol = () => {
               "
               onClick={() => setIsModalOpen(true)}
             >
-              Quero aprender com Adel e Solano
+               GARANTIR INGRESSO | R$47
             </Button>
           </div>
         </div>
