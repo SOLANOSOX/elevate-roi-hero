@@ -13,23 +13,16 @@ const SixthSection = () => {
 
             {/* Caixa interna da lista */}
             <div className="bg-[#1A1F25] rounded-[25px] md:rounded-[40px] p-6 md:p-10 shadow-md w-full max-w-[950px] mx-auto">
-              <div className="text-center mb-6">
-                <h2 className="text-[26px] md:text-[32px] lg:text-4xl font-bold text-hero-text leading-snug pb-5">
-                  A Arquitetura do Seu Lucro: <br className="block sm:hidden" />
-                  Bônus e Preço
-                </h2>
-              </div>
 
               <ul className="divide-y divide-hero-text/20 list-disc list-inside">
                 {[
-                  "Estratégia Detalhada de Captação 5X com IA",
-                  "Funil de Conversão Otimizado e Validado",
+                  "Análise de Projeto Pessoal",
+                  "Estratégia de Captação 5X com IA",
                   "Modelo Estruturado de Gestão de Equipe de Alta Performance",
-                  "Ferramentas de Automação Validadas de Nutrição, Aquecimento para Vender 24h",
+                  "Quais Ferramentas de Automação já Validamos de Nutrição e Aquecimento para Vender 24h",
                   "Estratégia de Expansão Inteligente para Domínio Regional",
                   "Painel de Controle de Métricas Essenciais para Retorno Máximo",
                   "Plano de Ação de 7 Dias Pós-Workshop",
-                  "Análise de Projeto Pessoal (Mesa Redonda)",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -74,9 +67,9 @@ const SixthSection = () => {
                       <span className="font-semibold">
                         Modelo Efetivo de Contrato de Parceria:
                       </span>{" "}
-                      Documento jurídico base referência para firmar novas
-                      parcerias de forma segura e estratégica, assegurando e
-                      fortalecendo seu time comercial.
+                      Base Modelo Documento jurídico para firmar parcerias
+                      comerciais de forma segura e estratégica, ampliando sua
+                      rede de negócios.
                     </p>
                   </li>
 
@@ -88,9 +81,9 @@ const SixthSection = () => {
                       <span className="font-semibold">
                         Direcionamento de Criativos para Tráfego:
                       </span>{" "}
-                      As diretrizes e exemplos de anúncios que realmente
-                      convertem, para você copiar, colar e adaptar nas suas
-                      campanhas de marketing.
+                      Diretrizes e exemplos de anúncios que realmente convertem,
+                      para você copiar, colar e adaptar nas suas campanhas de
+                      marketing.
                     </p>
                   </li>
                 </ul>
@@ -111,21 +104,26 @@ const SixthSection = () => {
                     variant="hero"
                     size="hero"
                     className="
-        w-full max-w-[360px]
-        px-6 py-4
-        text-[16px] font-bold tracking-wide
-        flex flex-col items-center justify-center
-        rounded-full
-        text-black
-        bg-gradient-to-r from-[#CBA135] to-[#F5D78E]
-        transition-all duration-300 ease-in-out
-        hover:from-[#FFD85D] hover:to-[#FFF3C0]
-        hover:shadow-[0_0_20px_rgba(255,215,0,0.7)]
-      "
+      w-full max-w-[380px]
+      px-4 sm:px-5 md:px-6
+      py-3 md:py-4
+      text-[14px] sm:text-[15px] md:text-[16px] font-bold tracking-tight
+      flex items-center justify-center
+      rounded-full
+      text-black
+      bg-gradient-to-r from-[#CBA135] to-[#F5D78E]
+      transition-all duration-300 ease-in-out
+      hover:from-[#FFD85D] hover:to-[#FFF3C0]
+      hover:shadow-[0_0_20px_rgba(255,215,0,0.7)]
+    "
                     onClick={() => setIsModalOpen(true)}
                   >
-                    <span className="block font-bold text-[18px] leading-none">
-                      GARANTIR INGRESSO | LOTE 0
+                    <span
+                      className="block text-center whitespace-normal break-words leading-tight font-bold
+                 text-[clamp(13px,3.6vw,18px)]"
+                      style={{ textWrap: "balance" }}
+                    >
+                      GARANTIR INGRESSO | LOTE 0 por apenas R$&nbsp;47
                     </span>
                   </Button>
                 </div>
