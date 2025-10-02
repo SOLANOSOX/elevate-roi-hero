@@ -47,7 +47,7 @@ const MentorsSectionSol = () => {
               w-full md:max-w-[1000px]
               ml-0 md:ml-0 lg:ml-[80px]
               px-2 md:px-0
-              mt-8 md:mt-[140px] lg:mt-[260px]
+             mt-[20vh] md:mt-[24vh] lg:mt-[28vh]
             "
           >
             <h2
