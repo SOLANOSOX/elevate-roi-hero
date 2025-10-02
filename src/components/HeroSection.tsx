@@ -45,7 +45,7 @@ const HeroSection = () => {
               <div className="flex flex-col">
                 <h1
                   className="
-    text-[30px] md:text-[36px] lg:text-[48px] 
+    text-[25px] md:text-[36px] lg:text-[48px] 
     leading-[34px] md:leading-[42px] lg:leading-[52px] 
     text-hero-text
   "
@@ -60,9 +60,8 @@ const HeroSection = () => {
 
               {/* Description */}
               <div className="flex flex-col text-hero-text text-sm md:text-base font-medium leading-5 md:leading-6 gap-4 md:gap-6">
-                <p className="text-hero-text text-[16px] md:text-[20px] lg:text-[24px]">
-                  2 dias intensivos. VENDAS RECORRENTES COM INTELIGÊNCIA
-                  ARTIFICIAL
+                <p className="text-hero-text text-[15px] md:text-[20px] lg:text-[24px]">
+                  2 dias intensivos. Vendas Recorrentes com Inteligência Artificial
                 </p>
               </div>
             </div>
