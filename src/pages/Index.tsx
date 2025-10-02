@@ -11,6 +11,8 @@ import MentorsSectionSol from "@/components/MentorsSectionSol";
 import FourthSection from "@/components/FourthSection";
 import SixthSection from "@/components/SixthSection";
 import SeventhSection from "@/components/SeventhSection";
+import BeforeSixSection from "@/components/BeforeSixSection";
+import BeforeSix2 from "@/components/BeforeSix2";
 
 const Index = () => {
   return (
@@ -21,6 +23,8 @@ const Index = () => {
       <ThirdSection />
       <FourthSection />
       <ThreeAsSection />
+      <BeforeSixSection />
+      <BeforeSix2 />
       <SixthSection />
       <SeventhSection />
       <EighthSection />

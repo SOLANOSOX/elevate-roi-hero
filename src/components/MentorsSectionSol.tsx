@@ -45,9 +45,10 @@ const MentorsSectionSol = () => {
               text-center md:text-center
               items-end md:items-center
               w-full md:max-w-[1000px]
-              ml-0 md:ml-0 lg:ml-[80px]
+              ml-10 md:ml-0 lg:ml-[80px]
               px-2 md:px-0
-             mt-[20vh] md:mt-[24vh] lg:mt-[28vh]
+              mt-[120px] md:mt-[180px] lg:mt-[250px]   /* 👈 agora no desktop o texto desce */
+    pr-10
             "
           >
             <h2

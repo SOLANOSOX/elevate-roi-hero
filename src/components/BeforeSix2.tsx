@@ -1,6 +1,8 @@
 // BeforeSix2.tsx
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import DiagnosticModal from "@/components/DiagnosticModal";
+
 
 const IconClock = ({ className = "w-5 h-5" }) => (
   <svg
@@ -32,6 +34,7 @@ const IconUsers = ({ className = "w-5 h-5" }) => (
   </svg>
 );
 
+
 export default function BeforeSix2({
   date = "Evento acessível",
   hoursLabel = "16h de conteúdo",
@@ -50,7 +53,9 @@ export default function BeforeSix2({
   cashText?: string;
   ctaText?: string;
   onCTAClick?: () => void;
-}) {
+}
+) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="bg-hero-bg px-4 md:px-6 lg:px-[418px] font-geist">
       <div className="max-w-[1060px] mx-auto py-10 md:py-14">
@@ -127,7 +132,7 @@ export default function BeforeSix2({
                 transition-all duration-300 ease-in-out
                 shadow-[0_6px_24px_rgba(0,0,0,0.12)]
               "
-              onClick={onCTAClick}
+              onClick={() => setIsModalOpen(true)}
             >
               <span
                 className="block text-center whitespace-normal break-words leading-tight font-bold
@@ -140,6 +145,10 @@ export default function BeforeSix2({
           </div>
         </div>
       </div>
+      <DiagnosticModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 }

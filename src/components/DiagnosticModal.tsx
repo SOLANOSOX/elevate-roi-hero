@@ -156,13 +156,13 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px] bg-background border-border max-h-[90vh] overflow-y-auto">
         <DialogHeader className="relative pb-4">
-          <button
+          {/* <button
             onClick={onClose}
             className="absolute right-0 top-0 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
           >
             <X className="h-4 w-4" />
             <span className="sr-only">Fechar</span>
-          </button>
+          </button> */}
           <DialogTitle className="text-center text-xl md:text-2xl font-bold text-primary">
             Garanta seu acesso!
           </DialogTitle>
