@@ -19,11 +19,12 @@ const AuthoritySection = () => {
           <div className="w-full max-w-[800px] text-[#010D15] text-lg md:text-xl leading-relaxed text-center">
             <p>
               Confiamos plenamente na qualidade e no valor transformador do
-              nosso workshop. Por isso, oferecemos uma Garantia Incondicional.
-              Se você assistir ao 1º dia completo e por qualquer motivo, não se
-              sentir satisfeito com o conteúdo, basta entrar em contato conosco
-              e devolveremos 100% do seu investimento, sem perguntas. Seu risco
-              é zero, o nosso é te entregar resultados.
+              nosso workshop. Por isso, oferecemos uma{" "}
+              <strong>Garantia Incondicional</strong>. Se você assistir ao 1º
+              dia completo e por qualquer motivo, não se sentir satisfeito com o
+              conteúdo, basta entrar em contato conosco e devolveremos 100% do
+              seu investimento, sem perguntas. Seu risco é zero, o nosso é te
+              entregar resultados.
             </p>
           </div>
           <div
@@ -33,14 +34,6 @@ const AuthoritySection = () => {
   "
             data-border="true"
           >
-            {/* Texto 1 */}
-            <p className="uppercase font-geist text-[11px] sm:text-[12px] font-medium tracking-[0.02em] leading-[130%] text-[#434951]">
-              Acesso imediato
-            </p>
-
-            {/* Separador */}
-            <div className="hidden sm:block w-px h-3 bg-[#434951]/40"></div>
-
             {/* Texto 2 */}
             <p className="uppercase font-geist text-[11px] sm:text-[12px] font-medium tracking-[0.02em] leading-[130%] text-[#434951]">
               Pagamento 100% seguro
