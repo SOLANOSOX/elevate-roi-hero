@@ -1,6 +1,6 @@
 import { useState } from "react";
 import background from "@/assets/backgroundAdel.png";
-import backgroundMobile from "@/assets/backgroundMobile/72.png";
+import backgroundMobile from "@/assets/backgroundMobile/73.png";
 
 const MentorsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
