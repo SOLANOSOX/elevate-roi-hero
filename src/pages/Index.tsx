@@ -31,8 +31,8 @@ const Index = () => {
       <MentorsSection />
       <MentorsSectionSol />
       <UrgencySection />
-      <FAQSection />
       <AuthoritySection />
+      <FAQSection />
     </>
   );
 };
