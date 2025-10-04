@@ -89,7 +89,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     setIsLoading(true);
 
     // 1. Construir URL do checkout com os dados do usuário
-    const checkoutUrl = new URL("https://pay.herospark.com/workshop-imobiliari-a-lucrativa-466738");
+    const checkoutUrl = new URL("https://pay.hub.la/RromdlJcDyVt11ii3CQB");
 
     // Configurado para enviar apenas Nome e Email
     checkoutUrl.searchParams.append("name", data.nomeCompleto);
