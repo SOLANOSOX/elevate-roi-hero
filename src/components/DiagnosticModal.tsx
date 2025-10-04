@@ -94,6 +94,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     // Configurado para enviar apenas Nome e Email
     checkoutUrl.searchParams.append("name", data.nomeCompleto);
     checkoutUrl.searchParams.append("email", data.email);
+    checkoutUrl.searchParams.append("phone", data.celular);
 
     // 2. Extrair fbp e fbc dos cookies
     const fbp = getCookie('_fbp') || "";
