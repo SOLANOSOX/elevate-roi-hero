@@ -70,6 +70,27 @@ const getCookie = (name: string): string | undefined => {
   return cookieMatch ? cookieMatch.split('=')[1] : undefined;
 };
 
+// =============================================================
+// HELPER PARA EXTRAIR URL E UTMS
+// =============================================================
+const getUTMParams = () => {
+  if (typeof window === 'undefined') return {};
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    return {
+      pageUrl: window.location.href,
+      utmSource: urlParams.get('utm_source') || '',
+      utmMedium: urlParams.get('utm_medium') || '',
+      utmCampaign: urlParams.get('utm_campaign') || '',
+      utmContent: urlParams.get('utm_content') || '',
+      utmTerm: urlParams.get('utm_term') || '',
+    };
+  } catch (e) {
+    console.error("Erro ao extrair parâmetros UTM:", e);
+    return { pageUrl: window.location.href };
+  }
+};
+
 
 const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
