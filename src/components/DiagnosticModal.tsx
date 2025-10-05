@@ -50,18 +50,10 @@ const formSchema = z.object({
 type FormInputs = z.infer<typeof formSchema>;
 
 // Tipo para o payload completo enviado ao webhook
-// --- AJUSTE 1: INCLUSÃO DOS CAMPOS DE UTM NO PAYLOAD
 type WebhookPayload = FormInputs & {
   fbp?: string;
   fbc?: string;
-  pageUrl?: string; // NOVO
-  utmSource?: string; // NOVO
-  utmMedium?: string; // NOVO
-  utmCampaign?: string; // NOVO
-  utmContent?: string; // NOVO
-  utmTerm?: string; // NOVO
 };
-// --- FIM AJUSTE 1
 
 
 interface DiagnosticModalProps {
@@ -73,48 +65,31 @@ interface DiagnosticModalProps {
 // HELPER PARA EXTRAIR COOKIES _fbp e _fbc
 // =============================================================
 const getCookie = (name: string): string | undefined => {
-  if (typeof document === 'undefined') return undefined;
-  const cookieMatch = document.cookie.split('; ').find(row => row.trim().startsWith(name + '='));
-  return cookieMatch ? cookieMatch.split('=')[1] : undefined;
+  if (typeof document === 'undefined') return undefined;
+  const cookieMatch = document.cookie.split('; ').find(row => row.trim().startsWith(name + '='));
+  return cookieMatch ? cookieMatch.split('=')[1] : undefined;
 };
 
 // =============================================================
-// HELPER PARA EXTRAIR URL E UTMS (LÓGICA AJUSTADA PARA TENTAR PEGAR O URL DA PÁGINA PRINCIPAL)
-// --- AJUSTE 2: NOVA FUNÇÃO HELPER PARA CAPTURA DE UTM/URL
+// HELPER PARA EXTRAIR URL E UTMS
 // =============================================================
 const getUTMParams = () => {
-  if (typeof window === 'undefined') return {};
-  try {
-    // Tenta acessar o location da janela principal (window.top) para evitar o problema do iframe.
-    const topLocation = window.top && window.top.location.href !== window.location.href ? window.top.location : window.location;
-    const url = topLocation.href;
-    
-    //console.log("DIAGNÓSTICO URL LIDA:", url); // Comentei o log para evitar sujeira no console.
-    
-    const urlParams = new URLSearchParams(topLocation.search);
-    return {
-      pageUrl: url,
-      utmSource: urlParams.get('utm_source') || '',
-      utmMedium: urlParams.get('utm_medium') || '',
-      utmCampaign: urlParams.get('utm_campaign') || '',
-      utmContent: urlParams.get('utm_content') || '',
-      utmTerm: urlParams.get('utm_term') || '',
-    };
-  } catch (e) {
-    // Se houver erro de segurança (CORS/iframe), volta a pegar o URL local
-    console.error("Erro ao tentar acessar URL principal. Usando URL local.", e);
-    const urlParams = new URLSearchParams(window.location.search);
-    return { 
-        pageUrl: window.location.href,
-        utmSource: urlParams.get('utm_source') || '',
-        utmMedium: urlParams.get('utm_medium') || '',
-        utmCampaign: urlParams.get('utm_campaign') || '',
-        utmContent: urlParams.get('utm_content') || '',
-        utmTerm: urlParams.get('utm_term') || '',
+  if (typeof window === 'undefined') return {};
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    return {
+      pageUrl: window.location.href,
+      utmSource: urlParams.get('utm_source') || '',
+      utmMedium: urlParams.get('utm_medium') || '',
+      utmCampaign: urlParams.get('utm_campaign') || '',
+      utmContent: urlParams.get('utm_content') || '',
+      utmTerm: urlParams.get('utm_term') || '',
     };
-  }
+  } catch (e) {
+    console.error("Erro ao extrair parâmetros UTM:", e);
+    return { pageUrl: window.location.href };
+  }
 };
-// --- FIM AJUSTE 2
 
 
 const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) => {
@@ -140,31 +115,25 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     // Configurado para enviar apenas Nome e Email
     checkoutUrl.searchParams.append("name", data.nomeCompleto);
     checkoutUrl.searchParams.append("email", data.email);
-    checkoutUrl.searchParams.append("phone", data.celular);
+    checkoutUrl.searchParams.append("phone", data.celular);
 
-    // 2. Extrair fbp e fbc dos cookies
-    const fbp = getCookie('_fbp') || "";
-    const fbc = getCookie('_fbc') || "";
+    // 2. Extrair fbp e fbc dos cookies
+    const fbp = getCookie('_fbp') || "";
+    const fbc = getCookie('_fbc') || "";
 
-    // NOVO: 3. Extrair URL e UTMs
-    const utms = getUTMParams(); // CHAMADA DA NOVA FUNÇÃO
-
-    // Atualizado: Criar o payload completo para o webhook, incluindo os cookies e UTMs
-    // --- AJUSTE 3: INCLUSÃO DOS DADOS DE UTM NO PAYLOAD
-    const webhookData: WebhookPayload = {
-        ...data,
-        fbp,
-        fbc,
-        ...utms, // NOVO: Espalha os campos de UTM e pageUrl no objeto
-    };
-    // --- FIM AJUSTE 3
+    // Criar o payload completo para o webhook, incluindo os cookies
+    const webhookData: WebhookPayload = {
+        ...data,
+        fbp,
+        fbc,
+    };
 
     let webhookSuccess = false;
 
     try {
       console.log("Enviando dados para o webhook:", webhookData);
 
-      // 4. Enviar dados para o webhook com timeout
+      // 3. Enviar dados para o webhook com timeout
       const controller = new AbortController();
       const timeoutId = setTimeout(() => {
         controller.abort();
@@ -198,7 +167,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
       }
     }
 
-    // 5. Sempre redirecionar para o checkout, independente do webhook
+    // 4. Sempre redirecionar para o checkout, independente do webhook
     try {
       toast({
         title: webhookSuccess ? "Sucesso!" : "Redirecionando...",
