@@ -21,7 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 }
- from "@/components/ui/select";
+  from "@/components/ui/select";
 import {
   Form,
   FormControl,
@@ -82,19 +82,25 @@ const getCookie = (name: string): string | undefined => {
 };
 
 // =============================================================
-// HELPER PARA EXTRAIR URL E UTMS
+// HELPER PARA EXTRAIR URL E UTMS (AJUSTADO PARA RETORNAR UNDEFINED SE VAZIO)
 // =============================================================
 const getUTMParams = (): UTMParams => {
   if (typeof window === 'undefined') return { pageUrl: '' };
   try {
     const urlParams = new URLSearchParams(window.location.search);
+    // Helper interno para obter o parâmetro ou undefined se for nulo ou vazio
+    const getParam = (key: string): string | undefined => {
+      const value = urlParams.get(key);
+      return (value && value.trim() !== '') ? value.trim() : undefined;
+    };
+
     return {
       pageUrl: window.location.href,
-      utmSource: urlParams.get('utm_source') || '',
-      utmMedium: urlParams.get('utm_medium') || '',
-      utmCampaign: urlParams.get('utm_campaign') || '',
-      utmContent: urlParams.get('utm_content') || '',
-      utmTerm: urlParams.get('utm_term') || '',
+      utmSource: getParam('utm_source'),
+      utmMedium: getParam('utm_medium'),
+      utmCampaign: getParam('utm_campaign'),
+      utmContent: getParam('utm_content'),
+      utmTerm: getParam('utm_term'),
     };
   } catch (e) {
     console.error("Erro ao extrair parâmetros UTM:", e);
@@ -124,7 +130,7 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     // 1. Construir URL do checkout com os dados do usuário
     const checkoutUrl = new URL("https://pay.hub.la/RromdlJcDyVt11ii3CQB");
 
-    // Configurado para enviar apenas Nome e Email
+    // Configurado para enviar Nome, Email e Telefone
     checkoutUrl.searchParams.append("name", data.nomeCompleto);
     checkoutUrl.searchParams.append("email", data.email);
     checkoutUrl.searchParams.append("phone", data.celular);
@@ -136,7 +142,17 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
     // 3. Extrair os parâmetros UTM
     const utmParams = getUTMParams();
 
-    // Criar o payload completo para o webhook, incluindo cookies e UTMS
+    // =========================================================================
+    // ALTERAÇÃO REALIZADA: ADICIONANDO UTMS AO CHECKOUT URL DO HUBLA
+    // =========================================================================
+    if (utmParams.utmSource) checkoutUrl.searchParams.append("utm_source", utmParams.utmSource);
+    if (utmParams.utmMedium) checkoutUrl.searchParams.append("utm_medium", utmParams.utmMedium);
+    if (utmParams.utmCampaign) checkoutUrl.searchParams.append("utm_campaign", utmParams.utmCampaign);
+    if (utmParams.utmContent) checkoutUrl.searchParams.append("utm_content", utmParams.utmContent);
+    if (utmParams.utmTerm) checkoutUrl.searchParams.append("utm_term", utmParams.utmTerm);
+    // =========================================================================
+
+    // Criar o payload completo para o webhook, incluindo cookies e UTMS (isso já estava correto)
     const webhookData: WebhookPayload = {
         ...data,
         fbp,
