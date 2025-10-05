@@ -142,23 +142,6 @@ const DiagnosticModal: React.FC<DiagnosticModalProps> = ({ isOpen, onClose }) =>
         fbp,
         fbc,
         ...utmParams, // Incluindo todos os parâmetros UTM e pageUrl
-
-      // ... dentro de onSubmit
-    // 3. Extrair os parâmetros UTM
-    const utmParams = getUTMParams();
-
-    // =========================================================================
-    // ALTERAÇÃO REALIZADA: ADICIONANDO UTMS AO CHECKOUT URL DO HUBLA
-    // =========================================================================
-    if (utmParams.utmSource) checkoutUrl.searchParams.append("utm_source", utmParams.utmSource);
-    if (utmParams.utmMedium) checkoutUrl.searchParams.append("utm_medium", utmParams.utmMedium);
-    if (utmParams.utmCampaign) checkoutUrl.searchParams.append("utm_campaign", utmParams.utmCampaign);
-    if (utmParams.utmContent) checkoutUrl.searchParams.append("utm_content", utmParams.utmContent);
-    if (utmParams.utmTerm) checkoutUrl.searchParams.append("utm_term", utmParams.utmTerm);
-    // =========================================================================
-// ...
-
-Isso garante que os parâmetros UTM sejam repassados ao Hubla. Se precisar de mais alguma modificação, é só me avisar!
     };
 
     let webhookSuccess = false;
